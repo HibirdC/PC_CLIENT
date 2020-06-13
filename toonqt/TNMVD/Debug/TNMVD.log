@@ -1,0 +1,53 @@
+﻿生成启动时间为 2020-06-12 21:50:41。
+     1>项目“D:\Work\toon_PC_Client\toonqt\TNMVD\TNMVD.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\Work\toon_PC_Client\TOONSDK\\opencore_amr\windows\include /I.\..\LocalStorage /I.\..\IMCore /I.\..\NetWorkAPI /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /I.\..\Common /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtMultimedia /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\ToonProtocol /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebChannel /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineWidgets /I.\Search /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineCore /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D TNMVD_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TNChooseCardDialog.cpp TNPictureViewerDialog.cpp TNWebViewDetailsArea.cpp
+         TNChooseCardDialog.cpp
+         TNPictureViewerDialog.cpp
+         TNWebViewDetailsArea.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\TNMVDd.dll" /NOLOGO /LIBPATH:D:\Work\toon_PC_Client\TOONSDK\\opencore_amr\windows\x86\lib /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib /LIBPATH:D:\Work\toon_PC_Client\TOONSDK\\lib\Win32\ qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib Qt5NetWorkd.lib Qt5Sqld.lib Qt5Multimediad.lib Qt5WebEngineWidgetsd.lib Qt5WebChanneld.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\NetWorkAPId.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\ToonProtocold.lib "opencore-amrnb.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.lib" /MACHINE:X86 /SAFESEH /DLL Debug\CommentTextEdit.obj
+         Debug\tnconvertrichedit.obj
+         Debug\TNEmojiSingleton.obj
+         Debug\TNEmotionLineEdit.obj
+         Debug\TNEmotionPictureTextConverter.obj
+         Debug\TNBizActionResponder.obj
+         Debug\TNFrameId.obj
+         Debug\TNFrameViewer.obj
+         Debug\moc_CommentTextEdit.obj
+         Debug\moc_TNAbstractItemDelegate.obj
+         Debug\moc_tnavatorbutton.obj
+         Debug\moc_TNBizActionResponder.obj
+         Debug\moc_TNChooseCardDialog.obj
+         Debug\moc_tncommondealavator.obj
+         Debug\moc_tnconvertrichedit.obj
+         Debug\moc_TNDefaultPage.obj
+         Debug\moc_TNElidedLabel.obj
+         Debug\moc_TNElidedLabelV2.obj
+         Debug\moc_TNEmotionLineEdit.obj
+         Debug\moc_TNEmotionPictureTextConverter.obj
+         Debug\moc_TNFrameViewer.obj
+         Debug\moc_TNPictureViewerDialog.obj
+         Debug\moc_TNWebViewDetailsArea.obj
+         Debug\qrc_TNMVD.obj
+         Debug\TNAbstractItemDelegate.obj
+         Debug\tnavatorbutton.obj
+         Debug\TNChooseCardDialog.obj
+         Debug\tncommondealavator.obj
+         Debug\TNDefaultPage.obj
+         Debug\TNElidedLabel.obj
+         Debug\TNElidedLabelV2.obj
+         Debug\TNMVD.obj
+         Debug\TNPictureViewerDialog.obj
+         Debug\TNWebViewDetailsArea.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\Commond.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\IMCored.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\NetWorkAPId.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\ToonProtocold.lib
+         TNMVD.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\TNMVD\TNMVD.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.41

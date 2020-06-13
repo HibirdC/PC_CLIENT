@@ -1,0 +1,209 @@
+/********************************************************************************
+** Form generated from reading UI file 'TNCreateGroupChatDialog.ui'
+**
+** Created by: Qt User Interface Compiler version 5.6.2
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_TNCREATEGROUPCHATDIALOG_H
+#define UI_TNCREATEGROUPCHATDIALOG_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_TNCreateGroupChatDialog
+{
+public:
+    QVBoxLayout *verticalLayout_3;
+    QWidget *memberDialogTitleWidget;
+    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *DialogTitleLabel;
+    QGridLayout *gridLayout;
+    QTableView *myStuffTableView;
+    QLabel *createGroupLabel2;
+    QLabel *createGroupLabel1;
+    QVBoxLayout *verticalLayout;
+    QTableView *rightTableView;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *okButton;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *cancelButton;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *myStuffCardLabel;
+    QVBoxLayout *verticalLayout_2;
+    QWidget *widget;
+    QTableView *leftTableView;
+
+    void setupUi(QDialog *TNCreateGroupChatDialog)
+    {
+        if (TNCreateGroupChatDialog->objectName().isEmpty())
+            TNCreateGroupChatDialog->setObjectName(QStringLiteral("TNCreateGroupChatDialog"));
+        TNCreateGroupChatDialog->resize(800, 482);
+        TNCreateGroupChatDialog->setMinimumSize(QSize(580, 482));
+        TNCreateGroupChatDialog->setMaximumSize(QSize(800, 484));
+        TNCreateGroupChatDialog->setFocusPolicy(Qt::StrongFocus);
+        verticalLayout_3 = new QVBoxLayout(TNCreateGroupChatDialog);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(30, 10, 30, 30);
+        memberDialogTitleWidget = new QWidget(TNCreateGroupChatDialog);
+        memberDialogTitleWidget->setObjectName(QStringLiteral("memberDialogTitleWidget"));
+        horizontalLayout_3 = new QHBoxLayout(memberDialogTitleWidget);
+        horizontalLayout_3->setSpacing(0);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 20);
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        DialogTitleLabel = new QLabel(memberDialogTitleWidget);
+        DialogTitleLabel->setObjectName(QStringLiteral("DialogTitleLabel"));
+        DialogTitleLabel->setAlignment(Qt::AlignCenter);
+        DialogTitleLabel->setIndent(0);
+
+        horizontalLayout_2->addWidget(DialogTitleLabel);
+
+
+        horizontalLayout_3->addLayout(horizontalLayout_2);
+
+
+        verticalLayout_3->addWidget(memberDialogTitleWidget);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setHorizontalSpacing(20);
+        gridLayout->setVerticalSpacing(6);
+        myStuffTableView = new QTableView(TNCreateGroupChatDialog);
+        myStuffTableView->setObjectName(QStringLiteral("myStuffTableView"));
+        myStuffTableView->setMinimumSize(QSize(200, 0));
+        myStuffTableView->setMaximumSize(QSize(200, 16777215));
+
+        gridLayout->addWidget(myStuffTableView, 1, 0, 1, 1);
+
+        createGroupLabel2 = new QLabel(TNCreateGroupChatDialog);
+        createGroupLabel2->setObjectName(QStringLiteral("createGroupLabel2"));
+
+        gridLayout->addWidget(createGroupLabel2, 0, 2, 1, 1);
+
+        createGroupLabel1 = new QLabel(TNCreateGroupChatDialog);
+        createGroupLabel1->setObjectName(QStringLiteral("createGroupLabel1"));
+
+        gridLayout->addWidget(createGroupLabel1, 0, 1, 1, 1);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        rightTableView = new QTableView(TNCreateGroupChatDialog);
+        rightTableView->setObjectName(QStringLiteral("rightTableView"));
+        rightTableView->setMinimumSize(QSize(250, 0));
+        rightTableView->setMaximumSize(QSize(250, 16777215));
+
+        verticalLayout->addWidget(rightTableView);
+
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(0);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 20, 0, 0);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer);
+
+        okButton = new QPushButton(TNCreateGroupChatDialog);
+        okButton->setObjectName(QStringLiteral("okButton"));
+        okButton->setCursor(QCursor(Qt::PointingHandCursor));
+
+        horizontalLayout_4->addWidget(okButton);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_4);
+
+        cancelButton = new QPushButton(TNCreateGroupChatDialog);
+        cancelButton->setObjectName(QStringLiteral("cancelButton"));
+        cancelButton->setCursor(QCursor(Qt::PointingHandCursor));
+
+        horizontalLayout_4->addWidget(cancelButton);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
+
+        gridLayout->addLayout(verticalLayout, 1, 2, 1, 1);
+
+        myStuffCardLabel = new QLabel(TNCreateGroupChatDialog);
+        myStuffCardLabel->setObjectName(QStringLiteral("myStuffCardLabel"));
+
+        gridLayout->addWidget(myStuffCardLabel, 0, 0, 1, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(10);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        widget = new QWidget(TNCreateGroupChatDialog);
+        widget->setObjectName(QStringLiteral("widget"));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
+        widget->setMinimumSize(QSize(250, 20));
+        widget->setMaximumSize(QSize(250, 16777215));
+
+        verticalLayout_2->addWidget(widget);
+
+        leftTableView = new QTableView(TNCreateGroupChatDialog);
+        leftTableView->setObjectName(QStringLiteral("leftTableView"));
+        leftTableView->setMinimumSize(QSize(250, 0));
+        leftTableView->setMaximumSize(QSize(250, 16777215));
+
+        verticalLayout_2->addWidget(leftTableView);
+
+
+        gridLayout->addLayout(verticalLayout_2, 1, 1, 1, 1);
+
+
+        verticalLayout_3->addLayout(gridLayout);
+
+        memberDialogTitleWidget->raise();
+
+        retranslateUi(TNCreateGroupChatDialog);
+
+        QMetaObject::connectSlotsByName(TNCreateGroupChatDialog);
+    } // setupUi
+
+    void retranslateUi(QDialog *TNCreateGroupChatDialog)
+    {
+        TNCreateGroupChatDialog->setWindowTitle(QApplication::translate("TNCreateGroupChatDialog", "\351\200\211\346\213\251\350\201\224\347\263\273\344\272\272", 0));
+        DialogTitleLabel->setText(QApplication::translate("TNCreateGroupChatDialog", "\345\210\233\345\273\272\347\276\244\350\201\212", 0));
+        createGroupLabel2->setText(QApplication::translate("TNCreateGroupChatDialog", "\345\267\262\351\200\211\346\213\251\350\201\224\347\263\273\344\272\272", 0));
+        createGroupLabel1->setText(QApplication::translate("TNCreateGroupChatDialog", "\351\200\211\346\213\251\350\201\224\347\263\273\344\272\272", 0));
+        okButton->setText(QApplication::translate("TNCreateGroupChatDialog", "\347\241\256\345\256\232", 0));
+        cancelButton->setText(QApplication::translate("TNCreateGroupChatDialog", "\345\217\226\346\266\210", 0));
+        myStuffCardLabel->setText(QApplication::translate("TNCreateGroupChatDialog", "\350\257\267\351\200\211\346\213\251\345\220\215\347\211\207", 0));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class TNCreateGroupChatDialog: public Ui_TNCreateGroupChatDialog {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_TNCREATEGROUPCHATDIALOG_H

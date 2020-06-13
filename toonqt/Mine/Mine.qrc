@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="toolWidget/tiJian">Resources/toolWidget/tiJian.png</file>
+    </qresource>
+</RCC>

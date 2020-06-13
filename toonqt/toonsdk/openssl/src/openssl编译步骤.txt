@@ -1,0 +1,14 @@
+1 安装perl，设置环境变量path
+2 到vs安装目录下，tools---x86工具---打开命令行。
+3 进入openssl库目录，执行
+  perl Configure VC-WIN32  shared no-asm no-shared（静态库）
+  perl Configure VC-WIN32  shared no-asm （动态库）
+  nmake
+  nmake test
+4 到vs安装目录下，tools----x64工具---打开命令行。
+5 进入openssl库目录， 执行 
+  perl Configure VC-WIN64A shared no-asm no-shared（静态库）
+  perl Configure VC-WIN64A shared no-asm （动态库）
+  nmake
+  nmake test
+  nmake clean

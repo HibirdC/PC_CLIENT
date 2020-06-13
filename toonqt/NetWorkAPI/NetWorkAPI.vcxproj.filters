@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\qrc_NetWorkAPI.cpp" />
+    <ClCompile Include="NetWorkAPI.cpp" />
+    <ClCompile Include="TNHttpApi.cpp" />
+    <ClCompile Include="TNHttpBaseApi.cpp" />
+    <ClCompile Include="TNHttpBasicRouterApi.cpp" />
+    <ClCompile Include="TNHttpCloudApi.cpp" />
+    <ClCompile Include="TNHttpDomainRouterApi.cpp" />
+    <ClCompile Include="TNHttpGetContactFriendFeed.cpp" />
+    <ClCompile Include="TNHttpGetListCard.cpp" />
+    <ClCompile Include="TNHttpGetCompanyInfoByComIdList.cpp" />
+    <ClCompile Include="TNHttpObtainGroupChatsByUserId.cpp" />
+    <ClCompile Include="TNHttpObtainGroupChatMembersByGroupChatId.cpp" />
+    <ClCompile Include="TNHttpObtainGroupChatInfoByGroupChatId.cpp" />
+    <ClCompile Include="TNHttpGetOrgGroupList.cpp" />
+    <ClCompile Include="TNHttpGetListGroupContactByUserId.cpp" />
+    <ClCompile Include="TNHttpGetGroupCardByUser.cpp" />
+    <ClCompile Include="TNHttpGetListRelationItem.cpp" />
+    <ClCompile Include="TNHttpGetListStaffContactByUserId.cpp" />
+    <ClCompile Include="TNHttpLoadAvatar.cpp" />
+    <ClCompile Include="TNHttpObtainFeedList.cpp" />
+    <ClCompile Include="TNHttpObtainStoken.cpp" />
+    <ClCompile Include="TNHttpUploadCloud.cpp" />
+    <ClCompile Include="TNHttpDownCloud.cpp" />
+    <ClCompile Include="TNHttpCreateGroupChat.cpp" />
+    <ClCompile Include="TNHttpFriendRequest.cpp" />
+    <ClCompile Include="TNHttpQuitGroupChat.cpp" />
+    <ClCompile Include="TNHttpGetListGroupRegisterApp.cpp" />
+    <ClCompile Include="TNHttpGetMessageAppInfo.cpp" />
+    <ClCompile Include="TNHttpGroupRequest.cpp" />
+    <ClCompile Include="TNHttpQRCodeKeyGen.cpp" />
+    <ClCompile Include="TNHttpNewCardRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListGroupInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpObtainGroupChatInfoByGroupChatIdSyn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpOrgCardRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNNetDetecter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpObtainGroupMembersByGroupId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpUpdateVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListOrgCardByUserId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpUpdateVersion.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpDownCloud.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpCloudApi.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpBaseApi.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpApi.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNUpgradeMangement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListStaffCardByUserId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListStaffCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListCardRegisterApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListCompanyStaffRegisterApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpObtainAppCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpUpdateGroupChat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpSetGroupChatDisb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpQuertySwitchInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpSwitchSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpFeedBack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpFeedBack.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListOrgCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListCompanyCardRegisterApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpQuertySwitchInfo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpObtainGroupMembersByGroupId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListStaffCardByUserId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListOrgCardByUserId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListStaffCard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpObtainGroupChatsByUserId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpObtainGroupChatMembersByGroupChatId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetOrgGroupList.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListStaffContactByUserId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListRelationItem.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListGroupContactByUserId.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetGroupCardByUser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetContactFriendFeed.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpQRCodeKeyGen.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNNetDetecter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNUpgradeMangement.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpObtainFeedList.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetCompanyFeedIdByComId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetListRecommendApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetListRecommendApp.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpObtainGroupMemberFeedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpObtainGroupMemberFeedList.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpUploadCloud.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNNetAvatarDown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNNetAvatarDown.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNDataStatistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNDataStatistics.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpDam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpFriendRequestByPhone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpDownFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpDownFile.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetUnConfirmFriendFeed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetUnConfirmFriendFeed.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpAddGroupChatMember.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetMyGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpGetMyGroup.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpReplyTimeout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHttpReplyTimeout.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpRemoveGroupChatMember.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetFeedRemark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpResetPassword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpCheckVCodeBeforeLogin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHttpGetOrgCommunicationStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNHomePageConfigParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNHomePageConfigParser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NetWorkAPI.h" />
+    <ClInclude Include="NetWorkAPI_global.h" />
+    <ClInclude Include="TNHttpBasicRouterApi.h" />
+    <ClInclude Include="TNHttpDomainRouterApi.h" />
+    <ClInclude Include="TNHttpGetListCard.h" />
+    <ClInclude Include="TNHttpGetCompanyInfoByComIdList.h" />
+    <ClInclude Include="TNHttpObtainGroupChatInfoByGroupChatId.h" />
+    <ClInclude Include="TNHttpLoadAvatar.h" />
+    <ClInclude Include="TNHttpObtainStoken.h" />
+    <ClInclude Include="TNHttpCreateGroupChat.h" />
+    <ClInclude Include="TNHttpFriendRequest.h" />
+    <ClInclude Include="TNHttpQuitGroupChat.h" />
+    <ClInclude Include="TNHttpGetListGroupRegisterApp.h" />
+    <ClInclude Include="TNHttpGetMessageAppInfo.h" />
+    <ClInclude Include="TNHttpGroupRequest.h" />
+    <ClInclude Include="TNHttpNewCardRequest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetListGroupInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpObtainGroupChatInfoByGroupChatIdSyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpOrgCardRequest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetListCardRegisterApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetListCompanyStaffRegisterApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpObtainAppCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpSetGroupChatDisb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpSwitchSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetListOrgCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetListCompanyCardRegisterApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpDam.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpFriendRequestByPhone.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpAddGroupChatMember.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpRemoveGroupChatMember.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpResetPassword.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpCheckVCodeBeforeLogin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNHttpGetOrgCommunicationStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNHttpApi.h" />
+    <CustomBuild Include="TNHttpBaseApi.h" />
+    <CustomBuild Include="NetWorkAPI.qrc" />
+    <CustomBuild Include="TNHttpCloudApi.h" />
+    <CustomBuild Include="TNHttpDownCloud.h" />
+    <CustomBuild Include="TNHttpUpdateVersion.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpFeedBack.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpQuertySwitchInfo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpObtainGroupMembersByGroupId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListStaffCardByUserId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListOrgCardByUserId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListStaffCard.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpObtainGroupChatsByUserId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpObtainGroupChatMembersByGroupChatId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetOrgGroupList.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListStaffContactByUserId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListRelationItem.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListGroupContactByUserId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetGroupCardByUser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetContactFriendFeed.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpQRCodeKeyGen.h">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNNetDetecter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNUpgradeMangement.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpObtainFeedList.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetCompanyFeedIdByComId.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetListRecommendApp.h">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpObtainGroupMemberFeedList.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpUploadCloud.h" />
+    <CustomBuild Include="TNNetAvatarDown.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNDataStatistics.h">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpDownFile.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetUnConfirmFriendFeed.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetMyGroup.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpReplyTimeout.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHttpGetFeedRemark.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNHomePageConfigParser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+</Project>

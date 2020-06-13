@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b419904d-698f-42ab-85ea-50d5c740c09e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\moc_TNInitiateGroupChatCommand.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNJoinGroupChatConfirmDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNShowGroupFrameCommand.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToonCommand\TNInitiateGroupChatCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToonCommand\TNJoinGroupChatConfirmDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToonCommand\TNShowGroupFrameCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnatlistitemwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNATSearchAdapter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNATSearchListItemDelegate.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnnoticeatarea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtSearch\TNATSearchAdapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtSearch\tnatlistitemwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtSearch\TNATSearchListItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AtSearch\tnnoticeatarea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnplayaudio.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnemojiwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\tnplayaudio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emoji\tnemojiwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tncustomtextedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input\tncustomtextedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tngeneratenoticemodeldata.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model_data\TNModelUserMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model_data\tngeneratenoticemodeldata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnsendimsg.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnsessionnetwork.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="network\tnsendimsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="network\tnsessionnetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_image_progress_bar.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_mytableview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_NoticeDetailsArea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnaudiobrowser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNChatDetailBase.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tndetailsunreadwdiget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnfilebrowser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNGrowingTextBrowser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnloadinghository.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNMsgDetailDelegate.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNMsgDetailItemWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNMsgDetailModel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnothermessagebrowser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnstatuslabel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_SelectContactDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNContactModel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNCreateGroupChatDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNGroupChatCreator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNGroupChatMembersWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNInputGroupChatNameDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNRemoveGroupChatMemberDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_NoticeListArea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_noticelistdelegate.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_noticelistmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnnoticelisttableview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnoutlinemessagethread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnwarndlag.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_Notice.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_someoneatyou.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNDropDownPushButton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tntextobject.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNSendConfirmDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNNoticeMessageOperate.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_SendFowardSelectContactDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNBatchSendFileConfirmDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNBatchSendImageConfirmDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNExitGroupChatConfirmDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNImageLoadThread.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNNewFriendCard.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNNoticeDetailTableWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tnwarndlag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list_notice\tnnoticelisttableview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNNoticeMessageOperate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tnothermessagebrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="out_line_message\tnoutlinemessagethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNRemoveGroupChatMemberDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNSendConfirmDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tnstatuslabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tntextobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNNoticeDetailTableWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tnloadinghository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\TNMsgDetailDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\TNMsgDetailItemWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\TNMsgDetailModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNNewFriendCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNInputGroupChatNameDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="someoneatyou.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tnaudiobrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNBatchSendFileConfirmDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNBatchSendImageConfirmDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\TNChatDetailBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNContactModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNCreateGroupChatDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tndetailsunreadwdiget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNDropDownPushButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNExitGroupChatConfirmDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\tnfilebrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNGroupChatCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\TNGroupChatMembersWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\TNGrowingTextBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNImageLoadThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_Notice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupChat\SelectContactDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SendFowardSelectContactDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list_notice\noticelistmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\mytableview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\NoticeDetailsArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list_notice\NoticeListArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="list_notice\noticelistdelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="details_notice\image_progress_bar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="draft\deal_draft_data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnconvertamr.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\wav\tnconvertamr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audio\wav\wavwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="history\loadhistorydata.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_loadhistorydata.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ToonCommand\TNInitiateGroupChatCommand.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ToonCommand\TNJoinGroupChatConfirmDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ToonCommand\TNJoinGroupChatConfirmDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ToonCommand\TNShowGroupFrameCommand.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\tnatlistitemwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\tnatlistitemwidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\TNATSearchAdapter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\TNATSearchListItemDelegate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\tnnoticeatarea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtSearch\tnnoticeatarea.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="audio\tnplayaudio.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="emoji\tnemojiwidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="emoji\tnemojiwidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="input\tncustomtextedit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="model_data\tngeneratenoticemodeldata.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="network\tnsendimsg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="network\tnsessionnetwork.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\image_progress_bar.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\mytableview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\NoticeDetailsArea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\NoticeDetailsArea.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnaudiobrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnaudiobrowser.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\TNChatDetailBase.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tndetailsunreadwdiget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tndetailsunreadwdiget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnfilebrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnfilebrowser.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\TNGrowingTextBrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnloadinghository.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnloadinghository.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\TNMsgDetailDelegate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\TNMsgDetailItemWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\TNMsgDetailModel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnothermessagebrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnothermessagebrowser.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="details_notice\tnstatuslabel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\SelectContactDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\SelectContactDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNContactModel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNCreateGroupChatDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNCreateGroupChatDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNGroupChatCreator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNGroupChatMembersWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNGroupChatMembersWidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNInputGroupChatNameDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNInputGroupChatNameDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNRemoveGroupChatMemberDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GroupChat\TNRemoveGroupChatMemberDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="list_notice\NoticeListArea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="list_notice\noticelistdelegate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="list_notice\noticelistmodel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="list_notice\tnnoticelisttableview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="out_line_message\tnoutlinemessagethread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tnwarndlag.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tnwarndlag.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Notice.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="someoneatyou.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNNewFriendCard.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNDropDownPushButton.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tntextobject.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="someoneatyou.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNSendConfirmDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNNoticeMessageOperate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Notice.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SendFowardSelectContactDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SendFowardSelectContactDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNBatchSendFileConfirmDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNBatchSendFileConfirmDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNBatchSendImageConfirmDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNBatchSendImageConfirmDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNExitGroupChatConfirmDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNExitGroupChatConfirmDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNImageLoadThread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNNewFriendCard.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNNoticeDetailTableWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="audio\wav\tnconvertamr.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="history\loadhistorydata.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_TNJoinGroupChatConfirmDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnatlistitemwidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnnoticeatarea.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnemojiwidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model_data\TNModelUserMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_NoticeDetailsArea.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnaudiobrowser.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tndetailsunreadwdiget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnfilebrowser.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnloadinghository.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnothermessagebrowser.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="draft\deal_draft_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_SelectContactDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNCreateGroupChatDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNGroupChatMembersWidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNInputGroupChatNameDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNRemoveGroupChatMemberDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tnwarndlag.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNNewFriendCard.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="notice_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_someoneatyou.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoticeEnum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_SendFowardSelectContactDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNBatchSendFileConfirmDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNBatchSendImageConfirmDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNExitGroupChatConfirmDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audio\wav\wavwriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notice.pri" />
+    <None Include="Notice.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\toolWidget\Notice.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\Notice_Check.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\066.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\067.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\068.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\069.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\070.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\071.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\072.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\073.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\074.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\075.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\076.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\077.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\078.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\079.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\080.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\emoji.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\file.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\pic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\arrow_down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\arrow_up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\pic_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\face_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\file_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\Empty.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\loding_history.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\loading_spinner.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\defaultAvatar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\NoticeFinished.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\defaultNullAvatar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\addContact.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\newFriendDefaultAvatar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\cellSecretary.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\enterManager.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\entertainment.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\gcDefaultAvatar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\close.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\close_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\close_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\exitGroupChat.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\right_arrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\down_arrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\exchange-icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\002.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\003.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\004.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\005.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\006.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\007.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\008.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\009.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\010.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\011.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\012.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\013.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\014.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\015.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\016.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\017.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\018.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\019.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\020.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\021.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\022.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\023.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\024.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\025.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\026.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\027.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\028.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\029.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\030.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\031.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\032.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\033.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\034.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\035.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\036.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\037.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\038.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\039.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\040.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\041.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\042.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\043.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\044.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\045.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\046.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\047.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\048.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\049.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\050.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\051.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\052.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\053.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\054.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\055.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\056.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\057.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\058.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\059.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\060.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\061.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\062.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\063.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\064.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\images\065.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\no_alarm.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\red_point.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\NoticeExpired.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\toolWidget\on_top.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

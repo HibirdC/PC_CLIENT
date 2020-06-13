@@ -1,0 +1,49 @@
+﻿生成启动时间为 2020-06-12 21:07:50。
+     1>项目“D:\Work\toon_PC_Client\toonqt\SetUp\SetUp.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I.\..\Common /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebChannel /I.\..\NetWorkAPI /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\LocalStorage /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /ID:\Work\toon_PC_Client\TOONSDK\\zlib\include /I.\..\IMCore /I.\..\ScreenShot /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D SETUP_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\moc_TNFeedBackProposalDialog.cpp SetUp.cpp SetUpListArea.cpp TNAboutUsWidget.cpp TNExitLoginWidget.cpp TNFeedBackProposalDialog.cpp TNLocaleStorageSettingWidget.cpp
+         moc_TNFeedBackProposalDialog.cpp
+         SetUp.cpp
+         SetUpListArea.cpp
+         TNAboutUsWidget.cpp
+         TNExitLoginWidget.cpp
+         TNFeedBackProposalDialog.cpp
+         TNLocaleStorageSettingWidget.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\SetUpd.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib Qt5WebEngineWidgetsd.lib Qt5WebChanneld.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\NetWorkAPId.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\ScreenShotd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\SetUpd.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\SetUpd.lib" /MACHINE:X86 /SAFESEH /DLL Debug\AppearanceWidget.obj
+         Debug\moc_AppearanceWidget.obj
+         Debug\moc_SetUp.obj
+         Debug\moc_SetUpDetailsArea.obj
+         Debug\moc_SetUpListArea.obj
+         Debug\moc_TNAboutUsWidget.obj
+         Debug\moc_TNExitLoginConfirmDialog.obj
+         Debug\moc_TNExitLoginWidget.obj
+         Debug\moc_TNFeedBackProposalDialog.obj
+         Debug\moc_TNLanguageChangeTipDialog.obj
+         Debug\moc_TNLocaleStorageSettingWidget.obj
+         Debug\moc_TNShortCutSettingDialog.obj
+         Debug\moc_TNSkinSet.obj
+         Debug\moc_TNStorageErrorTipsDialog.obj
+         Debug\qrc_SetUp.obj
+         Debug\SetUp.obj
+         Debug\SetUpDetailsArea.obj
+         Debug\SetUpListArea.obj
+         Debug\TNAboutUsWidget.obj
+         Debug\TNExitLoginConfirmDialog.obj
+         Debug\TNExitLoginWidget.obj
+         Debug\TNFeedBackProposalDialog.obj
+         Debug\TNLanguageChangeTipDialog.obj
+         Debug\TNLocaleStorageSettingWidget.obj
+         Debug\TNShortCutSettingDialog.obj
+         Debug\TNSkinSet.obj
+         Debug\TNStorageErrorTipsDialog.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\IMCored.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\NetWorkAPId.lib
+            正在创建库 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\SetUpd.lib 和对象 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\SetUpd.exp
+         SetUp.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\SetUpd.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\SetUp\SetUp.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:11.29

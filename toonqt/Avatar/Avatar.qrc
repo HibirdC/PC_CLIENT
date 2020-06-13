@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/default_feed_avatar.png</file>
+    </qresource>
+</RCC>

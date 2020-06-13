@@ -1,0 +1,12 @@
+﻿#ifndef SCREENSHOT_GLOBAL_H
+#define SCREENSHOT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef SCREENSHOT_LIB
+# define SCREENSHOT_EXPORT Q_DECL_EXPORT
+#else
+# define SCREENSHOT_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SCREENSHOT_GLOBAL_H

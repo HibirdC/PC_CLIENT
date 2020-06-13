@@ -1,0 +1,43 @@
+﻿生成启动时间为 2020-06-12 21:50:24。
+     1>项目“D:\Work\toon_PC_Client\toonqt\IMCore\IMCore.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I.\..\toonsdk\TNMP\include /I.\..\Common /I.\..\LocalStorage /I.\..\NetWorkAPI /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtANGLE /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /I.\..\toonsdk\tnimsdk\include /I.\..\toonsdk\tnimsdk\include\curl /Zi /nologo /W1 /WX- /MP /Od /Oy- /D BUILDING_LIBCURL /D HTTP_ONLY /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D IMCORE_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TNIMNoticeProcessor.cpp
+         TNIMNoticeProcessor.cpp
+     1>D:\Work\toon_PC_Client\toonqt\toonsdk\TNMP\include\tmtp_type.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Work\toon_PC_Client\toonqt\toonsdk\TNMP\include\ITNMPResponse.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\work\toon_pc_client\toonqt\toonsdk\tnmp\include\TMTPConst.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>D:\Work\toon_PC_Client\toonqt\toonsdk\tnimsdk\include\CTNDBHeader.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\work\toon_pc_client\toonqt\toonsdk\tnimsdk\include\CTNIMTypedef.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\IMCored.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib /LIBPATH:.\..\toonsdk\TNMP\lib\x86 /LIBPATH:.\..\toonsdk\openssl\lib\x86 /LIBPATH:.\..\toonsdk\tnimsdk\lib\x86 qtmaind.lib shell32.lib Ws2_32.lib TMTPD.lib wldap32.lib libcurld.lib Crypt32.lib libssl.lib libcrypto.lib TNHttpd.lib tnimsdkd.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib Qt5NetWorkd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\NetWorkAPId.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib" /MACHINE:X86 /SAFESEH /DLL Debug\ctnimclienttnmp.obj
+         Debug\moc_TNIMCoreClient.obj
+         Debug\moc_TNIMCoreProcessor.obj
+         Debug\moc_TNIMMsgManager.obj
+         Debug\moc_TNIMReadSessionManager.obj
+         Debug\moc_TNNoticeUpdater.obj
+         Debug\moc_tnnotifycenter.obj
+         Debug\moc_TNUserDataHelper.obj
+         Debug\imcore.obj
+         Debug\tncmessage.obj
+         Debug\TNIMCoreClient.obj
+         Debug\TNIMCoreProcessor.obj
+         Debug\TNIMMessageOperater.obj
+         Debug\TNIMMsgManager.obj
+         Debug\TNIMNoticeProcessor.obj
+         Debug\TNIMReadSessionManager.obj
+         Debug\TNIMSDKClient.obj
+         Debug\tnimutil.obj
+         Debug\tnmessagebody.obj
+         Debug\TNNoticeUpdater.obj
+         Debug\tnnotifycenter.obj
+         Debug\TNUserDataHelper.obj
+         Debug\TNUserVersionInfo.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\Commond.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\NetWorkAPId.lib
+         IMCore.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\IMCore\IMCore.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.71

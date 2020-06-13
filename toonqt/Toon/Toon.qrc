@@ -1,0 +1,350 @@
+<RCC>
+    <qresource prefix="/shadow">
+        <file>Resources/img/shadow/shadow_bottom.png</file>
+        <file>Resources/img/shadow/shadow_left.png</file>
+        <file>Resources/img/shadow/shadow_left_bottom.png</file>
+        <file>Resources/img/shadow/shadow_left_top.png</file>
+        <file>Resources/img/shadow/shadow_right.png</file>
+        <file>Resources/img/shadow/shadow_right_bottom.png</file>
+        <file>Resources/img/shadow/shadow_right_top.png</file>
+        <file>Resources/img/shadow/shadow_top.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>Resources/toon.qss</file>
+        <file>Resources/emoji.qss</file>
+        <file>Resources/systool.qss</file>
+		<file>Resources/toon_zh.qm</file>
+        <file>Resources/toon_en.qm</file>
+        <file>Resources/toon_tc.qm</file>
+    </qresource>
+    <qresource prefix="/sysButton">
+        <file alias="toon">Resources/img/sysButton/toon.png</file>
+        <file>Resources/img/sysButton/yuanquan.png</file>
+        <file>Resources/img/sysButton/downArrow.png</file>
+        <file>Resources/img/sysButton/rightArrow.png</file>
+        <file>Resources/img/sysButton/warning-icon.png</file>
+        <file>Resources/img/sysButton/login-close.png</file>
+        <file>Resources/img/sysButton/login-close-hover.png</file>
+        <file>Resources/img/sysButton/login-min.png</file>
+        <file>Resources/img/sysButton/login-min-hover.png</file>
+        <file>Resources/img/sysButton/at-close.png</file>
+        <file>Resources/img/sysButton/checked-icon.png</file>
+        <file>Resources/img/sysButton/combobox.png</file>
+        <file>Resources/img/sysButton/choice-arrow.png</file>
+        <file>Resources/img/sysButton/allDefaultAvatar.png</file>
+        <file>Resources/img/sysButton/choiceIcon.png</file>
+        <file>Resources/img/sysButton/avatarChoiceIcon.png</file>
+        <file>Resources/img/sysButton/exchange-icon.png</file>
+        <file>Resources/img/sysButton/addGroupArrow.png</file>
+        <file>Resources/img/sysButton/newmsg-arrow-down.png</file>
+        <file>Resources/img/sysButton/newmsg-arrow-up.png</file>
+        <file>Resources/img/sysButton/newmsg-close.png</file>
+        <file>Resources/img/sysButton/success-ico.png</file>
+        <file>Resources/img/sysButton/offline-ico.png</file>
+        <file>Resources/img/sysButton/img-remove-ico.png</file>
+        <file>Resources/img/sysButton/file-remove-ico.png</file>
+        <file>Resources/img/sysButton/login-code.png</file>
+        <file>Resources/img/sysButton/login-face.png</file>
+        <file>Resources/img/sysButton/login-pc.png</file>
+        <file>Resources/img/sysButton/face-fail-ico.png</file>
+        <file>Resources/img/sysButton/cardcase-none.png</file>
+        <file>Resources/img/sysButton/notice-none.png</file>
+        <file>Resources/img/sysButton/sendfoward-ico.png</file>
+        <file>Resources/img/sysButton/big-cardcase-none.png</file>
+        <file>Resources/img/sysButton/search-none.png</file>
+        <file>Resources/img/sysButton/arrow-down.png</file>
+        <file>Resources/img/sysButton/arrow-up.png</file>
+        <file>Resources/img/sysButton/group/add-btn.png</file>
+        <file>Resources/img/sysButton/group/add-btn-hover.png</file>
+        <file>Resources/img/sysButton/group/add-group-btn.png</file>
+        <file>Resources/img/sysButton/group/add-group-btn-hover.png</file>
+        <file>Resources/img/sysButton/group/cancel-btn.png</file>
+        <file>Resources/img/sysButton/group/checked.png</file>
+        <file>Resources/img/sysButton/group/delete-ico.png</file>
+        <file>Resources/img/sysButton/group/delete-ico-hover.png</file>
+        <file>Resources/img/sysButton/group/exit-btn.png</file>
+        <file>Resources/img/sysButton/group/exit-btn-hover.png</file>
+        <file>Resources/img/sysButton/group/member-ico.png</file>
+        <file>Resources/img/sysButton/group/member-ico-hover.png</file>
+        <file>Resources/img/sysButton/group/search-none.png</file>
+        <file>Resources/img/sysButton/group/uncheck.png</file>
+        <file>Resources/img/sysButton/group/actived.png</file>
+        <file>Resources/img/sysButton/group/member-add.png</file>
+        <file>Resources/img/sysButton/group/member-delete.png</file>
+        <file>Resources/img/sysButton/reset-arrow.png</file>
+        <file>Resources/img/sysButton/reset-arrow-active.png</file>
+        <file>Resources/img/sysButton/resetNum1.png</file>
+        <file>Resources/img/sysButton/resetNum2.png</file>
+        <file>Resources/img/sysButton/resetNum2H.png</file>
+        <file>Resources/img/sysButton/resetState.png</file>
+        <file>Resources/img/sysButton/resetStateH.png</file>
+        <file>Resources/img/sysButton/resetSuccess.png</file>
+        <file>Resources/img/sysButton/cancel-upload.png</file>
+        <file>Resources/img/sysButton/cancel-upload-hover.png</file>
+        <file>Resources/img/sysButton/page-arrow-down.png</file>
+        <file>Resources/img/sysButton/page-arrow-up.png</file>
+        <file>Resources/img/sysButton/homepage-none.png</file>
+    </qresource>
+    <qresource prefix="/skin">
+        <file>Resources/img/skin/default/homepage.png</file>
+        <file alias="menuarea">Resources/img/skin/default/menuArea.png</file>
+        <file alias="shadow">Resources/img/skin/default/shadow.png</file>
+        <file alias="cardcase">Resources/img/skin/default/cardcase.png</file>
+        <file alias="cardcaseHover">Resources/img/skin/default/cardcaseHover.png</file>
+        <file alias="setting">Resources/img/skin/default/setting.png</file>
+        <file alias="settingHover">Resources/img/skin/default/settingHover.png</file>
+        <file>Resources/img/skin/default/default.qss</file>
+        <file alias="notice">Resources/img/skin/default/notice.png</file>
+        <file alias="noticeHover">Resources/img/skin/default/noticeHover.png</file>
+        <file alias="loginLogo">Resources/img/skin/default/loginLogo.png</file>
+        <file alias="topBar">Resources/img/skin/default/topBar.png</file>
+        <file>Resources/img/skin/default/close.png</file>
+        <file>Resources/img/skin/default/close_hover.png</file>
+        <file>Resources/img/skin/default/min.png</file>
+        <file>Resources/img/skin/default/min_hover.png</file>
+        <file alias="toonBg">Resources/img/skin/default/toon-bg.png</file>
+        <file alias="code">Resources/img/skin/default/code.png</file>
+        <file>Resources/img/skin/default/login-btn.png</file>
+        <file alias="check">Resources/img/skin/default/check.png</file>
+        <file alias="checked">Resources/img/skin/default/checked.png</file>
+        <file alias="pc">Resources/img/skin/default/pc-icon.png</file>
+        <file alias="loginCode">Resources/img/skin/default/login-code.png</file>
+        <file alias="loginPassword">Resources/img/skin/default/login-password.png</file>
+        <file alias="loginUser">Resources/img/skin/default/login-user.png</file>
+        <file alias="searchBlack">Resources/img/skin/default/search-black.png</file>
+        <file>Resources/img/skin/default/toon-white.png</file>
+        <file>Resources/img/skin/default/search-card.png</file>
+        <file>Resources/img/skin/default/blueLine.png</file>
+        <file>Resources/img/skin/default/login-bg.png</file>
+        <file>Resources/img/skin/default/login-wave.gif</file>
+        <file>Resources/img/skin/default/mine.png</file>
+        <file>Resources/img/skin/default/mineHover.png</file>
+        <file>Resources/img/skin/default/list-bg.png</file>
+        <file>Resources/img/skin/default/menu-bg.png</file>
+        <file>Resources/img/skin/default/max.png</file>
+        <file>Resources/img/skin/default/max_hover.png</file>
+        <file>Resources/img/skin/default/loading_data.gif</file>
+        <file>Resources/img/skin/default/loading-bg.png</file>
+        <file>Resources/img/skin/default/empty.png</file>
+        <file>Resources/img/skin/default/max_restore.png</file>
+        <file>Resources/img/skin/default/max_restore_hover.png</file>
+        <file>Resources/img/skin/default/emoji_hover.png</file>
+        <file>Resources/img/skin/default/emoji.png</file>
+        <file>Resources/img/skin/default/file_hover.png</file>
+        <file>Resources/img/skin/default/file.png</file>
+        <file>Resources/img/skin/default/pic_hover.png</file>
+        <file>Resources/img/skin/default/pic.png</file>
+        <file alias="add">Resources/img/skin/default/add.png</file>
+        <file alias="addHover">Resources/img/skin/default/addHover.png</file>
+        <file>Resources/img/skin/default/shot-hover.png</file>
+        <file>Resources/img/skin/default/shot.png</file>
+        <file>Resources/img/skin/default/shot-mac-hover.png</file>
+        <file>Resources/img/skin/default/shot-mac.png</file>
+        <file>Resources/img/skin/default/login-btn-active.png</file>
+        <file>Resources/img/skin/default/login-btn-hover.png</file>
+        <file>Resources/img/skin/default/disable.png</file>
+        <file>Resources/img/skin/default/homepageHover.png</file>
+        <file>Resources/img/skin/default/login-btn-disable.png</file>
+    </qresource>
+    <qresource prefix="/browser">
+        <file>Resources/img/browser/bs-back.png</file>
+        <file>Resources/img/browser/bs-close.png</file>
+        <file>Resources/img/browser/bs-fresh.png</file>
+        <file>Resources/img/browser/bs-max.png</file>
+        <file>Resources/img/browser/bs-min.png</file>
+        <file>Resources/img/browser/bs-next.png</file>
+        <file alias="dialogShadow">Resources/img/browser/dialogShadow.png</file>
+        <file>Resources/img/browser/bs-restore.png</file>
+        <file>Resources/img/browser/bs-close-hover.png</file>
+        <file>Resources/img/browser/bs-fresh-hover.png</file>
+        <file>Resources/img/browser/bs-max-hover.png</file>
+        <file>Resources/img/browser/bs-min-hover.png</file>
+        <file>Resources/img/browser/bs-restore-hover.png</file>
+    </qresource>
+    <qresource prefix="/media">
+        <file>Resources/media/messageReceived.wav</file>
+    </qresource>
+    <qresource prefix="/picviewer">
+        <file>Resources/img/picviewer/close.png</file>
+        <file>Resources/img/picviewer/close-hover.png</file>
+        <file>Resources/img/picviewer/download.png</file>
+        <file>Resources/img/picviewer/download-hover.png</file>
+        <file>Resources/img/picviewer/max.png</file>
+        <file>Resources/img/picviewer/max-hover.png</file>
+        <file>Resources/img/picviewer/min.png</file>
+        <file>Resources/img/picviewer/min-hover.png</file>
+        <file>Resources/img/picviewer/rotate.png</file>
+        <file>Resources/img/picviewer/rotate-hover.png</file>
+        <file>Resources/img/picviewer/zoomin.png</file>
+        <file>Resources/img/picviewer/zoomin-hover.png</file>
+        <file>Resources/img/picviewer/zoomout.png</file>
+        <file>Resources/img/picviewer/zoomout-hover.png</file>
+        <file>Resources/img/picviewer/max-restore.png</file>
+        <file>Resources/img/picviewer/max-restore-hover.png</file>
+        <file>Resources/img/picviewer/next.png</file>
+        <file>Resources/img/picviewer/next-hover.png</file>
+        <file>Resources/img/picviewer/preview.png</file>
+        <file>Resources/img/picviewer/preview-hover.png</file>
+    </qresource>
+    <qresource prefix="/mac">
+        <file>Resources/img/mac/close.png</file>
+        <file>Resources/img/mac/close-hover.png</file>
+        <file>Resources/img/mac/disable.png</file>
+        <file>Resources/img/mac/max.png</file>
+        <file>Resources/img/mac/max-hover.png</file>
+        <file>Resources/img/mac/max-restore.png</file>
+        <file>Resources/img/mac/min.png</file>
+        <file>Resources/img/mac/min-hover.png</file>
+    </qresource>
+    <qresource prefix="/green">
+        <file>Resources/img/skin/green/blueLine.png</file>
+        <file>Resources/img/skin/green/default.qss</file>
+        <file>Resources/img/skin/green/emoji_hover.png</file>
+        <file>Resources/img/skin/green/empty.png</file>
+        <file>Resources/img/skin/green/file_hover.png</file>
+        <file>Resources/img/skin/green/list-bg.png</file>
+        <file>Resources/img/skin/green/menu-bg.png</file>
+        <file>Resources/img/skin/green/pic_hover.png</file>
+        <file>Resources/img/skin/green/shot-hover.png</file>
+        <file>Resources/img/skin/green/shot-mac-hover.png</file>
+        <file>Resources/img/skin/green/add-btn.png</file>
+        <file>Resources/img/skin/green/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/pink">
+        <file>Resources/img/skin/pink/blueLine.png</file>
+        <file>Resources/img/skin/pink/default.qss</file>
+        <file>Resources/img/skin/pink/emoji_hover.png</file>
+        <file>Resources/img/skin/pink/file_hover.png</file>
+        <file>Resources/img/skin/pink/list-bg.png</file>
+        <file>Resources/img/skin/pink/menu-bg.png</file>
+        <file>Resources/img/skin/pink/pic_hover.png</file>
+        <file>Resources/img/skin/pink/yuanquan.png</file>
+        <file>Resources/img/skin/pink/shot-hover.png</file>
+        <file>Resources/img/skin/pink/shot-mac-hover.png</file>
+        <file>Resources/img/skin/pink/add-btn.png</file>
+        <file>Resources/img/skin/pink/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/tea">
+        <file>Resources/img/skin/tea/blueLine.png</file>
+        <file>Resources/img/skin/tea/default.qss</file>
+        <file>Resources/img/skin/tea/emoji_hover.png</file>
+        <file>Resources/img/skin/tea/file_hover.png</file>
+        <file>Resources/img/skin/tea/list-bg.png</file>
+        <file>Resources/img/skin/tea/menu-bg.png</file>
+        <file>Resources/img/skin/tea/pic_hover.png</file>
+        <file>Resources/img/skin/tea/shot-hover.png</file>
+        <file>Resources/img/skin/tea/shot-mac-hover.png</file>
+        <file>Resources/img/skin/tea/add-btn.png</file>
+        <file>Resources/img/skin/tea/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/screenShot">
+        <file>Resources/img/screenShot/icon-arrow.png</file>
+        <file>Resources/img/screenShot/icon-circle.png</file>
+        <file>Resources/img/screenShot/icon-cross.png</file>
+        <file>Resources/img/screenShot/icon-download.png</file>
+        <file>Resources/img/screenShot/icon-ok.png</file>
+        <file>Resources/img/screenShot/icon-pen.png</file>
+        <file>Resources/img/screenShot/icon-rotate.png</file>
+        <file>Resources/img/screenShot/icon-square.png</file>
+        <file>Resources/img/screenShot/icon-word.png</file>
+        <file>Resources/img/screenShot/icon-arrow-hover.png</file>
+        <file>Resources/img/screenShot/icon-circle-hover.png</file>
+        <file>Resources/img/screenShot/icon-cross-hover.png</file>
+        <file>Resources/img/screenShot/icon-download-hover.png</file>
+        <file>Resources/img/screenShot/icon-ok-hover.png</file>
+        <file>Resources/img/screenShot/icon-pen-hover.png</file>
+        <file>Resources/img/screenShot/icon-rotate-hover.png</file>
+        <file>Resources/img/screenShot/icon-square-hover.png</file>
+        <file>Resources/img/screenShot/icon-word-hover.png</file>
+        <file>Resources/img/screenShot/color1.png</file>
+        <file>Resources/img/screenShot/color1-hover.png</file>
+        <file>Resources/img/screenShot/color2.png</file>
+        <file>Resources/img/screenShot/color2-hover.png</file>
+        <file>Resources/img/screenShot/color3.png</file>
+        <file>Resources/img/screenShot/color3-hover.png</file>
+        <file>Resources/img/screenShot/color4.png</file>
+        <file>Resources/img/screenShot/color4-hover.png</file>
+        <file>Resources/img/screenShot/color5.png</file>
+        <file>Resources/img/screenShot/color5-hover.png</file>
+        <file>Resources/img/screenShot/color6.png</file>
+        <file>Resources/img/screenShot/color6-hover.png</file>
+        <file>Resources/img/screenShot/color7.png</file>
+        <file>Resources/img/screenShot/color7-hover.png</file>
+        <file>Resources/img/screenShot/color8.png</file>
+        <file>Resources/img/screenShot/color8-hover.png</file>
+        <file>Resources/img/screenShot/line-l.png</file>
+        <file>Resources/img/screenShot/line-l-hover.png</file>
+        <file>Resources/img/screenShot/line-m.png</file>
+        <file>Resources/img/screenShot/line-m-hover.png</file>
+        <file>Resources/img/screenShot/line-s.png</file>
+        <file>Resources/img/screenShot/line-s-hover.png</file>
+        <file>Resources/img/screenShot/menu/arrow.png</file>
+        <file>Resources/img/screenShot/menu/circle.png</file>
+        <file>Resources/img/screenShot/menu/cross.png</file>
+        <file>Resources/img/screenShot/menu/download.png</file>
+        <file>Resources/img/screenShot/menu/ok.png</file>
+        <file>Resources/img/screenShot/menu/pen.png</file>
+        <file>Resources/img/screenShot/menu/rotate.png</file>
+        <file>Resources/img/screenShot/menu/square.png</file>
+        <file>Resources/img/screenShot/menu/word.png</file>
+    </qresource>
+    <qresource prefix="/sysIcon">
+        <file>Resources/img/sysIcon/MacSystemTray.icns</file>
+        <file>Resources/img/sysIcon/windowsicon.png</file>
+        <file>Resources/img/sysIcon/WinSystemTray.ico</file>
+    </qresource>
+    <qresource prefix="/orange">
+        <file>Resources/img/skin/orange/blueLine.png</file>
+        <file>Resources/img/skin/orange/default.qss</file>
+        <file>Resources/img/skin/orange/emoji_hover.png</file>
+        <file>Resources/img/skin/orange/file_hover.png</file>
+        <file>Resources/img/skin/orange/list-bg.png</file>
+        <file>Resources/img/skin/orange/menu-bg.png</file>
+        <file>Resources/img/skin/orange/pic_hover.png</file>
+        <file>Resources/img/skin/orange/shot-hover.png</file>
+        <file>Resources/img/skin/orange/yuanquan.png</file>
+        <file>Resources/img/skin/orange/shot-mac-hover.png</file>
+        <file>Resources/img/skin/orange/add-btn.png</file>
+        <file>Resources/img/skin/orange/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/purple">
+        <file>Resources/img/skin/purple/blueLine.png</file>
+        <file>Resources/img/skin/purple/default.qss</file>
+        <file>Resources/img/skin/purple/emoji_hover.png</file>
+        <file>Resources/img/skin/purple/file_hover.png</file>
+        <file>Resources/img/skin/purple/list-bg.png</file>
+        <file>Resources/img/skin/purple/menu-bg.png</file>
+        <file>Resources/img/skin/purple/pic_hover.png</file>
+        <file>Resources/img/skin/purple/shot-hover.png</file>
+        <file>Resources/img/skin/purple/shot-mac-hover.png</file>
+        <file>Resources/img/skin/purple/add-btn.png</file>
+        <file>Resources/img/skin/purple/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/orchid">
+        <file>Resources/img/skin/orchid/blueLine.png</file>
+        <file>Resources/img/skin/orchid/default.qss</file>
+        <file>Resources/img/skin/orchid/emoji_hover.png</file>
+        <file>Resources/img/skin/orchid/file_hover.png</file>
+        <file>Resources/img/skin/orchid/list-bg.png</file>
+        <file>Resources/img/skin/orchid/menu-bg.png</file>
+        <file>Resources/img/skin/orchid/pic_hover.png</file>
+        <file>Resources/img/skin/orchid/shot-hover.png</file>
+        <file>Resources/img/skin/orchid/shot-mac-hover.png</file>
+        <file>Resources/img/skin/orchid/add-btn.png</file>
+        <file>Resources/img/skin/orchid/member-ico-hover.png</file>
+    </qresource>
+    <qresource prefix="/bud">
+        <file>Resources/img/skin/bud/blueLine.png</file>
+        <file>Resources/img/skin/bud/default.qss</file>
+        <file>Resources/img/skin/bud/emoji_hover.png</file>
+        <file>Resources/img/skin/bud/file_hover.png</file>
+        <file>Resources/img/skin/bud/list-bg.png</file>
+        <file>Resources/img/skin/bud/menu-bg.png</file>
+        <file>Resources/img/skin/bud/pic_hover.png</file>
+        <file>Resources/img/skin/bud/shot-hover.png</file>
+        <file>Resources/img/skin/bud/yuanquan.png</file>
+        <file>Resources/img/skin/bud/shot-mac-hover.png</file>
+        <file>Resources/img/skin/bud/add-btn.png</file>
+        <file>Resources/img/skin/bud/member-ico-hover.png</file>
+    </qresource>
+</RCC>

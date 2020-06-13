@@ -1,0 +1,47 @@
+﻿生成启动时间为 2020-06-12 21:50:30。
+     1>项目“D:\Work\toon_PC_Client\toonqt\LocalStorage\LocalStorage.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /I.\..\Common /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_SQL_LIB /D LOCALSTORAGE_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TNDataCache.cpp
+         TNDataCache.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\LocalStoraged.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib qtmaind.lib Qt5Cored.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib Qt5Sqld.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib" /MACHINE:X86 /SAFESEH /DLL Debug\ConnectionPool.obj
+         Debug\moc_TNDataCache.obj
+         Debug\moc_TNDataControlServer.obj
+         Debug\LocalStorageCommon.obj
+         Debug\TNBaseTable.obj
+         Debug\localstorage.obj
+         Debug\TNBlackList.obj
+         Debug\TNBMessage0.obj
+         Debug\TNChatAppList.obj
+         Debug\TNChatSettings.obj
+         Debug\TNColleagueGroup.obj
+         Debug\TNColleagueRelation.obj
+         Debug\TNCompanyInfo.obj
+         Debug\TNDataCache.obj
+         Debug\TNDataControlServer.obj
+         Debug\TNDbUtil.obj
+         Debug\tnfaceid.obj
+         Debug\TNGroupInfo.obj
+         Debug\TNGroupMember.obj
+         Debug\TNNewFriend.obj
+         Debug\TNNewFriendUtil.obj
+         Debug\TNOwnerData.obj
+         Debug\TNReadSessionReq.obj
+         Debug\TNSetUp.obj
+         Debug\TNLoginUser.obj
+         Debug\TNMessageAppInfo.obj
+         Debug\TNMessageFault.obj
+         Debug\TNMessageOperate.obj
+         Debug\TNFeed.obj
+         Debug\TNMyStuff.obj
+         Debug\TNJoinStuff.obj
+         Debug\TNSession.obj
+         Debug\TNSessionBackground.obj
+         Debug\TNVersion.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\Commond.lib
+         LocalStorage.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\LocalStorage\LocalStorage.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.46

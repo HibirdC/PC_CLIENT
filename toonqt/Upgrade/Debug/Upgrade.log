@@ -1,0 +1,31 @@
+﻿生成启动时间为 2020-06-11 19:06:03。
+     1>项目“D:\Work\toon_PC_Client\toonqt\Upgrade\Upgrade.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Rcc'ing upgrade.qrc...
+         Uic'ing TNDownloadProgressDialog.ui...
+         Moc'ing downloadmanager.h...
+         Moc'ing TNDownloadProgressDialog.h...
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /I..\Common /I..\NetWorkAPI /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\toonsdk\zlib\include /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt downloadmanager.cpp GeneratedFiles\moc_downloadmanager.cpp GeneratedFiles\moc_TNDownloadProgressDialog.cpp gmblogger.cpp main.cpp TNDownloadProgressDialog.cpp
+         downloadmanager.cpp
+         moc_downloadmanager.cpp
+         moc_TNDownloadProgressDialog.cpp
+         gmblogger.cpp
+         main.cpp
+         TNDownloadProgressDialog.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /I..\Common /I..\NetWorkAPI /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\toonsdk\zlib\include /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\qrc_upgrade.cpp
+         qrc_upgrade.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\Upgrade.exe" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib /LIBPATH:D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5NetWorkd.lib Qt5Widgetsd.lib Commond.lib NetWorkAPId.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Upgrade.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Upgrade.lib" /MACHINE:X86 /SAFESEH Debug\downloadmanager.obj
+         Debug\moc_downloadmanager.obj
+         Debug\moc_TNDownloadProgressDialog.obj
+         Debug\qrc_upgrade.obj
+         Debug\gmblogger.obj
+         Debug\main.obj
+         Debug\TNDownloadProgressDialog.obj
+         Upgrade.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Upgrade.exe
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\Upgrade\Upgrade.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.09

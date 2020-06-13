@@ -1,0 +1,141 @@
+﻿生成启动时间为 2020-06-12 21:49:00。
+     1>项目“D:\Work\toon_PC_Client\toonqt\Notice\Notice.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebChannel /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineWidgets /I.\..\Common /I.\..\ScreenShot /I.\..\LocalStorage /I.\..\ToonProtocol /I.\..\IMCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtMultimedia /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\NetWorkAPI /ID:\Work\toon_PC_Client\TOONSDK\\opencore_amr\windows\include /I..\Search /I.\..\TNMVD /I.\AtSearch /I.\GroupChat /I.\back_list /I.\list_notice /I.\input /I.\network /I.\history /I.\details_notice /I.\..\toonsdk\tnimsdk\include /I.\..\toonsdk\TNMP\include /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D NOTICE_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt details_notice\tnfilebrowser.cpp
+         tnfilebrowser.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\Noticed.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib /LIBPATH:D:\Work\toon_PC_Client\TOONSDK\\opencore_amr\windows\x86\lib /LIBPATH:.\..\toonsdk\TNMP\lib\x86 /LIBPATH:.\..\toonsdk\openssl\lib\x86 /LIBPATH:.\..\toonsdk\tnimsdk\lib\x86 qtmaind.lib Crypt32.lib libssl.lib libcrypto.lib TNHttpd.lib tnimsdkd.lib Qt5Cored.lib Qt5Sqld.lib Qt5Guid.lib Qt5Widgetsd.lib Qt5NetWorkd.lib Qt5WebEngineWidgetsd.lib Qt5WebChanneld.lib Qt5Multimediad.lib "opencore-amrnb.lib" D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\NetWorkAPId.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\ToonProtocold.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Searchd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Noticed.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Noticed.lib" /MACHINE:X86 /SAFESEH /DLL Debug\tnatlistitemwidget.obj
+         Debug\TNATSearchAdapter.obj
+         Debug\TNATSearchListItemDelegate.obj
+         Debug\tnnoticeatarea.obj
+         Debug\tnplayaudio.obj
+         Debug\tnconvertamr.obj
+         Debug\wavwriter.obj
+         Debug\image_progress_bar.obj
+         Debug\mytableview.obj
+         Debug\NoticeDetailsArea.obj
+         Debug\tnaudiobrowser.obj
+         Debug\TNChatDetailBase.obj
+         Debug\tndetailsunreadwdiget.obj
+         Debug\tnfilebrowser.obj
+         Debug\TNGrowingTextBrowser.obj
+         Debug\tnloadinghository.obj
+         Debug\TNMsgDetailDelegate.obj
+         Debug\TNMsgDetailItemWidget.obj
+         Debug\TNMsgDetailModel.obj
+         Debug\tnothermessagebrowser.obj
+         Debug\tnstatuslabel.obj
+         Debug\deal_draft_data.obj
+         Debug\tnemojiwidget.obj
+         Debug\moc_image_progress_bar.obj
+         Debug\moc_loadhistorydata.obj
+         Debug\moc_mytableview.obj
+         Debug\moc_Notice.obj
+         Debug\moc_NoticeDetailsArea.obj
+         Debug\moc_NoticeListArea.obj
+         Debug\moc_noticelistdelegate.obj
+         Debug\moc_noticelistmodel.obj
+         Debug\moc_SelectContactDialog.obj
+         Debug\moc_SendFowardSelectContactDialog.obj
+         Debug\moc_someoneatyou.obj
+         Debug\moc_tnatlistitemwidget.obj
+         Debug\moc_TNATSearchAdapter.obj
+         Debug\moc_TNATSearchListItemDelegate.obj
+         Debug\moc_tnaudiobrowser.obj
+         Debug\moc_TNBatchSendFileConfirmDialog.obj
+         Debug\moc_TNBatchSendImageConfirmDialog.obj
+         Debug\moc_TNChatDetailBase.obj
+         Debug\moc_TNContactModel.obj
+         Debug\moc_tnconvertamr.obj
+         Debug\moc_TNCreateGroupChatDialog.obj
+         Debug\moc_tncustomtextedit.obj
+         Debug\moc_tndetailsunreadwdiget.obj
+         Debug\moc_TNDropDownPushButton.obj
+         Debug\moc_tnemojiwidget.obj
+         Debug\moc_TNExitGroupChatConfirmDialog.obj
+         Debug\moc_tnfilebrowser.obj
+         Debug\moc_tngeneratenoticemodeldata.obj
+         Debug\moc_TNGroupChatCreator.obj
+         Debug\moc_TNGroupChatMembersWidget.obj
+         Debug\moc_TNGrowingTextBrowser.obj
+         Debug\moc_TNImageLoadThread.obj
+         Debug\moc_TNInitiateGroupChatCommand.obj
+         Debug\moc_TNInputGroupChatNameDialog.obj
+         Debug\moc_TNJoinGroupChatConfirmDialog.obj
+         Debug\moc_tnloadinghository.obj
+         Debug\moc_TNMsgDetailDelegate.obj
+         Debug\moc_TNMsgDetailItemWidget.obj
+         Debug\moc_TNMsgDetailModel.obj
+         Debug\moc_TNNewFriendCard.obj
+         Debug\moc_tnnoticeatarea.obj
+         Debug\moc_TNNoticeDetailTableWidget.obj
+         Debug\moc_tnnoticelisttableview.obj
+         Debug\moc_TNNoticeMessageOperate.obj
+         Debug\moc_tnothermessagebrowser.obj
+         Debug\moc_tnoutlinemessagethread.obj
+         Debug\moc_tnplayaudio.obj
+         Debug\moc_TNRemoveGroupChatMemberDialog.obj
+         Debug\moc_TNSendConfirmDialog.obj
+         Debug\moc_tnsendimsg.obj
+         Debug\moc_tnsessionnetwork.obj
+         Debug\moc_TNShowGroupFrameCommand.obj
+         Debug\moc_tnstatuslabel.obj
+         Debug\moc_tntextobject.obj
+         Debug\moc_tnwarndlag.obj
+         Debug\qrc_Notice.obj
+         Debug\SelectContactDialog.obj
+         Debug\TNContactModel.obj
+         Debug\TNCreateGroupChatDialog.obj
+         Debug\TNGroupChatCreator.obj
+         Debug\TNGroupChatMembersWidget.obj
+         Debug\TNInputGroupChatNameDialog.obj
+         Debug\TNRemoveGroupChatMemberDialog.obj
+         Debug\loadhistorydata.obj
+         Debug\tncustomtextedit.obj
+         Debug\NoticeListArea.obj
+         Debug\noticelistdelegate.obj
+         Debug\noticelistmodel.obj
+         Debug\tnnoticelisttableview.obj
+         Debug\tngeneratenoticemodeldata.obj
+         Debug\TNModelUserMessage.obj
+         Debug\tnsendimsg.obj
+         Debug\tnsessionnetwork.obj
+         Debug\Notice.obj
+         Debug\tnoutlinemessagethread.obj
+         Debug\SendFowardSelectContactDialog.obj
+         Debug\someoneatyou.obj
+         Debug\TNBatchSendFileConfirmDialog.obj
+         Debug\TNBatchSendImageConfirmDialog.obj
+         Debug\TNDropDownPushButton.obj
+         Debug\TNExitGroupChatConfirmDialog.obj
+         Debug\TNImageLoadThread.obj
+         Debug\TNNewFriendCard.obj
+         Debug\TNNoticeDetailTableWidget.obj
+         Debug\TNNoticeMessageOperate.obj
+         Debug\TNSendConfirmDialog.obj
+         Debug\tntextobject.obj
+         Debug\tnwarndlag.obj
+         Debug\TNInitiateGroupChatCommand.obj
+         Debug\TNJoinGroupChatConfirmDialog.obj
+         Debug\TNShowGroupFrameCommand.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\IMCored.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\NetWorkAPId.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\ScreenShotd.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\TNMVDd.lib
+     1>tnimsdkd.lib(CTNDBHeader.obj) : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+            正在创建库 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Noticed.lib 和对象 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Noticed.exp
+     1>libcrypto.lib(md5_dgst.obj) : warning LNK4099: 未找到 PDB“ossl_static.pdb”(使用“libcrypto.lib(md5_dgst.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\ossl_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>libcrypto.lib(md5_one.obj) : warning LNK4099: 未找到 PDB“ossl_static.pdb”(使用“libcrypto.lib(md5_one.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\ossl_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>libcrypto.lib(mem_clr.obj) : warning LNK4099: 未找到 PDB“ossl_static.pdb”(使用“libcrypto.lib(mem_clr.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\ossl_static.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>tnimsdkd.lib(CLog.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tnimsdkd.lib(CLog.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>tnimsdkd.lib(CThreadEx.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tnimsdkd.lib(CThreadEx.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>tnimsdkd.lib(CTNJsonUtils.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tnimsdkd.lib(CTNJsonUtils.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>tnimsdkd.lib(CTNDBHeader.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tnimsdkd.lib(CTNDBHeader.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+     1>tnimsdkd.lib(CTNDBUtils.obj) : warning LNK4099: 未找到 PDB“vc120.pdb”(使用“tnimsdkd.lib(CTNDBUtils.obj)”或在“D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\vc120.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         Notice.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Noticed.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\Notice\Notice.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:06.62

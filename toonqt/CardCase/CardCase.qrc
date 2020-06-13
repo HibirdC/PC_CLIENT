@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/toolWidget/CardCase.png</file>
+        <file>Resources/toolWidget/CardCase_Check.png</file>
+        <file>Resources/DetailWidget/icon_search_normal.png</file>
+    </qresource>
+    <qresource prefix="/DetailWidget">
+        <file>Resources/DetailWidget/Return.png</file>
+        <file>Resources/DetailWidget/Empty.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,140 @@
+cmake_minimum_required(VERSION 2.8.11) 
+
+set(PACKAGE "NetWorkApi")
+set(CMAKE_AUTOMOC ON)
+
+IF(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    add_definitions(-DQT_DLL -DNETWORKAPI_LIB -DUNICODE)
+    configure_file(
+      ${CMAKE_SOURCE_DIR}/version.rc.in
+      ${CMAKE_CURRENT_SOURCE_DIR}/NetWorkAPI.rc
+      @ONLY)
+ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    add_definitions(-DNETWORKAPI_LIB)
+ELSE()
+    add_definitions(-DNETWORKAPI_LIB)
+ENDIF()
+
+#根据不同平台的编译环境加载lib
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    SET (CMAKE_DEBUG_POSTFIX "d")
+    #set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
+    #set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_RELEASE} /MD")
+    IF(CMAKE_SIZEOF_VOID_P EQUAL 8)
+        IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/Commond.lib)
+        ELSE()
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/Common.lib)
+        ENDIF()
+    ELSEIF(CMAKE_SIZEOF_VOID_P EQUAL 4)
+        IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x86/bin/Debug/Commond.lib)
+        ELSE()
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x86/bin/Release/Common.lib)
+        ENDIF()
+    ENDIF()
+ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Linux")
+    IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/libCommon.so)
+    ELSE()
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/libCommon.so)
+    ENDIF()
+ENDIF()
+
+IF(APPLE)
+    IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/libCommon.dylib)
+    ELSE()
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/libCommon.dylib)
+    ENDIF()
+ENDIF()
+
+#头文件搜索路径
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/Common)
+
+FILE(GLOB NETWORK_HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+FILE(GLOB NETWORK_FORM_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.ui)
+FILE(GLOB NETWORK_SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp) 
+FILE(GLOB NETWORK_RESOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.qrc)
+FILE(GLOB NOTAUTOMOC_SOURCE ${CMAKE_BINARY_DIR}/NetWorkAPI/qrc_*.cpp)
+set_property(SOURCE ${NOTAUTOMOC_SOURCE} PROPERTY SKIP_AUTOMOC ON)
+
+
+#FILE(GLOB NETWORK_MOC_FILES 
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNAvatarPhotoGetter.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpApi.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpBaseApi.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNUpgradeMangement.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNNetDetecter.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpDownCloud.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpCloudApi.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpUpdateVersion.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpQRCodeKeyGen.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpObtainGroupChatMen.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpObtainGroupChatsByl.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpObtainGroupMember.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpLoadAvator.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpObtainGroupChatInfo.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpGetListStaffContactBy.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNHttpGetListGroupRegister.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNDownAvator.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/TNThreadForAvator.h
+#    )
+
+if (MSVC)
+    SOURCE_GROUP("Header Files" FILES ${NETWORK_HEADER_FILES})
+    SOURCE_GROUP("Form Files" FILES ${NETWORK_FORM_FILES})
+    SOURCE_GROUP("Source Files" FILES ${NETWORK_SOURCE_FILES})
+    SOURCE_GROUP("Resource Files" FILES ${NETWORK_RESOURCE_FILES})
+endif(MSVC)
+#QT GUI
+
+find_package(Qt5Network)
+find_package(Qt5Core)
+find_package(Qt5Gui)
+find_package(Qt5Widgets)
+
+QT5_WRAP_UI(FORMS_UIC ${NETWORK_FORM_FILES})
+QT5_ADD_RESOURCES(QRC_RCC ${NETWORK_RESOURCE_FILES})
+#QT5_WRAP_CPP(HEADERS_MOC ${NETWORK_MOC_FILES})
+
+if(MSVC)
+    SOURCE_GROUP("Generated Files" FILES ${HEADERS_MOC})
+    FILE(GLOB NETWORK_GENERATED_FILES ${HEADERS_MOC}) 
+endif(MSVC)
+
+IF(CMAKE_SYSTEM_NAME MATCHES "Windows")
+ADD_LIBRARY(${PACKAGE} SHARED 
+    ${NETWORK_RESOURCE_FILES}
+    ${NETWORK_HEADER_FILES}
+    ${NETWORK_SOURCE_FILES}
+    ${NETWORK_FORM_FILES}
+    ${FROMS_UIC} ${QRC_RCC}
+    #${HEADERS_MOC}
+    ${CMAKE_CURRENT_SOURCE_DIR}/NetWorkAPI.rc
+    )
+ELSE()
+ADD_LIBRARY(${PACKAGE} SHARED 
+    ${NETWORK_RESOURCE_FILES}
+    ${NETWORK_HEADER_FILES}
+    ${NETWORK_SOURCE_FILES}
+    ${NETWORK_FORM_FILES}
+    ${FROMS_UIC} ${QRC_RCC}
+    #${HEADERS_MOC}
+    )
+ENDIF()
+
+TARGET_LINK_LIBRARIES(${PACKAGE}
+    Qt5::Core
+    Qt5::Network
+    Qt5::Gui
+    Qt5::Widgets
+    ${COMMONLIB}
+    ) 
+
+set_target_properties(${PACKAGE} PROPERTIES SOVERSION ${TOON_VERSION})
+
+#生成目录
+set(LIBRARY_OUTPUT_PATH ${TOON_OUTPUT_PATH})

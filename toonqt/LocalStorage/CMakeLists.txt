@@ -1,0 +1,115 @@
+cmake_minimum_required(VERSION 2.8.11) 
+#MESSAGE(STATUS "bin dir:" ${CMAKE_CURRENT_BINARY_DIR})
+#MESSAGE(STATUS "source dir:" ${CMAKE_CURRENT_SOURCE_DIR})
+set(CMAKE_CXX_STANDARD 11)
+set(PACKAGE "LocalStorage")
+set(CMAKE_AUTOMOC ON)
+
+if(sqlite_cipher MATCHES "^SQLITE_CIPHER=1$")
+    add_definitions(-DSQLITE_CIPHER)
+    message("add_definitions: SQLITE_CIPHER")
+endif()
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    add_definitions(-DLOCALSTORAGE_LIB)
+ELSEIF(CMAKE_SYSTEM_NAME MATCHES "Windows")
+    add_definitions(-DQT_DLL -DLOCALSTORAGE_LIB -DUNICODE)
+    configure_file(
+      ${CMAKE_SOURCE_DIR}/version.rc.in
+      ${CMAKE_CURRENT_SOURCE_DIR}/LocalStorage.rc
+      @ONLY)
+ELSE()
+    add_definitions(-DLOCALSTORAGE_LIB)
+ENDIF()
+
+
+
+#根据不同平台的编译环境加载lib
+IF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    SET (CMAKE_DEBUG_POSTFIX "d")
+    #set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MD")
+    #set (CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_RELEASE} /MD")
+    IF(CMAKE_SIZEOF_VOID_P EQUAL 8)
+        IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/Commond.lib)
+        ELSE()
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/Common.lib)
+        ENDIF()
+    ELSEIF(CMAKE_SIZEOF_VOID_P EQUAL 4)
+        IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x86/bin/Debug/Commond.lib)
+        ELSE()
+            SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x86/bin/Release/Common.lib)
+        ENDIF()
+    ENDIF()
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/libCommon.so)
+    ELSE()
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/libCommon.so)
+    ENDIF()
+ENDIF()
+#mac
+IF(APPLE)
+    IF(CMAKE_BUILD_TYPE MATCHES "Debug")
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Debug/libCommon.dylib)
+    ELSE()
+        SET(COMMONLIB ${PROJECT_SOURCE_DIR}/toonsdk/build/x64/bin/Release/libCommon.dylib)
+    ENDIF()
+ENDIF()
+
+#头文件搜索路径
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/Common)
+
+FILE(GLOB STORAGE_HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.h)
+FILE(GLOB STORAGE_FORM_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.ui)
+FILE(GLOB STORAGE_SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp) 
+FILE(GLOB STORAGE_RESOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.qrc)
+#FILE(GLOB STORAGE_MOC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/TNDataCache.h)
+
+if (MSVC)
+    SOURCE_GROUP("Header Files" FILES ${STORAGE_HEADER_FILES})
+    SOURCE_GROUP("Form Files" FILES ${STORAGE_FORM_FILES})
+    SOURCE_GROUP("Source Files" FILES ${STORAGE_SOURCE_FILES})
+    SOURCE_GROUP("Resource Files" FILES ${STORAGE_RESOURCE_FILES})
+endif(MSVC)
+#QT GUI
+
+find_package(Qt5Sql)
+QT5_WRAP_UI(FORMS_UIC ${STORAGE_FORM_FILES})
+QT5_ADD_RESOURCES(QRC_RCC ${STORAGE_RESOURCE_FILES})
+#QT5_WRAP_CPP(HEADERS_MOC ${STORAGE_MOC_FILES})
+
+IF(CMAKE_SYSTEM_NAME MATCHES "Windows")
+ADD_LIBRARY(${PACKAGE} SHARED 
+    ${STORAGE_RESOURCE_FILES}
+    ${STORAGE_HEADER_FILES}
+    ${STORAGE_SOURCE_FILES}
+    ${STORAGE_FORM_FILES}
+    ${FROMS_UIC}
+    ${QRC_RCC}
+    ${HEADERS_MOC}
+    ${CMAKE_CURRENT_SOURCE_DIR}/LocalStorage.rc
+    )
+ELSE()
+ADD_LIBRARY(${PACKAGE} SHARED 
+    ${STORAGE_RESOURCE_FILES}
+    ${STORAGE_HEADER_FILES}
+    ${STORAGE_SOURCE_FILES}
+    ${STORAGE_FORM_FILES}
+    ${FROMS_UIC}
+    ${QRC_RCC}
+    ${HEADERS_MOC}
+    )
+ENDIF()
+
+TARGET_LINK_LIBRARIES(${PACKAGE}
+    Qt5::Sql
+    ${COMMONLIB}
+    ) 
+set_target_properties(${PACKAGE} PROPERTIES SOVERSION ${TOON_VERSION})
+
+#生成目录
+set(LIBRARY_OUTPUT_PATH ${TOON_OUTPUT_PATH})

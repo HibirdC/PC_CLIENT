@@ -1,0 +1,1700 @@
+﻿/* 公共样式 */
+    a{
+        color:#3F94FC;
+        text-decoration:none;
+    }
+    QObject{
+        font-family:"微软雅黑";
+        font-size:12px;
+    }
+
+    QTableView, QTreeView{
+        border:0;
+    }
+    * {
+        outline:none;
+    }
+    QPushButton{
+        outline: none;
+    }
+    /* 设置登录窗体样式 */
+    QDialog#Login{
+        height:432px;
+        width:320px;
+        border:0;
+        background-color: transparent;
+    }
+    /* 设置主窗体样式 */
+    #Toon{
+        height:652px;
+        width:1002px;
+        border:none;
+        background:transparent;
+        overflow:hidden;
+    }
+
+    /* 设置主体标题栏样式 */
+    #toonTitle{
+        width:680px;
+        min-height:18px;
+        max-height:18px;
+        overflow:hidden;
+    }
+    #titleWidget_unix{
+        min-height:18px;
+        max-height:18px;
+    }
+    /* 最小化 */
+    #toonMin{
+        width:18px;
+        height:18px;
+        background:transparent;
+        border-image:url(:/skin/Resources/img/skin/default/min.png);
+    }
+    #toonMin:hover,#toonMin:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/min_hover.png);
+    }
+    /* 最大化 */
+    #toonMax{
+        width:18px;
+        height:18px;
+        background:transparent;
+        border-image:url(:/skin/Resources/img/skin/default/max.png);
+    }
+    #toonMax:hover,#toonMax:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/max_hover.png);
+    }
+    #toonMax:checked{
+        border-image:url(:/skin/Resources/img/skin/default/max_restore.png);
+    }
+    #toonMax:checked:hover,#toonMax:checked:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/max_restore_hover.png);
+    }
+    /* 关闭按钮 */
+    #toonClose{
+        width:18px;
+        height:18px;
+        background:transparent;
+        border-image:url(:/skin/Resources/img/skin/default/close.png);
+    }
+    #toonClose:hover,#toonClose:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/close_hover.png);
+    }
+    /* 左侧菜单工具栏 */
+    QWidget#MenuArea{
+        height:650px;
+        min-width:70px;
+        max-width:70px;
+        background:url(:/skin/Resources/img/skin/default/menu-bg.png) no-repeat center bottom;
+        border-top-left-radius: 4px;
+    }
+    /* 列表区 */
+    QWidget#ListArea{
+        height:650px;
+        min-width:250px;
+        max-width:250px;
+        background:url(:/skin/Resources/img/skin/default/list-bg.png);
+        border-top:1px solid #DFDFDF;
+        border-bottom:1px solid #DFDFDF;
+    }
+    /* mac列表区 */
+    QWidget#MacListArea{
+        min-height:650px;
+        min-width:250px;
+        max-width:250px;
+        background:url(:/skin/Resources/img/skin/default/list-bg.png);
+        border:0;
+    }
+    /* 详情区 */
+    #detailWidget{
+        width:680px;
+        height:650px;
+        border:1px solid #DFDFDF;
+        border-left:none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background:#ffffff;
+    }
+    /* mac详情区 */
+    #MacDetailWidget{
+       	min-width:680px;
+        min-height:650px;
+        border:0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background:#ffffff;
+    }
+    /* 详情区内容 */
+    QWidget#DetailsArea{
+        background:transparent;
+        height:632px;
+       	width:680px;
+        border-bottom-right-radius: 4px;
+        overflow:hidden;
+    }
+    /* 消息详情区 */
+    #NoticeDetailsArea, #stackedWidget{
+        background:transparent;
+        width:680px;
+        height:632px;
+    }
+
+    /* mac下标题栏样式---------------------------- */
+        #titleWidget_unix{
+            min-width: 70px;
+            max-width:70px;
+            min-height:12px;
+            max-height:12px;    
+        }
+        /* 最小化 */
+        #macMin{
+            min-width: 12px;
+            max-width:12px;
+            min-height:12px;
+            max-height:12px;
+            background:transparent;
+            border-image:url(:/mac/Resources/img/mac/min.png);
+        }
+        #macMin:hover{
+            border-image:url(:/mac/Resources/img/mac/min-hover.png);
+        }
+        #macMin:!enabled{
+            border-image:url(:/mac/Resources/img/mac/disable.png);
+        }
+        /* 最大化 */
+        #macMax{
+            min-width: 12px;
+            max-width:12px;
+            min-height:12px;
+            max-height:12px;
+            background:transparent;
+            border-image:url(:/mac/Resources/img/mac/max.png);
+        }
+        #macMax:Hover{
+            border-image:url(:/mac/Resources/img/mac/max-hover.png);
+        }
+        #macMax:checked{
+            border-image:url(:/mac/Resources/img/mac/max.png);
+        }
+        #macMax:checked:hover{
+            border-image:url(:/mac/Resources/img/mac/max-restore.png);
+        }
+
+        /* 关闭按钮 */
+        #macClose{
+            min-width: 12px;
+            max-width:12px;
+            min-height:12px;
+            max-height:12px;
+            background:transparent;
+            border-image:url(:/mac/Resources/img/mac/close.png);
+        }
+        #macClose:hover{
+            border-image:url(:/mac/Resources/img/mac/close-hover.png);
+        }
+
+
+/* Login 登录样式 ============================================================================== */
+    /* 登录主体 */
+    #LoginBody,#TNLoginWidget{
+        width:320px;
+        height:432px;
+        background-image: url(:/skin/Resources/img/skin/default/login-bg.png);
+        background-position:center bottom;
+        background-repeat: no-repeat;
+    }
+    /* 登录标题 */
+    QWidget#LoginTitle{
+        min-height:18px;
+        max-height:18px;
+    }
+    /* 最小化 */
+    #loginMin{
+        min-width:18px;
+        max-width:18px;
+        min-height:18px;
+        max-width:18px;
+        background:transparent;
+        border-image:url(:/skin/Resources/img/skin/default/min.png);
+        margin-right:6px;
+    }
+    #loginMin:hover,#loginMin:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/min_hover.png);
+    }
+    /* 关闭 */
+    #loginClose{
+        min-width:18px;
+        max-width:18px;
+        min-height:18px;
+        max-width:18px;
+        background:transparent;
+        border-image:url(:/skin/Resources/img/skin/default/close.png);
+    }
+    #loginClose:hover,#loginClose:pressed{
+        border-image:url(:/skin/Resources/img/skin/default/close_hover.png);
+    }
+    /* 登录logo */
+    #label_title{
+        width:70px;
+        height:27px;
+        min-width:70px;
+        min-height:27px;
+        max-width:70px;
+        max-height:27px;
+        border-image: url(:/skin/loginLogo);
+        background:transparent;
+    }
+    /* 登录tab */
+    #checkBox_pwdLogin,#checkBox_IdeCodeLogin{
+        font-size: 13px;
+        color: #AEAEAE;
+        border:0;
+        background:transparent;
+        padding-bottom:2px;
+        border-bottom:2px solid transparent;
+    }
+    #checkBox_pwdLogin{
+        width:56px;
+    }
+    #checkBox_IdeCodeLogin{
+        width:70px; 
+    }
+    #checkBox_pwdLogin:Hover,#checkBox_pwdLogin:Pressed,#checkBox_pwdLogin:Checked,#checkBox_IdeCodeLogin:Hover,#checkBox_IdeCodeLogin:Pressed,#checkBox_IdeCodeLogin:checked{
+        color:#3395ff;
+        border-bottom:2px solid #3395ff;
+    }
+    /* 登录line */
+    #line,#line_2,#line_3{
+        border:0;
+        background:transparent;
+        border-top:1px solid #EAEDF1;
+        height:1px;
+        width:220px;
+    }
+    Line#line{
+        width:300px;
+        background-color:rgba(234,237,241,0.50);
+    }
+    /* 登录icon */
+    #label_userIcon,#label_pwdIcon,#label_pwdIcon_2{
+        width:16px;
+        height:18px;
+        background:transparent;
+    }
+    #label_userIcon{
+        border-image: url(:/skin/loginUser);
+    }
+    #label_pwdIcon{
+        border-image: url(:/skin/loginPassword);
+    }
+    #label_pwdIcon_2{
+        border-image: url(:/skin/loginCode);
+    }
+    /* 登录文本框 */
+    #lineEdit_mobile,#lineEdit_Password,#lineEdit_IdentifyCode,#lineEdit_phone_num, #mobileLineEdit, #passwordLineEdit,#idCodeLineEdit,#passwordLineEdit_1,#passwordLineEdit_2{
+        background:transparent;
+        border:0;
+        height:42px;
+        width:162px;
+        font-size:14px;
+        color:#333333;
+        text-align:left;
+    }
+    #passwordLineEdit_1{
+        font-size:13px;
+    }
+    #passwordLineEdit_2{
+        font-size:13px;
+    }
+    #lineEdit_Password,#lineEdit_IdentifyCode, #passwordLineEdit,#passwordLineEdit_1,#passwordLineEdit_2{
+        width:220px;
+    }
+    /* 登录下拉框 */
+    QComboBox#comboBox_mobilePre,QComboBox#comboBox_mobilePre_code, QComboBox#teleCodeComboBox{
+        width:48px;
+        height:35px;
+        border:0;
+        background:transparent;
+        text-align:center;
+        font-size:14px;
+        color:#333333;
+    }
+    QComboBox#comboBox_mobilePre::item,QComboBox#comboBox_mobilePre_code::item, QComboBox#teleCodeComboBox::item{
+        padding:5px;
+        background:#ffffff;
+    }
+    QComboBox::drop-down#comboBox_mobilePre,QComboBox::drop-down#comboBox_mobilePre_code, QComboBox::drop-down#teleCodeComboBox{
+        border:0;
+        background:transparent;
+    }
+    QComboBox::down-arrow#comboBox_mobilePre,QComboBox::down-arrow#comboBox_mobilePre_code,QComboBox::down-arrow#teleCodeComboBox{
+        image:url(:/sysButton/Resources/img/sysButton/combobox.png);
+        width:10px;
+        height:6px;
+        right:6px;
+        top:2px;
+        text-align:center ;
+    }
+    /* 登录二维码切换 */
+    #checkBox_tabPage,#btn_qrcode{
+        width:16px;
+        height:16px;
+        border-image:url(:/sysButton/Resources/img/sysButton/login-code.png);
+        background:transparent;
+        text-indent:100px;
+    }
+    #checkBox_tabPage:checked,#btn_qrcode:checked{
+        border-image:url(:/sysButton/Resources/img/sysButton/login-pc.png);
+    }
+    /* 人脸识别登录切换 */
+    #btn_faceid{
+        width:16px;
+        height:16px;
+        border-image:url(:/sysButton/Resources/img/sysButton/login-face.png);
+        background:transparent;
+        text-indent:100px;
+    }
+    /* 其他登录方式 */
+    #btn_faceid_other,#btn_faceid_failed_other_login{
+        color:#3395ff;
+        border:0;
+        background:transparent;
+        font-size:14px;
+    }
+    /* 登录button */
+    #loginPushButton,#btn_face_login,#btn_faceid_failed_tryagain,#resetPushButton,#goLoginPushButton{
+        width:222px;
+        height:40px;
+        padding-bottom:32px;
+        font-size:16px;
+        color:#ffffff;
+        border-image:url(:/skin/Resources/img/skin/default/login-btn.png);
+        background:transparent;
+    }
+    #loginPushButton:hover,#btn_face_login:hover,#btn_faceid_failed_tryagain:hover,#resetPushButton:hover,#goLoginPushButton:hover{
+        border-image:url(:/skin/Resources/img/skin/default/login-btn-hover.png);
+    }
+    #loginPushButton:!enabled,#loginPushButton:!enabled:Pressed,#loginPushButton:!enabled:hover,#resetPushButton:!enabled{
+        border-image:url(:/skin/Resources/img/skin/default/login-btn-disable.png);
+    }
+    #loginPushButton:Pressed,#btn_face_login:Pressed,#btn_faceid_failed_tryagain:Pressed,#resetPushButton:Pressed,#goLoginPushButton:Pressed{
+        border-image:url(:/skin/Resources/img/skin/default/login-btn-active.png);
+    }
+    /* 登录checkbox */
+    #checkBox_AotoLogin,#rememberPsdCheckBox{
+        color:#454545;
+        font-size:12px;
+    }
+    #checkBox_AotoLogin::indicator:enabled:unchecked,#rememberPsdCheckBox::indicator:enabled:unchecked{
+         image: url(:/skin/check);
+         width:12px;
+         height:12px;
+    }
+    #checkBox_AotoLogin::indicator:enabled:checked,#rememberPsdCheckBox::indicator:enabled:checked{
+         image: url(:/skin/checked);
+         width:12px;
+         height:12px;
+    }
+    /* 登录验证码 */
+    QPushButton#obtainIdCodeButton{
+        min-height:25px;
+        max-height:25px;
+        min-width:80px;
+        max-width:80px;
+        background: transparent;
+        font-size: 14px;
+        color: #3395FF;
+    }
+    QPushButton#obtainIdCodeButton:Pressed, QPushButton#obtainIdCodeButton:Checked{
+        color: #D5D5D5;
+    }
+    /* 登录扫码 */
+    #label_scantip{
+        font-size: 14px;
+        color: #8E8E93;
+    }
+    /* 错误提示 */
+    #label_info,#label_login_error,#label_faceid_failed_error,#errorLabel{
+        font-size: 13px;
+        color: #FB6041;
+    }
+    #deviceLabel,#showFaceLabel,#resetOkTextLabel{
+        font-size:14px;
+        color:#333333;
+    }
+    #label_faceid_failed_icon{
+        min-width:50px;
+        min-width:50px;
+        max-height:50px;
+        max-height:50px;
+        border-image: url(:/sysButton/Resources/img/sysButton/face-fail-ico.png);
+        background:transparent;
+    }
+    /* 返回扫码登录 */
+    #mobileLabel{
+        font-size:16px;
+        color:#454545;
+    }
+    #confirmTextLabel{
+        font-size:14px;
+        color:#454545;
+    }
+    #backCodeScanButton{
+        border:0;
+        background:transparent;
+        font-size:14px;
+        color:#3390ff;
+    }
+    /* 忘记密码 */
+    #forgetPsdPushButton{
+        font-size:12px;
+        border:0;
+        background:transparent;
+        text-align:right;
+        color:#3390ff;
+    }
+    #resetPsdLabel{
+        font-size:16px;
+    }
+    #resetLabel1,#resetLabel2H{
+        color:#3390ff;
+        font-size:13px;
+    }
+    #resetLabel2{
+        color:#AEAEAE;
+        font-size:13px;
+    }
+    #resetNum1,#resetNum2,#resetNum2H{
+        width:16px;
+        height:16px;
+        background:transparent;
+        border:0;
+        margin-right:2px;
+    }
+    #resetNum1{
+        border-image: url(:/sysButton/Resources/img/sysButton/resetNum1.png)
+    }
+    #resetNum2{
+        border-image: url(:/sysButton/Resources/img/sysButton/resetNum2.png)
+    }
+    #resetNum2H{
+        border-image: url(:/sysButton/Resources/img/sysButton/resetNum2H.png)
+    }
+    #resetArrow,#resetArrowH{
+        width:12px;
+        height:14px;
+        border-image: url(:/sysButton/Resources/img/sysButton/reset-arrow.png);
+        border:0;
+        background:transparent;
+    }
+    #resetArrowH{
+        border-image: url(:/sysButton/Resources/img/sysButton/reset-arrow-active.png);
+    }
+    #resetPswFirst,#resetPswSecond{
+        width:12px;
+        height:12px;
+        background:transparent;
+        border:0;
+        border-image:url(:/sysButton/Resources/img/sysButton/resetState.png);
+    }
+    #resetPswFirst:checked,#resetPswSecond:checked{
+        border-image:url(:/sysButton/Resources/img/sysButton/resetStateH.png);
+    }
+    #resetSuccess{
+        width:50px;
+        height:50px;
+        border-image:url(:/sysButton/Resources/img/sysButton/resetSuccess.png);
+    }
+
+
+
+
+/* 设置左侧菜单栏样式 ==================================================================== */
+    QToolButton#transparentToolButton{
+        background:transparent;
+    }
+    #menuLogo{
+        border-image: url(:/skin/Resources/img/skin/default/toon-white.png);
+        background:transparent;
+        color:#ffffff;
+        width:70px;
+        height:70px;
+    }
+    MenuAreaBase{
+        min-height:60px;
+        min-width:70px;
+        max-height:60px;
+        max-width:70px;
+        background:transparent;
+        border:0;
+        line-height:70px;
+        font-size:12px;
+        text-align:center;
+    }
+    QLabel#Menu_Lable{
+        min-height:12px;
+        max-height:12px;
+        min-width:70px;
+        min-width:70px;
+        font-size:12px;
+        text-align:center;
+    }
+    /* 名片icon */
+    MenuAreaBase#Menu_CardCase{
+        border-image: url(:/skin/cardcase);
+        background:transparent;
+    }
+    MenuAreaBase#Menu_CardCase:Pressed,MenuAreaBase#Menu_CardCase:Checked,MenuAreaBase#Menu_CardCase:Hover{
+        border-image: url(:/skin/cardcaseHover);
+        background:transparent;
+    }
+    /* 我的icon */
+    MenuAreaBase#Menu_Mine{
+        border-image: url(:/skin/Resources/img/skin/default/mine.png);
+        background:transparent;
+    }
+    MenuAreaBase#Menu_Mine:Pressed,MenuAreaBase#Menu_Mine:Checked,MenuAreaBase#Menu_Mine:Hover{
+        border-image: url(:/skin/Resources/img/skin/default/mineHover.png);
+        background:transparent;
+    }
+    /* 通知icon */
+    MenuAreaBase#Menu_Notice{
+        border-image: url(:/skin/notice);
+        background:transparent;
+    }
+    MenuAreaBase#Menu_Notice:Pressed,MenuAreaBase#Menu_Notice:Checked,MenuAreaBase#Menu_Notice:Hover{
+        border-image: url(:/skin/noticeHover);
+        background:transparent;
+    }
+    /* 设置icon */
+    MenuAreaBase#Menu_SetUp{
+        border-image: url(:/skin/setting);
+        background:transparent;
+        min-height:70px;
+        max-height:70px;
+    }
+    MenuAreaBase#Menu_SetUp:Pressed,MenuAreaBase#Menu_SetUp:Checked,MenuAreaBase#Menu_SetUp:Hover{
+        border-image: url(:/skin/settingHover);
+        background:transparent;
+    }
+    /* 添加icon */
+    MenuAreaBase#Menu_Create{
+        border-image: url(:/skin/add);
+        background:transparent;
+    }
+    MenuAreaBase#Menu_Create:Pressed,MenuAreaBase#Menu_Create:Checked,MenuAreaBase#Menu_Create:Hover{
+        border-image: url(:/skin/addHover);
+        background:transparent;
+    }
+    /* 主页icon */
+    MenuAreaBase#Menu_Homepage{
+        border-image: url(:/skin/Resources/img/skin/default/homepage.png);
+        background:transparent;
+    }
+    MenuAreaBase#Menu_Homepage:Pressed,MenuAreaBase#Menu_Homepage:Checked,MenuAreaBase#Menu_Homepage:Hover{
+        border-image: url(:/skin/Resources/img/skin/default/homepageHover.png);
+        background:transparent;
+    }
+    /* 身份切换icon */
+    MenuAreaBase#Menu_Avatar{
+        min-width:50px;
+        max-width:50px;
+        min-height:50px;
+        max-height:50px;
+        line-height:50px;
+    }
+
+
+/* Cardcase 通讯录列表栏样式 ==================================================================*/
+    /* 搜索区 -------------------------------------------------------------------------- */
+    QWidget#CardCaseSearchArea{
+        border-top:1px solid #dde9f8;
+        background:transparent;
+    }
+    QWidget#searchWidget,QWidget#searchWidget:Focus{
+        background-color:transparent;
+        border:0;
+    }
+    /* 搜索文本框 */
+    #cardcaseSearch,#noticeSearch{
+        background: #ffffff;
+        color:#5d677d;
+        border:1px solid #dde9f8;
+        border-radius:2px;
+        height:26px;
+        width:220px;
+        font-size:13px;
+    }
+    #noticeSearch{
+        width:182px;
+    }
+    #cardcaseSearch:Focus,#noticeSearch:Focus{
+        border:1px solid #3390ff;
+    }
+    #searchWidget QToolButton{
+        border-image: url(:/sysButton/Resources/img/sysButton/group/cancel-btn.png);
+    }
+    /* 搜索按钮 */
+    #searchButton{
+        border-image: url(:/skin/Resources/img/skin/default/search-card.png);
+        min-height:13px;
+        max-height:13px;
+        min-width:14px;
+        max-width:14px;
+        background: transparent;
+        border: 0;
+        margin:0 4px;
+    }
+    /* 搜索底部遮罩 */
+    #CardCaseSearchBottom{
+        background:rgba(0,0,0,0.2);
+    }
+    /* 搜索结果区 */
+    #SearchlistWidgt{
+        background-color:#f1f7ff;
+    }
+    /* 搜索分栏 */
+    #TNSearchItemWidget{
+        padding:0 15px;
+    }
+    #searchLetterName{
+        color: #858fa4;
+        font-size: 14px;
+        border:0;
+        font-size:14px;
+        background:url(:/skin/Resources/img/skin/default/blueLine.png) no-repeat left center;
+        padding-left:6px;
+        text-align:left;
+        height:20px;
+        line-height:20px;
+    }
+    #searchShowAllButton{
+        color: #858fa4;
+        font-size: 12px;
+        background:transparent;
+        border:0;
+        height:20px;
+        line-height:20px;
+    }
+
+    /* 通讯录tab样式 ---------------------------------------------------------------------- */
+    QWidget#CardListTopWidget{
+        min-height:40px;
+        max-height:40px;
+        min-width:250px;
+        max-width:250px;
+        border:0px solid #ebedf0;
+        background-color:transparent;
+    }
+    QPushButton#CardListTopText{
+        min-height:40px;
+        max-height:40px;
+        min-width:28px;
+        max-width:28px;
+        background:transparent;
+        border:0px;
+        font-size:14px;
+        text-align:center;
+        color:#5d677d;
+    }
+    QPushButton#CardListTopText:Pressed, QPushButton#CardListTopText:Checked{
+        border-bottom:2px solid #3f94fc;
+        color:#3f94fc;
+    }
+
+    /* 通讯录列表区样式 -------------------------------------------------------------------- */
+    #CardCaselistWidgt, #ColleagueListWidgt, #GroupListWidgt, #GroupChatListWidgt{
+        border-top:1px solid #dde9f8;
+        background:transparent;
+    }
+    /* list响应鼠标样式 */
+    #CardCaselistWidgt::item,#ColleagueListWidgt::item, #GroupListWidgt::item, #GroupChatListWidgt::item{
+        background:transparent;
+        border:0;
+    }
+    #CardCaselistWidgt::item:hover, #ColleagueListWidgt::item:hover, #GroupListWidgt::item:hover, #GroupChatListWidgt::item:hover{
+        background:#e3efff;
+    }
+    #CardCaselistWidgt::item:selected, #ColleagueListWidgt::item:selected, #GroupListWidgt::item:selected, #GroupChatListWidgt::item:selected{
+        background:#e4f0ff;
+    }
+    /* 滚动条 */
+    #CardCaselistWidgt QScrollBar::handle:vertical, #ColleagueListWidgt QScrollBar::handle:vertical, #GroupListWidgt QScrollBar::handle:vertical, #GroupChatListWidgt QScrollBar::handle:vertical, #SearchlistWidgt QScrollBar::handle:vertical, #myCardListWidget QScrollBar::handle:vertical{
+        background:#cfdef1;
+    }
+    #CardCaselistWidgt QScrollBar::handle:vertical:hover, #ColleagueListWidgt QScrollBar::handle:vertical:hover, #GroupListWidgt QScrollBar::handle:vertical:hover, #GroupChatListWidgt QScrollBar::handle:vertical:hover, #SearchlistWidgt QScrollBar::handle:vertical:hover, #myCardListWidget QScrollBar::handle:vertical:hover{
+        background:#cfdef1;
+    }
+    /* 年龄 */
+    QLabel#ageLabel{
+        font-size: 12px;
+        color: #858fa4;
+    }
+    /* 数字 */
+    QLabel#numberLabel{
+        font-size: 14px;
+        color: #5d677d;
+    }
+    /* 昵称 */
+    #lblItemTitle, #newFriendItemTitle{
+        font-size:13px;
+        color:#000000;
+    }
+    /* 签名 */
+    #lblItemSubTitle{
+        font-size: 12px;
+        color: #5d677d;
+    }
+    /* tag标签 */
+    QLabel#counLabel,QLabel#groupFlagLabel{
+        font-size: 12px;
+        padding:0 2px 1px;
+        border-radius:2px;
+        min-height:14px;
+        max-height:14px;
+        border: 1px solid #dedede;
+        color: #858fa4;
+    }
+    /* 头像点击效果 */
+    #btnItemPhotoIcon{
+        background:transparent;
+    }
+    #btnItemPhotoIcon:Pressed{
+        background:transparent;
+    }
+    QPushButton#herAvatarButton:Pressed,QPushButton#mineAvatarButton:Pressed{
+        border: none;
+    }
+    #lblItemMyTitle{
+        font-size:12px;
+    }
+    #exchangeArrow{
+        background:transparent;
+        border-image: url(:/sysButton/Resources/img/sysButton/exchange-icon.png);
+        width:10px;
+        height:10px;
+    }
+
+    /* 好友分栏 */
+    QLabel#friendLetterLabel{
+        color: #858fa4;
+        font-size: 14px;
+        min-height:16px;
+        max-height:16px;
+        margin:6px 15px;
+    }
+    /* 公司名字分栏 */
+    #treeCompanyButton,#treeCompanyButton:unchecked,#treeCompanyButton:checked{
+        color: #858fa4;
+        font-size: 14px;
+        min-height:30px;
+        max-height:30px;
+        border:0;
+        font-size:14px;
+        background:url(:/skin/Resources/img/skin/default/blueLine.png) no-repeat left center;
+        padding-left:6px;
+        text-align:left;
+    }
+
+    /* 群组分栏样式 */
+    #treeItemBtn{
+        font-size:14px;
+        color: #000000;
+        border-image: url(:/sysButton/Resources/img/sysButton/rightArrow.png);
+        padding-left:20px;
+        border:0;
+        text-align: left;
+        height:40px;
+        line-height:40px;
+        min-width:194px;
+        max-width:194px;
+    }
+    #treeItemBtn:checked{
+        border-image: url(:/sysButton/Resources/img/sysButton/downArrow.png);
+    }
+    #countLabel{
+        color: #858fa4;
+    }
+
+    /* 通讯录详情区样式 --------------------------------------------------------------------- */
+    /* 详情区标题栏 */
+    QWidget#widget_CardCaseDetailTitle{
+        /*min-width:680px;*/
+        border-bottom:1px solid #ebedf0;
+        background-color:#ffffff;
+    }
+    /* 详情区标题label */
+    #cardCaseTitleNameLabel{
+        font-size:14px;
+        color:#333333;
+        text-align:center;
+    }
+    /* 空白页面默认图片 */
+    #label_default_backpic{
+        width:200px;
+        height:124px;
+        border-image: url(:/skin/Resources/img/skin/default/empty.png);
+    }
+
+    #sexMale{
+        min-width:12px;
+        max-width:12px;
+        min-height:12px;
+        max-height:12px;
+        background:transparent;
+        border-image: url(:/Resources/male.png);
+    }
+    #sexFemale{
+        min-width:12px;
+        max-width:12px;
+        min-height:12px;
+        max-height:12px;
+        background:transparent;
+        border-image: url(:/Resources/female.png);
+    }
+
+
+/* Mine我的样式 ================================================================================= */
+    #myCardListWidget{
+        background:transparent;
+        border:0;
+        outline:0;
+    }
+    #myCardListWidget::Item{
+        min-height:70px;
+        max-height:70px;
+        margin:0;
+        background:transparent;
+        border:0;
+        outline:0;
+    }
+    #myCardListWidget::Item:hover{
+        background:#e3efff;
+    }
+    #myCardListWidget::Item:checked,#myCardListWidget::Item:selected{
+        background:#e4f0ff;
+    }
+    #myItemTitle{
+        font-size:13px;
+        color:#000000;
+    }
+    #myItemSubTitle{
+        font-size:12px;
+        color:#5d677d
+    }
+    #btnMyCardListItemPhoto{
+        border:none;
+        background:transparent;
+    }
+
+    QListView::Item:hover{
+        background:#e3efff;
+    }
+    QListView::Item:checked,QListView::Item:selected{
+        background:#e4f0ff;
+    }
+    #avatarChoiceBtnItem{
+        border:0;
+        background:transparent;
+    }
+
+
+
+
+/* Setup设置模块样式 ======================================================================== */
+    /* 设置区 */
+    QWidget#SetUpListArea{
+        background: transparent;
+    }
+    /* 用户协议区 */
+    QTextEdit#userAgreeWidget{
+        background: #FFFFFF;
+    	border: 0px solid #ebedf0;
+    }
+    /* 菜单栏 */
+    QPushButton#bootUpButton,
+    QPushButton#noDisturbButton,
+    QPushButton#appearanceButton,
+    QPushButton#localeStorageButton,
+    QPushButton#userAgreementButton,
+    QPushButton#aboutUsButton,
+    QPushButton#exitLoginButton,
+    QPushButton#syncCatalog{
+        background-color: transparent;
+        border: 0;
+        text-align: left;
+        font-size: 14px;
+        color: #333333;
+        padding-left:15px;
+        width:235px;
+        min-height:70px;
+        max-height:70px;
+    }
+    /* 菜单栏移上去效果 */
+    QPushButton#bootUpButton:hover,
+    QPushButton#noDisturbButton:hover,
+    QPushButton#appearanceButton:hover,
+    QPushButton#localeStorageButton:hover,
+    QPushButton#userAgreementButton:hover,
+    QPushButton#aboutUsButton:hover,
+    QPushButton#exitLoginButton:hover,
+    QPushButton#syncCatalog:hover{
+        background-color: #e3efff;
+    }
+    /* 菜单选中效果 */
+    QPushButton#bootUpButton:checked,
+    QPushButton#noDisturbButton:checked{
+        background-color: transparent;
+    }
+    QPushButton#appearanceButton:checked,
+    QPushButton#localeStorageButton:checked,
+    QPushButton#userAgreementButton:checked,
+    QPushButton#aboutUsButton:checked,
+    QPushButton#exitLoginButton:checked,
+    QPushButton#syncCatalog:checked{
+        background-color: #D4E6FF;
+    }
+    /* 本地存储-文件管理说明文字 */
+    QLabel#localStorageLabel{
+    	min-width: 322px;
+    	min-height: 16px;
+    	max-width: 322px;
+    	max-height: 16px;
+    	font-size: 12px;
+    	color: #8e8e93;
+    }
+    /* 本地存储-文本框 */
+    QLineEdit#localStorageFileLineEdit{
+        min-width: 310px;
+    	min-height: 28px;
+    	max-width: 310px;
+    	max-height: 28px;
+    	background: #FFFFFF;
+    	border: 1px solid #ebedf0;
+    	border-radius: 2px;
+        font-size:14px;
+        color:#333333;
+        padding:0 8px;
+        text-align:center;
+    }
+    #localStorageLabelTitle,#shortKeyLabel,#localStorageSystemTitle,#localStorageSystemTitle_2,#localStorageSystemTitle_3{
+        font-size:14px;
+        color:#8e8e93;
+    }
+    #labelFileMan,#sendMessageLable,#checkHotKey,#hotKeyScreenShot,#localStorageSystemTitle_4{
+        font-size:14px;
+        color:#333333;
+        margin-right:5px;
+    }
+    #facelabel{
+        font-size:12px;
+        color:#8e8e93;
+    }
+    #comboBox,#languageComboBox{
+        background: #FFFFFF;
+        border: 1px solid #EBEDF0;
+        border-radius: 2px;
+        width:122px;
+        height:30px;
+        font-size:14px;
+        color:#333333;
+        padding:0 5px;
+    }
+    QComboBox::drop-down#comboBox,QComboBox::drop-down#languageComboBox{
+        border:0;
+        background:transparent;
+    }
+    QComboBox::down-arrow#comboBox,QComboBox::down-arrow#languageComboBox{
+        image:url(:/sysButton/Resources/img/sysButton/combobox.png);
+        width:10px;
+        height:6px;
+        right:6px;
+        text-align:center ;
+    }
+    #hotKeyCheckBox,#bootUpCheckBox,#noDisturbCheckBox,#autoLoginCheckBox,#faceIdButton{
+        font-size:14px;
+        color:#333333;
+    }
+    #hotKeyCheckBox::indicator:enabled:unchecked,#bootUpCheckBox::indicator:enabled:unchecked,#noDisturbCheckBox::indicator:enabled:unchecked,#autoLoginCheckBox::indicator:enabled:unchecked{
+         image: url(:/skin/check);
+         width:14px;
+         height:14px;
+    }
+    #hotKeyCheckBox::indicator:enabled:checked,#bootUpCheckBox::indicator:enabled:checked,#noDisturbCheckBox::indicator:enabled:checked,#autoLoginCheckBox::indicator:enabled:checked{
+         image: url(:/skin/checked);
+         width:14px;
+         height:14px;
+    }
+    #hotKeyCheckBox::indicator:!enabled,#bootUpCheckBox::indicator:!enabled,#noDisturbCheckBox::indicator:!enabled,#autoLoginCheckBox::indicator:!enabled{
+         image: url(:/skin/Resources/img/skin/default/disable.png);
+         width:14px;
+         height:14px;
+    }
+    /* 截图快捷键文本框 */
+    #screentShotShortCut{
+        background: #FFFFFF;
+        border: 1px solid #EBEDF0;
+        border-radius: 2px;
+        width:140px;
+        height:30px;
+        font-size:14px;
+        color:#333333;
+        padding:0 5px;
+        text-align:left;
+    }
+    #comboBox:hover,#screentShotShortCut:hover,#languageComboBox:hover{
+        border:1px solid #d1d1d1;
+    }
+    /* 关于我们-logo */
+    QLabel#aboutUsLogoLabel{
+    	border-image: url(:/Resources/toolWidget/toonLogo_Big.png);
+    	min-width: 80px;
+    	min-height: 80px;
+    	max-width: 80px;
+    	max-height: 80px;
+    }
+    /* 关于我们-用户名 */
+    QLabel#aboutUsSoftNameLabel{
+    	font-size: 20px;
+    	color: #333333;
+    }
+    /* 关于我们-文字描述 */
+    QLabel#aboutUsVersionLabel,QLabel#aboutUsCompanyLabel{
+    	min-width: 234px;
+    	min-height: 15px;
+	max-width: 234px;
+    	max-height: 15px;
+    	font-size: 12px;
+    	color: #8E8E93;
+    }
+    /* 退出登录-头像 */
+    QLabel#exitAvatarLabel{
+    	border-image: url(:/Resources/toolWidget/exitlogo.png);
+    	min-width: 80px;
+    	min-height: 80px;
+    	max-width: 80px;
+    	max-height: 80px;
+    } 
+    /* 退出登录-用户名 */
+    QLabel#exitUserNameLabel{
+    	min-width: 220px;
+    	min-height: 20px;
+    	max-width: 220px;
+    	max-height: 20px;
+    	font-size: 20px;
+    	color: #333333;
+    } 
+    /* 设置区各按钮状态 */
+    QPushButton#exitPushButton,QPushButton#changeDirButton, #openDirButton, QPushButton#aboutUsCheckUpdateButton, #aboutUsFeedBackButton, #sendCloseButton{
+    	min-width: 80px;
+        padding:0 5px;
+    	min-height: 24px;
+    	max-height: 24px;
+    	font-size: 14px;
+    	color: #333333;
+    	background: #FFFFFF;
+    	border: 1px solid #ebedf0;
+    	border-radius: 2px;
+        padding-bottom:1px;
+    }
+    /* 设置区各按钮移上去状态 */
+    QPushButton#exitPushButton:Hover,QPushButton#exitPushButton:Pressed,QPushButton#changeDirButton:Hover, #openDirButton:Hover,QPushButton#changeDirButton:Pressed, #openDirButton:Pressed,QPushButton#aboutUsCheckUpdateButton:Hover, #aboutUsFeedBackButton:Hover,QPushButton#aboutUsCheckUpdateButton:Pressed, #aboutUsFeedBackButton:Pressed{
+        background:#3f94fc;
+        border:1px solid #3f94fc;
+        color:#ffffff;
+    }
+    #aboutUsFeedBackButton:disabled{
+        background:#b0b0b0;
+    }
+    /* 当前是最新版本 */
+    QLabel#tipsLabel{
+    	font-size: 14px;
+    	color: #333333;
+    }
+    /* 建议反馈文字 */
+    QLabel#feedBackLabel{
+    	min-width: 170px;
+    	min-height: 15px;
+    	max-width: 170px;
+    	max-height: 15px;
+    	font-size: 14px;
+    	color: #8E8E93;
+    }
+    /* 建议反馈文本框 */
+    QPlainTextEdit#feedBackTextEdit{
+    	min-width: 380px;
+    	min-height: 80px;
+    	max-width: 380px;
+    	max-height: 80px;
+    	background: #FFFFFF;
+    	border: 1px solid #ebedf0;
+        padding:5px;
+        font-size:14px;
+    }
+
+
+
+
+/* Notice 通知样式 ========================================================================= */
+
+    /* IM chat style ----------------------------------------------------------------------- */
+    
+    /* IM 头部用户名显示区 */
+    #widget_top_add, #widget_top_add_notice{
+        border-bottom: 1px solid #ebedf0;
+        border-top-right-radius:4px;
+    }
+
+    #pushButton_top_name, #pushButton_top_name:Unchecked{
+        text-align:left;
+        border:0;
+        font-size:13px;
+        color:#000
+    }
+    #pushButton_top_arrow,#pushButton_top_arrow:Unchecked{
+        width:14px;
+        height:14px;
+        border-image: url(:/sysButton/Resources/img/sysButton/group/member-ico.png);
+        border:0;
+        background:transparent;
+    }
+    #pushButton_top_arrow:Checked,#pushButton_top_arrow:Hover{
+        border-image: url(:/sysButton/Resources/img/sysButton/group/member-ico-hover.png);
+    }
+
+    /* IM 消息显示区-消息气泡 */
+    QTextBrowser#GrowingTextBrowser{
+        font-size: 13px;
+        color: #333333;
+        line-height: 20px;
+    }
+    /* IM emoji 显示区 */
+    QWidget#TNEmojiWidget{
+        border:1px solid #ebedf0;
+        background-color: #FFFFFF;
+        border-radius:4px;
+    }
+    /* IM 富文本区 */
+    QWidget#widget_emoji_file_pic{
+        background-color: #ffffff;
+        border-top: 1px solid #ebedf0;
+        border-left: none;
+        border-right: none;
+    }
+    /* 表情图标 */
+    QPushButton#pushButton_Expression{
+        border-image: url(:/skin/Resources/img/skin/default/emoji.png);
+    }
+    QPushButton#pushButton_Expression:hover{
+        border-image: url(:/skin/Resources/img/skin/default/emoji_hover.png);
+    }
+    /* 上传文件图标 */
+    QPushButton#pushButton_file{
+        border-image: url(:/skin/Resources/img/skin/default/file.png);
+    }
+    QPushButton#pushButton_file:hover,QPushButton#pushButton_file:Pressed{
+        border-image: url(:/skin/Resources/img/skin/default/file_hover.png);
+    }
+    /* 发送图片图标 */
+    QPushButton#pushButton_image{
+        border-image: url(:/skin/Resources/img/skin/default/pic.png);
+    }
+    QPushButton#pushButton_image:hover,QPushButton#pushButton_image:Pressed{
+        border-image: url(:/skin/Resources/img/skin/default/pic_hover.png);
+    }
+    /* 截图图标 */
+    QPushButton#pushButton_screenShot{
+        border-image: url(:/skin/Resources/img/skin/default/shot.png);
+    }
+    QPushButton#pushButton_screenShot:hover,QPushButton#pushButton_screenShot:Pressed{
+        border-image: url(:/skin/Resources/img/skin/default/shot-hover.png);
+    }
+    /* 截图图标for mac */
+    QPushButton#pushButton_screenShot_mac{
+        min-width:22px;
+        max-width:22px;
+        border-image: url(:/skin/Resources/img/skin/default/shot-mac.png);
+    }
+    QPushButton#pushButton_screenShot_mac:hover,QPushButton#pushButton_screenShot_mac:Pressed{
+        border-image: url(:/skin/Resources/img/skin/default/shot-mac-hover.png);
+    }
+    
+    /* 文字输入框 */
+    QTextEdit#textEdit_Send{
+        background-color: #ffffff;
+        border: 0px solid #ebedf0;
+        font-size: 14px;
+        color: #333333;
+        line-height: 20px;
+    }
+    /* 消息发送按钮 */
+    QPushButton#pushButton_Send{
+        background-color: #FFFFFF;
+        border: 1px solid #ebedf0;
+        font-size: 14px;
+        color: #333333;
+        width:80px;
+        height:25px;
+    }
+    QPushButton#pushButton_Send:hover,QPushButton#pushButton_Send:Pressed{
+    	background-color: #f8f8f8;
+    }
+    /* 消息显示用户名 */
+    #detailFeedName{
+        font-size: 12px;
+        color: #5D677D;
+        background: transparent;
+    }
+    /* 消息日期 */
+    QLabel#LabelMessageTime{
+        font-size: 12px;
+        color: #8E8E93;
+    }
+    /* @功能样式 */
+    #AtSearchlistWidgt{
+        border:1px solid #ebedf0;
+        background:#ffffff;
+        border-radius:2px;
+    }
+    #AtSearchlistWidgt::item{
+        background:transparent;
+    }
+    #AtSearchlistWidgt::item:hover,#AtSearchlistWidgt::item:checked{
+        background:#EAF3FF;
+    }
+    #atlbitem_name{
+        font-size:14px;
+        color:#333333;
+    }
+    #someoneatyou{
+        background:#f1f7ff;
+        border:1px solid #e2efff;
+        border-right:0;
+        border-top-left-radius:15px;
+        border-bottom-left-radius:15px;
+        min-width:215px;
+        max-width:215px;
+        min-height:28px;
+        max-height:28px;
+    }
+    #lineEdit_AtYou_MessageBox{
+        border:0;
+        background:transparent;
+        color:#4094fd;
+        font-size:14px;
+        width:165px;
+        min-height:20px;
+        max-height:20px;
+        border-right:1px solid #e2efff;
+    }
+    #AtClosePushButton{
+        width:10px;
+        height:10px;
+        border-image:url(:/sysButton/Resources/img/sysButton/at-close.png);
+        background:transparent;
+    }
+
+    /* IM文件下载控件 ------------------------------------------------------------ */
+    /* 文件操作区 */
+    #widget_file_operation{
+        background-color: #FDFDFD;
+        border: 1px solid #F3F3F3;
+    }
+    /* 文件显示区 */
+    #widget_file_content{
+        background-color: #F3F3F3;
+        border-radius: 2px;
+    }
+    /* 打开/下载/另存为按钮/转发 */
+    #button_file_open,#button_file_opendir,#button_file_sendForward,
+    #button_file_download,#button_file_saveother{
+        font-size: 12px;
+        color: #3395FF;
+        line-height: 12px;
+        background-color: #ffffff;
+        border: none;
+    }
+    /* 文件名 */
+    #label_file_name{
+        font-size: 14px;
+        color: #333333;
+        line-height: 12px;
+        text-overflow: ellipsis;
+    }
+    /* 文件大小 */
+    #label_file_size{
+        font-size: 12px;
+        color: #8E8E93;
+        line-height: 12px;
+    }
+    /* 文件下载进度条 */
+    #progressBar_file{
+        background-color: #ebedf0;
+        border-radius: 2px;
+    }
+    #progressBar_file::chunk {
+        background-color: #3395FF;
+        border-radius: 2px;
+    }
+    /* IM头像 */
+    #btnitem_icon,#btnitem_icon:Pressed{
+        background:transparent;
+    }
+    /* 音频播放 */
+    #widget_audio_left{
+        background-color: #FDFDFD;
+        border:1px solid #EBEDF0;
+        border-radius: 2px;
+    }
+    #widget_audio_right{
+        background-color: #F3F3F3;
+        border-radius: 2px;
+    }
+    #label_audio_time_left{
+        font-size: 14px;
+        color: #777E8C;
+        line-height: 14px;
+    }
+    #label_audio_time_right{
+        font-size: 14px;
+        color: #777E8C;
+        line-height: 14px;  
+    }
+    /* IM 提示框 */
+    #widget_warn_head{
+        background-color: #F8F8F8;
+        border: 1px solid #ebedf0;
+        border-radius: 2px 2px 0 0; 
+    }
+    #label_notify_static{
+        font-size: 14px;
+        color: #333333;
+    }
+    #widget_warn_bottom{
+        background-color: #FFFFFF;
+        border-left: 1px solid #ebedf0;
+        border-right: 1px solid #ebedf0;
+        border-bottom: 1px solid #ebedf0;
+        border-radius: 2px;
+    }
+    #label_notify{
+        font-size: 14px;
+        color: #333333;
+    }
+    #pushButton_notify_close{
+        border-image: url(:/Resources/toolWidget/close.png);
+    }
+    #pushButton_notify_close:hover{
+        border-image: url(:/Resources/toolWidget/close_hover.png);
+    }
+    #pushButton_notify_close:checked{
+        border-image: url(:/Resources/toolWidget/close_pressed.png);
+    }
+
+    /* 通知列表区 -------------------------------------------------------------- */
+    #Notice_ListArea{
+        background: transparent;
+        padding:2px 0;
+    }
+    /* list响应鼠标样式 */
+    #Notice_ListArea::item{
+        background:transparent;
+        border:0;
+    }
+    #Notice_ListArea::item:hover{
+        background:#e3efff;
+    }
+    #Notice_ListArea::item:selected{
+        background:#e4f0ff;
+    }
+    /* 用户昵称 */
+    #lbitem_name{
+        font-size: 13px;
+        color: #000000;
+    }
+    /* 年龄 */
+    #lbitem_age{
+        font-size: 12px;
+        color: #8E8E93;
+    }
+    /* 时间 */
+    #lbitem_time{
+        font-size: 12px;
+        color: #858fa4;
+        text-align: right;
+    }
+    /* 消息记录 */
+    #lbitem_title,#lbitem_subtitle{
+        font-size: 12px;
+        color: #5d677d;
+    }
+    /* 滚动条 */
+    #Notice_ListArea QScrollBar::handle:vertical
+    {
+        background:#cfdef1;
+    }
+    #Notice_ListArea QScrollBar::handle:vertical:hover
+    {
+        background:#cfdef1;
+    }
+    /* 消息条数 */
+    #lbimte_readed_num{
+        background-color: #FB6041;
+        border-radius: 8px;
+        min-width:16px;
+        min-height:16px;
+        max-height:16px;
+        line-height:16px; 
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    #TNOtherMessageBrowser{
+    	background-color: #F8F8F8;
+    	border-radius: 2px;
+    }
+
+    #label_othermessage_notify{
+    	font-size: 14px;
+    	color: #8E8E93;
+    }
+
+    /* 通知显示card样式 -------------------------------------------------------- */
+    #TNNewFriendCard{
+        min-width:650px;
+        max-with:650px;
+        border-radius:2px;
+        background: #FFFFFF;
+    }
+    #subCatalogLabel{
+        min-height:34px;
+        max-height:34px;
+        text-align:center;
+        background: #FDFDFD;
+        border: 1px solid #EBEDF0;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        font-size:14px;
+        color:#333333;
+    }
+    QWidget#infoWidget{
+        background: transparent;
+        border: 1px solid #EBEDF0;
+        border-top:0;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    QLabel#timeLabel{
+        font-size: 12px;
+        color: #8E8E93;
+    }
+    #herNickNameLabel{
+        font-size: 14px;
+        color: #333333;
+    }
+    #herSubTitleLabel{
+        font-size:12px;
+        color:#8E8E93;
+    }
+    #herTagLabel{
+        font-size: 12px;
+        color: #8E8E93;
+    }
+    #summeryLabel,#textLabel,#resourceLabel{
+        font-size:14px;
+        color:#333333;
+    }
+    /* 接受按钮 */
+    QPushButton#acceptButton{
+        min-width: 80px;
+        min-height: 24px;
+        max-width: 80px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #3395FF;
+        border-radius: 2px;
+        padding-bottom:1px;
+    }
+    /* 拒绝按钮 */
+    QPushButton#rejectButton{
+        min-width: 80px;
+        min-height: 24px;
+        max-width: 80px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #333333;
+        background: #FFFFFF;
+        border: 1px solid #ebedf0;
+        border-radius: 2px;
+        padding-bottom:1px;
+    }
+    /* 其他按钮 */
+    #buttonNameButton{
+        min-height: 24px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #3395FF;
+        border-radius: 2px;
+        padding:0 5px 1px;
+    } 
+    QLabel#label_file_isdownload{
+        font-size: 12px;
+        color: #AEAEAE;
+        line-height: 12px;
+    }
+    QPushButton#DetailItemAvatorButton{
+        border: none;
+    }
+    /* 已完成盖章 */
+    #noticeFinished{
+        width:58px;
+        height:64px;
+        border:0;
+        background:transparent;
+        border-image:url(:/Resources/toolWidget/NoticeFinished.png);
+    }
+    /* 已失效盖章 */
+    #noticeExpired{
+        width:58px;
+        height:64px;
+        border:0;
+        background:transparent;
+        border-image:url(:/Resources/toolWidget/NoticeExpired.png);
+    }
+
+    /* IM 群聊样式 ----------------------------------------------------------------- */
+    #TNAddchatDown{
+        border-bottom:1px solid #EBEDF0;
+        background:#ffffff;
+        min-width:680px;
+        padding:10px 5px 2px;
+    }
+    /* 已选择的联系人 */
+    QLabel#haveSelectedLabel{
+        font-size: 14px;
+        color: #333333;
+    }
+    /* 点击删除 */
+    QLabel#clickRemoveLabel{
+        font-size: 14px;
+        color: #8E8E93;
+    }
+    /* 点击添加联系人 */
+    QLabel#clickAddLabel{
+        font-size: 14px;
+        color: #8E8E93;
+    }
+    /* 添加联系人/删除并退出 */
+    QToolButton#defaultAddButton, QToolButton#defaultExitButton{
+        min-width: 69px;
+        min-height: 89px;
+        max-width: 69px;
+        max-height: 89px;
+        background: transparent;
+        border: 0;
+        font-size: 12px;
+        color: #333333;
+    }
+    /* 群聊list */
+    QToolButton#membersButton{
+        min-width: 69px;
+        min-height: 89px;
+        max-width: 69px;
+        max-height: 89px;
+        font-size: 12px;
+        color: #333333;
+        background: transparent;
+        border: 0;
+    }
+
+    /* 群聊搜索文本框 */
+    #contactSearchLineEdit{
+        background: #FFFFFF;
+        border: 1px solid #EBEDF0;
+        border-radius: 2px;
+        width:244px;
+        min-height:26px;
+        max-height:26px;
+        color:#333333;
+        font-size:14px;
+    }
+    #contactSearchLineEdit:Focus{
+        border:1px solid #3390ff;
+    }
+    /* 群聊搜索按钮 */
+    #contactSearchButton{
+        border:0;
+        border-image: url(:/skin/Resources/img/skin/default/search-card.png);
+        min-height:13px;
+        max-height:13px;
+        min-width:14px;
+        max-width:14px;
+        background:transparent;
+        margin:0 4px;
+    }
+    /* 群聊联系人左右区域 */
+    QTableView#leftTableView,QTableView#rightTableView{
+        min-width: 248px;
+        max-width: 248px;
+        max-height: 320px;
+        min-height: 320px;
+        background-color:#ffffff;
+        border:1px solid #ebedf0;
+    }
+    QLabel#titleLabel{
+        min-width:400px;
+        max-width:400px;
+        min-height:34px;
+        max-height:34px;
+        font-size: 14px;
+        color: #858fa4;
+        background: transparent;
+    }
+
+    /* 修改群聊名称文本框 */
+    #groupChatLineEdit{
+        background: #FFFFFF;
+        border: 1px solid #EBEDF0;
+        width:260px;
+        height:28px;
+        padding:0 10px;
+        text-align:left;
+        font-size:14px;
+    }
+
+/* 右下角消息提示弹窗样式 */
+#UNReadMsgWidgt{
+    background:#fff;
+    border:1px solid #ebedf0;
+    overflow:hidden;
+}
+#unMsgLine{
+    min-height:2px;
+    max-height:2px;
+    background:#3395ff;
+    border-radius: 0;
+    border-top-left-radius:1px;
+    border-top-right-radius:1px;
+}
+#unMsgListLabelTitle{
+    font-size:12px;
+    color:#454545;
+    height:24px;
+    line-height:24px;
+    background:transparent;
+}
+#unReadListView{
+    background:transparent;
+    border:0;
+}
+#unReadListView::item{
+    min-height:40px;
+    max-height:40px;
+}
+#unMsgListButton{
+    background:transparent;
+    color:#3395ff;
+    font-size:12px;
+}

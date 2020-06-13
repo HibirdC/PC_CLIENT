@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNChooseCardDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNAbstractItemDelegate.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tnavatorbutton.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNChooseCardDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tncommondealavator.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNElidedLabel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNWebViewDetailsArea.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="frames\TNFrameViewer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNMVD.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNPictureViewerDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="frames\TNBizActionResponder.h">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNElidedLabelV2.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNDefaultPage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNDefaultPage.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="emotion\TNEmotionLineEdit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="emotion\tnconvertrichedit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="emotion\TNEmotionPictureTextConverter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CommentTextEdit.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNMVD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TNMVD_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNDefaultPage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="emotion\TNEmojiSingleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frames\TNFrameId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\moc_TNAbstractItemDelegate.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnavatorbutton.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNChooseCardDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tncommondealavator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNElidedLabel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNWebViewDetailsArea.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNFrameViewer.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNAbstractItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tnavatorbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNChooseCardDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tncommondealavator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNElidedLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNMVD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNWebViewDetailsArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\TNFrameViewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_TNMVD.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNPictureViewerDialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNPictureViewerDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\TNBizActionResponder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNBizActionResponder.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNElidedLabelV2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNElidedLabelV2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNDefaultPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNDefaultPage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emotion\TNEmotionLineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNEmotionLineEdit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emotion\tnconvertrichedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_tnconvertrichedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emotion\TNEmojiSingleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="emotion\TNEmotionPictureTextConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNEmotionPictureTextConverter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommentTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_CommentTextEdit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frames\TNFrameId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoji.plist">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\PDF.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\video.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\DefaltAvarta.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\female.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\male.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\downArrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\rightArrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\loading.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\android.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\default.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\docx.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\key.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\numbers.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pages.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\PPT.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\text.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\xls.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\zip.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\gray.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\unread.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\audio_play_blue.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\audio_default_gray.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\audio_play_gray.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\prompt_fill.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_ellipse.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\audio_default_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_hexagon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_hexagon_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_ellipse_moresmall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\loading_data.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_ellipse_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_ellipse_middle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\mask_ellipse_middlesmall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\default_feed_avatar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\new_friend.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

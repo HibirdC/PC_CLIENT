@@ -1,0 +1,264 @@
+/* 通知IM emoji表情库 */
+    #TNEmojiWidget{
+        background: #FFFFFF;
+        border: 1px solid #EBEDF0;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.04);
+        border-radius: 2px;
+        margin:0;
+        padding:0;
+    }
+    #TNEmojiWidget QPushButton{
+        min-width:30px;
+        max-width:30px;
+        min-height:30px;
+        max-height:30px;
+        background:transparent;
+    }
+    QPushButton#pushButton_emoji_1{
+            border-image: url(:/Resources/images/001.png);
+    }
+    QPushButton#pushButton_emoji_2{
+            border-image: url(:/Resources/images/002.png);
+    }
+    QPushButton#pushButton_emoji_3{
+            border-image: url(:/Resources/images/003.png);
+    }
+    QPushButton#pushButton_emoji_4{
+            border-image: url(:/Resources/images/004.png);
+    }
+    QPushButton#pushButton_emoji_5{
+            border-image: url(:/Resources/images/005.png);
+    }
+    QPushButton#pushButton_emoji_6{
+            border-image: url(:/Resources/images/006.png);
+    }
+    QPushButton#pushButton_emoji_7{
+            border-image: url(:/Resources/images/007.png);
+    }
+    QPushButton#pushButton_emoji_8{
+            border-image: url(:/Resources/images/008.png);
+    }
+    QPushButton#pushButton_emoji_9{
+            border-image: url(:/Resources/images/009.png);
+    }
+
+    QPushButton#pushButton_emoji_10{
+            border-image: url(:/Resources/images/010.png);
+    }
+    QPushButton#pushButton_emoji_11{
+            border-image: url(:/Resources/images/011.png);
+    }
+    QPushButton#pushButton_emoji_12{
+            border-image: url(:/Resources/images/012.png);
+    }
+    QPushButton#pushButton_emoji_13{
+            border-image: url(:/Resources/images/013.png);
+    }
+    QPushButton#pushButton_emoji_14{
+            border-image: url(:/Resources/images/014.png);
+    }
+    QPushButton#pushButton_emoji_15{
+            border-image: url(:/Resources/images/015.png);
+    }
+    QPushButton#pushButton_emoji_16{
+            border-image: url(:/Resources/images/016.png);
+    }
+    QPushButton#pushButton_emoji_17{
+            border-image: url(:/Resources/images/017.png);
+    }
+    QPushButton#pushButton_emoji_18{
+            border-image: url(:/Resources/images/018.png);
+    }
+
+    QPushButton#pushButton_emoji_19{
+            border-image: url(:/Resources/images/019.png);
+    }
+    QPushButton#pushButton_emoji_20{
+            border-image: url(:/Resources/images/020.png);
+    }
+    QPushButton#pushButton_emoji_21{
+            border-image: url(:/Resources/images/021.png);
+    }
+    QPushButton#pushButton_emoji_22{
+            border-image: url(:/Resources/images/022.png);
+    }
+    QPushButton#pushButton_emoji_23{
+            border-image: url(:/Resources/images/023.png);
+    }
+    QPushButton#pushButton_emoji_24{
+            border-image: url(:/Resources/images/024.png);
+    }
+    QPushButton#pushButton_emoji_25{
+            border-image: url(:/Resources/images/025.png);
+    }
+    QPushButton#pushButton_emoji_26{
+            border-image: url(:/Resources/images/026.png);
+    }
+    QPushButton#pushButton_emoji_27{
+            border-image: url(:/Resources/images/027.png);
+    }
+
+    QPushButton#pushButton_emoji_28{
+            border-image: url(:/Resources/images/028.png);
+    }
+    QPushButton#pushButton_emoji_29{
+            border-image: url(:/Resources/images/029.png);
+    }
+    QPushButton#pushButton_emoji_30{
+            border-image: url(:/Resources/images/030.png);
+    }
+    QPushButton#pushButton_emoji_31{
+            border-image: url(:/Resources/images/031.png);
+    }
+    QPushButton#pushButton_emoji_32{
+            border-image: url(:/Resources/images/032.png);
+    }
+    QPushButton#pushButton_emoji_33{
+            border-image: url(:/Resources/images/033.png);
+    }
+    QPushButton#pushButton_emoji_34{
+            border-image: url(:/Resources/images/034.png);
+    }
+    QPushButton#pushButton_emoji_35{
+            border-image: url(:/Resources/images/035.png);
+    }
+    QPushButton#pushButton_emoji_36{
+            border-image: url(:/Resources/images/036.png);
+    }
+
+    QPushButton#pushButton_emoji_37{
+            border-image: url(:/Resources/images/037.png);
+    }
+    QPushButton#pushButton_emoji_38{
+            border-image: url(:/Resources/images/038.png);
+    }
+    QPushButton#pushButton_emoji_39{
+            border-image: url(:/Resources/images/039.png);
+    }
+    QPushButton#pushButton_emoji_40{
+            border-image: url(:/Resources/images/040.png);
+    }
+    QPushButton#pushButton_emoji_41{
+            border-image: url(:/Resources/images/041.png);
+    }
+    QPushButton#pushButton_emoji_42{
+            border-image: url(:/Resources/images/042.png);
+    }
+    QPushButton#pushButton_emoji_43{
+            border-image: url(:/Resources/images/043.png);
+    }
+    QPushButton#pushButton_emoji_44{
+            border-image: url(:/Resources/images/044.png);
+    }
+    QPushButton#pushButton_emoji_45{
+            border-image: url(:/Resources/images/045.png);
+    }
+
+    QPushButton#pushButton_emoji_46{
+            border-image: url(:/Resources/images/046.png);
+    }
+    QPushButton#pushButton_emoji_47{
+            border-image: url(:/Resources/images/047.png);
+    }
+    QPushButton#pushButton_emoji_48{
+            border-image: url(:/Resources/images/048.png);
+    }
+    QPushButton#pushButton_emoji_49{
+            border-image: url(:/Resources/images/049.png);
+    }
+    QPushButton#pushButton_emoji_50{
+            border-image: url(:/Resources/images/050.png);
+    }
+    QPushButton#pushButton_emoji_51{
+            border-image: url(:/Resources/images/051.png);
+    }
+    QPushButton#pushButton_emoji_52{
+            border-image: url(:/Resources/images/052.png);
+    }
+    QPushButton#pushButton_emoji_53{
+            border-image: url(:/Resources/images/053.png);
+    }
+    QPushButton#pushButton_emoji_54{
+            border-image: url(:/Resources/images/054.png);
+    }
+
+    QPushButton#pushButton_emoji_55{
+            border-image: url(:/Resources/images/055.png);
+    }
+    QPushButton#pushButton_emoji_56{
+            border-image: url(:/Resources/images/056.png);
+    }
+    QPushButton#pushButton_emoji_57{
+            border-image: url(:/Resources/images/057.png);
+    }
+    QPushButton#pushButton_emoji_58{
+            border-image: url(:/Resources/images/058.png);
+    }
+    QPushButton#pushButton_emoji_59{
+            border-image: url(:/Resources/images/059.png);
+    }
+    QPushButton#pushButton_emoji_60{
+            border-image: url(:/Resources/images/060.png);
+    }
+    QPushButton#pushButton_emoji_61{
+            border-image: url(:/Resources/images/061.png);
+    }
+    QPushButton#pushButton_emoji_62{
+            border-image: url(:/Resources/images/062.png);
+    }
+    QPushButton#pushButton_emoji_63{
+            border-image: url(:/Resources/images/063.png);
+    }
+
+    QPushButton#pushButton_emoji_64{
+            border-image: url(:/Resources/images/064.png);
+    }
+    QPushButton#pushButton_emoji_65{
+            border-image: url(:/Resources/images/065.png);
+    }
+    QPushButton#pushButton_emoji_66{
+            border-image: url(:/Resources/images/066.png);
+    }
+    QPushButton#pushButton_emoji_67{
+            border-image: url(:/Resources/images/067.png);
+    }
+    QPushButton#pushButton_emoji_68{
+            border-image: url(:/Resources/images/068.png);
+    }
+    QPushButton#pushButton_emoji_69{
+            border-image: url(:/Resources/images/069.png);
+    }
+    QPushButton#pushButton_emoji_70{
+            border-image: url(:/Resources/images/070.png);
+    }
+    QPushButton#pushButton_emoji_71{
+            border-image: url(:/Resources/images/071.png);
+    }
+    QPushButton#pushButton_emoji_72{
+            border-image: url(:/Resources/images/072.png);
+    }
+
+    QPushButton#pushButton_emoji_73{
+            border-image: url(:/Resources/images/073.png);
+    }
+    QPushButton#pushButton_emoji_74{
+            border-image: url(:/Resources/images/074.png);
+    }
+    QPushButton#pushButton_emoji_75{
+            border-image: url(:/Resources/images/075.png);
+    }
+    QPushButton#pushButton_emoji_76{
+            border-image: url(:/Resources/images/076.png);
+    }
+    QPushButton#pushButton_emoji_77{
+            border-image: url(:/Resources/images/077.png);
+    }
+    QPushButton#pushButton_emoji_78{
+            border-image: url(:/Resources/images/078.png);
+    }
+    QPushButton#pushButton_emoji_79{
+            border-image: url(:/Resources/images/079.png);
+    }
+    QPushButton#pushButton_emoji_80{
+            border-image: url(:/Resources/images/080.png);
+    }

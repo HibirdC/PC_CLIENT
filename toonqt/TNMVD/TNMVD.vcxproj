@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25DCEB6C-2EEF-44EE-A323-698100ADA7AB}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(TOONSDK)\$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(TOONSDK)\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(QTDIR)\include;$(TOONSDK)\include;$(TOONSDK)\include\windows;$(IncludePath)</IncludePath>
+    <LibraryPath>$(QTDIR)\lib;$(TOONSDK)\lib\$(Platform)\;$(TOONSDK)\lib\windows\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(TOONSDK)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(TOONSDK)\$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(QTDIR)\include;$(TOONSDK)\include;$(TOONSDK)\include\windows;$(IncludePath)</IncludePath>
+    <LibraryPath>$(QTDIR)\lib;$(TOONSDK)\lib\$(Platform)\;$(TOONSDK)\lib\windows\$(Platform)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;TNMVD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(TOONSDK)\opencore_amr\windows\include;.\..\LocalStorage;.\..\IMCore;.\..\NetWorkAPI;.\GeneratedFiles;.;$(QTDIR)\include;.\..\Common;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetWork;.\..\ToonProtocol;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngineWidgets;.\Search;$(QTDIR)\include\QtWebEngineCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName)d.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(TOONSDK)\opencore_amr\windows\x86\lib;$(QTDIR)\lib;$(TOONSDK)\lib\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5NetWorkd.lib;Qt5Sqld.lib;Qt5Multimediad.lib;Qt5WebEngineWidgetsd.lib;Qt5WebChanneld.lib;$(TOONSDK)\$(Platform)\$(Configuration)\Commond.lib;$(TOONSDK)\$(Platform)\$(Configuration)\NetWorkAPId.lib;$(TOONSDK)\$(Platform)\$(Configuration)\IMCored.lib;$(TOONSDK)\$(Platform)\$(Configuration)\ToonProtocold.lib;opencore-amrnb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;TNMVD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\..\LocalStorage;.\..\IMCore;.\..\ToonProtocol;.\..\NetWorkAPI;.\GeneratedFiles;.;$(QTDIR)\include;.\..\Common;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetWork;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtWebEngineWidgets;.\Search;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName)d.dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(TOONSDK)\lib\$(Platform)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5NetWorkd.lib;Qt5WebEngineWidgetsd.lib;Qt5WebChanneld.lib;Qt5Sqld.lib;Qt5Multimediad.lib;pugixmld.lib;$(TOONSDK)\$(Platform)\$(Configuration)\Commond.lib;$(TOONSDK)\$(Platform)\$(Configuration)\NetWorkAPId.lib;$(TOONSDK)\$(Platform)\$(Configuration)\IMCored.lib;$(TOONSDK)\$(Platform)\$(Configuration)\ToonProtocold.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;TNMVD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(TOONSDK)\opencore_amr\windows\include;.\..\LocalStorage;.\..\ToonProtocol;.\..\IMCore;.\..\NetWorkAPI;.\GeneratedFiles;.;$(QTDIR)\include;.\..\Common;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtNetWork;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWebChannel;.\Search;$(QTDIR)\include\QtWebEngineCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(TOONSDK)\opencore_amr\windows\x86\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5NetWork.lib;Qt5Multimedia.lib;Qt5WebChannel.lib;Qt5WebEngineWidgets.lib;$(TOONSDK)\$(Platform)\$(Configuration)\Common.lib;$(TOONSDK)\$(Platform)\$(Configuration)\NetWorkAPI.lib;$(TOONSDK)\$(Platform)\$(Configuration)\IMCore.lib;$(TOONSDK)\$(Platform)\$(Configuration)\ToonProtocol.lib;opencore-amrnb.lib;Qt5Sql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;TNMVD_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(TOONSDK)\opencore_amr\windows\include;.\..\LocalStorage;.\..\ToonProtocol;.\..\IMCore;.\..\NetWorkAPI;.\GeneratedFiles;.;$(QTDIR)\include;.\..\Common;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebEngineWidgets;$(QTDIR)\include\QtNetWork;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWebChannel;.\Search;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(TOONSDK)\opencore_amr\windows\x64\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5NetWork.lib;Qt5Multimedia.lib;pugixml.lib;Qt5WebChannel.lib;Qt5WebEngineWidgets.lib;$(TOONSDK)\$(Platform)\$(Configuration)\Common.lib;$(TOONSDK)\$(Platform)\$(Configuration)\NetWorkAPI.lib;$(TOONSDK)\$(Platform)\$(Configuration)\IMCore.lib;$(TOONSDK)\$(Platform)\$(Configuration)\ToonProtocol.lib;opencore-amrnb.lib;Qt5Sql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.vcxproj">
+      <Project>{97676cb6-b850-4a73-95a9-da87b50de3b6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\IMCore\IMCore.vcxproj">
+      <Project>{11bf6a32-b50a-4112-9c7d-36d7537fd41e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LocalStorage\LocalStorage.vcxproj">
+      <Project>{01c52f03-5318-4f90-b0c8-ef7b52161763}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\NetWorkAPI\NetWorkAPI.vcxproj">
+      <Project>{ad193733-8c77-4a71-8be5-9a2921dcbade}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ToonProtocol\ToonProtocol.vcxproj">
+      <Project>{4120e87c-8200-4ede-a6dc-27cde2f69da4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNChooseCardDialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNPictureViewerDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNPictureViewerDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNPictureViewerDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNPictureViewerDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNPictureViewerDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="frames\TNFrameViewer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNFrameViewer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNFrameViewer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNFrameViewer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNFrameViewer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="frames\TNBizActionResponder.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNBizActionResponder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNBizActionResponder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNBizActionResponder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNBizActionResponder.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="emotion\TNEmotionLineEdit.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNEmotionLineEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNEmotionLineEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNEmotionLineEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNEmotionLineEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="emotion\tnconvertrichedit.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tnconvertrichedit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing tnconvertrichedit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tnconvertrichedit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing tnconvertrichedit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="CommentTextEdit.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CommentTextEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing CommentTextEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CommentTextEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing CommentTextEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <ClInclude Include="emotion\TNEmojiSingleton.h" />
+    <CustomBuild Include="emotion\TNEmotionPictureTextConverter.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNEmotionPictureTextConverter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNEmotionPictureTextConverter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNEmotionPictureTextConverter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNEmotionPictureTextConverter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <ClInclude Include="frames\TNFrameId.h" />
+    <ClInclude Include="GeneratedFiles\ui_TNDefaultPage.h" />
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="TNElidedLabelV2.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNElidedLabelV2.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNElidedLabelV2.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNElidedLabelV2.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNElidedLabelV2.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <ClInclude Include="resource1.h" />
+    <CustomBuild Include="TNDefaultPage.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNDefaultPage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNDefaultPage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNDefaultPage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNDefaultPage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <ClInclude Include="TNMVD.h" />
+    <ClInclude Include="TNMVD_global.h" />
+    <CustomBuild Include="TNWebViewDetailsArea.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNWebViewDetailsArea.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNWebViewDetailsArea.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNWebViewDetailsArea.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNWebViewDetailsArea.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TNElidedLabel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNElidedLabel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNElidedLabel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNElidedLabel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNElidedLabel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="tncommondealavator.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tncommondealavator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing tncommondealavator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tncommondealavator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing tncommondealavator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TNChooseCardDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNChooseCardDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNChooseCardDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNChooseCardDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNChooseCardDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="tnavatorbutton.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tnavatorbutton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing tnavatorbutton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tnavatorbutton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing tnavatorbutton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+    <CustomBuild Include="TNAbstractItemDelegate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TNAbstractItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I.\..\ToonProtocol" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing TNAbstractItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I.\..\LocalStorage" "-I.\..\IMCore" "-I.\..\ToonProtocol" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtWebChannel" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I.\Search"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TNAbstractItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search" "-I$(QTDIR)\include\QtWebEngineCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing TNAbstractItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DTNMVD_LIB -D_WINDLL  "-I$(TOONSDK)\opencore_amr\windows\include" "-I.\..\LocalStorage" "-I.\..\ToonProtocol" "-I.\..\IMCore" "-I.\..\NetWorkAPI" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\..\Common" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtWebEngineWidgets" "-I$(QTDIR)\include\QtNetWork" "-I$(QTDIR)\include\QtMultimedia" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWebChannel" "-I.\Search"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommentTextEdit.cpp" />
+    <ClCompile Include="emotion\tnconvertrichedit.cpp" />
+    <ClCompile Include="emotion\TNEmojiSingleton.cpp" />
+    <ClCompile Include="emotion\TNEmotionLineEdit.cpp" />
+    <ClCompile Include="emotion\TNEmotionPictureTextConverter.cpp" />
+    <ClCompile Include="frames\TNBizActionResponder.cpp" />
+    <ClCompile Include="frames\TNFrameId.cpp" />
+    <ClCompile Include="frames\TNFrameViewer.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_CommentTextEdit.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNAbstractItemDelegate.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_tnavatorbutton.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNBizActionResponder.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNChooseCardDialog.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_tncommondealavator.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_tnconvertrichedit.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNDefaultPage.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNElidedLabel.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNElidedLabelV2.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNEmotionLineEdit.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNEmotionPictureTextConverter.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNFrameViewer.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNPictureViewerDialog.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_TNWebViewDetailsArea.cpp" />
+    <ClCompile Include="GeneratedFiles\qrc_TNMVD.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TNAbstractItemDelegate.cpp" />
+    <ClCompile Include="tnavatorbutton.cpp" />
+    <ClCompile Include="TNChooseCardDialog.cpp" />
+    <ClCompile Include="tncommondealavator.cpp" />
+    <ClCompile Include="TNDefaultPage.cpp" />
+    <ClCompile Include="TNElidedLabel.cpp" />
+    <ClCompile Include="TNElidedLabelV2.cpp" />
+    <ClCompile Include="TNMVD.cpp" />
+    <ClCompile Include="TNPictureViewerDialog.cpp" />
+    <ClCompile Include="TNWebViewDetailsArea.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNMVD.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\Resources\Emoji.plist;.\Resources\PDF.png;.\Resources\video.png;.\Resources\DefaltAvarta.png;.\Resources\female.png;.\Resources\male.png;.\Resources\downArrow.png;.\Resources\rightArrow.png;.\Resources\loading.gif;.\Resources\android.png;.\Resources\default.png;.\Resources\docx.png;.\Resources\key.png;.\Resources\numbers.png;.\Resources\pages.png;.\Resources\PPT.png;.\Resources\text.png;.\Resources\xls.png;.\Resources\zip.png;.\Resources\gray.jpg;.\Resources\unread.png;.\Resources\audio_play_blue.gif;.\Resources\audio_default_gray.png;.\Resources\audio_play_gray.gif;.\Resources\prompt_fill.png;.\Resources\mask_ellipse.png;.\Resources\audio_default_blue.png;.\Resources\mask_hexagon.png;.\Resources\mask_hexagon_small.png;.\Resources\mask_ellipse_moresmall.png;.\Resources\loading_data.gif;.\Resources\mask_ellipse_small.png;.\Resources\mask_ellipse_middle.png;.\Resources\mask_ellipse_middlesmall.png;.\Resources\default_feed_avatar.png;.\Resources\new_friend.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);.\Resources\Emoji.plist;.\Resources\PDF.png;.\Resources\video.png;.\Resources\DefaltAvarta.png;.\Resources\female.png;.\Resources\male.png;.\Resources\downArrow.png;.\Resources\rightArrow.png;.\Resources\loading.gif;.\Resources\android.png;.\Resources\default.png;.\Resources\docx.png;.\Resources\key.png;.\Resources\numbers.png;.\Resources\pages.png;.\Resources\PPT.png;.\Resources\text.png;.\Resources\xls.png;.\Resources\zip.png;.\Resources\gray.jpg;.\Resources\unread.png;.\Resources\audio_play_blue.gif;.\Resources\audio_default_gray.png;.\Resources\audio_play_gray.gif;.\Resources\prompt_fill.png;.\Resources\mask_ellipse.png;.\Resources\audio_default_blue.png;.\Resources\mask_hexagon.png;.\Resources\mask_hexagon_small.png;.\Resources\mask_ellipse_moresmall.png;.\Resources\loading_data.gif;.\Resources\mask_ellipse_small.png;.\Resources\mask_ellipse_middle.png;.\Resources\mask_ellipse_middlesmall.png;.\Resources\default_feed_avatar.png;.\Resources\new_friend.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\Resources\Emoji.plist;.\Resources\PDF.png;.\Resources\video.png;.\Resources\DefaltAvarta.png;.\Resources\female.png;.\Resources\male.png;.\Resources\downArrow.png;.\Resources\rightArrow.png;.\Resources\loading.gif;.\Resources\android.png;.\Resources\default.png;.\Resources\docx.png;.\Resources\key.png;.\Resources\numbers.png;.\Resources\pages.png;.\Resources\PPT.png;.\Resources\text.png;.\Resources\xls.png;.\Resources\zip.png;.\Resources\gray.jpg;.\Resources\unread.png;.\Resources\audio_play_blue.gif;.\Resources\audio_default_gray.png;.\Resources\audio_play_gray.gif;.\Resources\prompt_fill.png;.\Resources\mask_ellipse.png;.\Resources\audio_default_blue.png;.\Resources\mask_hexagon.png;.\Resources\mask_hexagon_small.png;.\Resources\mask_ellipse_moresmall.png;.\Resources\loading_data.gif;.\Resources\mask_ellipse_small.png;.\Resources\mask_ellipse_middle.png;.\Resources\mask_ellipse_middlesmall.png;.\Resources\default_feed_avatar.png;.\Resources\new_friend.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);.\Resources\Emoji.plist;.\Resources\PDF.png;.\Resources\video.png;.\Resources\DefaltAvarta.png;.\Resources\female.png;.\Resources\male.png;.\Resources\downArrow.png;.\Resources\rightArrow.png;.\Resources\loading.gif;.\Resources\android.png;.\Resources\default.png;.\Resources\docx.png;.\Resources\key.png;.\Resources\numbers.png;.\Resources\pages.png;.\Resources\PPT.png;.\Resources\text.png;.\Resources\xls.png;.\Resources\zip.png;.\Resources\gray.jpg;.\Resources\unread.png;.\Resources\audio_play_blue.gif;.\Resources\audio_default_gray.png;.\Resources\audio_play_gray.gif;.\Resources\prompt_fill.png;.\Resources\mask_ellipse.png;.\Resources\audio_default_blue.png;.\Resources\mask_hexagon.png;.\Resources\mask_hexagon_small.png;.\Resources\mask_ellipse_moresmall.png;.\Resources\loading_data.gif;.\Resources\mask_ellipse_small.png;.\Resources\mask_ellipse_middle.png;.\Resources\mask_ellipse_middlesmall.png;.\Resources\default_feed_avatar.png;.\Resources\new_friend.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoji.plist">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <CustomBuild Include="TNDefaultPage.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\android.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\audio_default_blue.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\audio_default_gray.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\audio_play_blue.gif">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\audio_play_gray.gif">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\DefaltAvarta.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\default.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\default_feed_avatar.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\docx.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\downArrow.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\female.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\gray.jpg">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\key.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\loading.gif">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\loading_data.gif">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\male.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_ellipse.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_ellipse_middle.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_ellipse_middlesmall.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_ellipse_moresmall.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_ellipse_small.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_hexagon.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\mask_hexagon_small.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\new_friend.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\numbers.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\pages.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\PDF.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\PPT.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\prompt_fill.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\rightArrow.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\text.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\unread.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\video.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\xls.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\zip.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="msvc2013" Qt5Version_x0020_x64="$(DefaultQtVersion)" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

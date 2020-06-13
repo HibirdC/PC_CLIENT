@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\httpserver">
+      <UniqueIdentifier>{6a96934c-98da-4c12-b2b0-080c49dc1bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\httpserver">
+      <UniqueIdentifier>{9c79cf78-a573-4480-8863-1e1b5473dcd2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToonProtocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToonProtocol_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="httpserver\http_parser.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_TNSimpleBrowser.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="TNSimpleBrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNWebEnginePage.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="httpserver\httpconnection.h">
+      <Filter>Header Files\httpserver</Filter>
+    </CustomBuild>
+    <CustomBuild Include="httpserver\httprequest.h">
+      <Filter>Header Files\httpserver</Filter>
+    </CustomBuild>
+    <CustomBuild Include="httpserver\httpresponse.h">
+      <Filter>Header Files\httpserver</Filter>
+    </CustomBuild>
+    <CustomBuild Include="httpserver\httpserver.h">
+      <Filter>Header Files\httpserver</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNSimpleBrowser.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNToonCommandManager.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNAbstractToonCommand.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNUploadPhotoCommand.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TNWebEngineUrlRequestInterceptor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TNSimpleBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNSimpleBrowser.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNWebEnginePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNWebEnginePage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToonProtocol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_httpconnection.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_httprequest.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_httpresponse.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_httpserver.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver\http_parser.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver\httpconnection.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver\httprequest.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver\httpresponse.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="httpserver\httpserver.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="TNToonCommandManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNToonCommandManager.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNAbstractToonCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNAbstractToonCommand.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNUploadPhotoCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNUploadPhotoCommand.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TNWebEngineUrlRequestInterceptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\moc_TNWebEngineUrlRequestInterceptor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

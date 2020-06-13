@@ -1,0 +1,60 @@
+/* 公共样式 */
+    QObject{
+        font-family:"微软雅黑";
+        font-size:12px;
+    }
+
+/* 更新进度条样式 */
+    QProgressBar{
+        background:#ebedf0;
+        width:290px;
+        height:8px;
+        border-radius:4px;
+    }
+    QProgressBar::chunk{
+        background:#3F94FC;
+        border-radius:4px;
+    }
+
+/* 弹出窗口样式 */
+	QDialog{
+	    background: #FFFFFF;
+	    border: 1px solid #EBEDF0;
+	    border-radius: 2px;
+	    box-shadow: 3px 3px 10px #333;
+	}
+
+	#exitConfirmTitleWidget{
+        background:transparent;
+        border-top-left-radius:2px;
+        border-top-right-radius:2px;
+        border: 0;
+    }
+    #confirmTitleLabel{
+    	font-size:16px;
+        color:#333333;
+        padding-left:20px;
+    }
+    QPushButton#closeButton{
+        border-image: url(:/img/Resources/img/bs-close.png);
+        width:12px;
+        height:12px;
+        background: transparent;
+        border: 0px solid #ebedf0;
+    }
+    QPushButton#closeButton:Hover,QPushButton#closeButton:Pressed{
+        border-image: url(:/img/Resources/img/bs-close-hover.png);
+    }
+
+    QPushButton#reDownLoadButton, #fromBrownserButton{
+    	min-width: 90px;
+    	min-height: 24px;
+    	max-width: 90px;
+    	max-height: 24px;
+    	font-size: 14px;
+    	color: #333333;
+    	background: #FFFFFF;
+    	border: 1px solid #ebedf0;
+    	border-radius: 2px;
+        padding-bottom:1px;
+    }

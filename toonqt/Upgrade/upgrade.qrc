@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Upgrade">
+        <file>Resources/upgrade.qss</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>Resources/img/windowsicon.png</file>
+        <file>Resources/img/bs-close.png</file>
+        <file>Resources/img/bs-close-hover.png</file>
+    </qresource>
+    <qresource prefix="/shadow">
+        <file>Resources/toon_en.qm</file>
+        <file>Resources/toon_tc.qm</file>
+        <file>Resources/toon_zh.qm</file>
+    </qresource>
+</RCC>

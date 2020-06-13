@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/toolWidget/SetUp.png</file>
+        <file>Resources/toolWidget/SetUp_Check.png</file>
+        <file>Resources/toolWidget/Off.png</file>
+        <file>Resources/toolWidget/On.png</file>
+        <file>Resources/toolWidget/toonLogo_Big.png</file>
+        <file>Resources/toolWidget/exitlogo.png</file>
+        <file>Resources/user_protocol.html</file>
+        <file>Resources/toolWidget/close.png</file>
+        <file>Resources/bjtoon_user_protocol.html</file>
+        <file>Resources/daotoon_user_protocol.html</file>
+        <file>Resources/qltoon_user_protocol.html</file>
+        <file>Resources/mctoon_user_protocol.html</file>
+        <file>Resources/zqtoon_user_protocol.html</file>
+    </qresource>
+</RCC>

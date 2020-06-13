@@ -1,0 +1,12 @@
+﻿#ifndef TOONPROTOCOL_GLOBAL_H
+#define TOONPROTOCOL_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef TOONPROTOCOL_LIB
+# define TOONPROTOCOL_EXPORT Q_DECL_EXPORT
+#else
+# define TOONPROTOCOL_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TOONPROTOCOL_GLOBAL_H

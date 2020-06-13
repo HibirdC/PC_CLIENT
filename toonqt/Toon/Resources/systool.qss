@@ -1,0 +1,1193 @@
+﻿QToolTip{
+    background:#f8f8f8;
+    border:0;
+    color:#333333;
+    border-radius:2px;
+    padding:1px;
+}
+
+/* 右键菜单样式 */
+    QMenu{
+        background: #FFFFFF;
+        border: 1px solid #dfdfdf;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
+        border-radius: 2px;
+        margin:0;
+        padding:0;
+    }
+    QMenu::item{
+        width:70px;
+        height:30px;
+        background:transparent;
+        padding:0px 10px;
+        font-size:12px;
+        color:#333333;
+        text-align:left;
+    }
+    QMenu::item:selected,QMenu::item:hover{
+        background:#EAF3FF;
+    }
+    QMenu#shotContextMenu::item{
+        width:60px;
+        padding-left:20px;
+    }
+    QMenu#noticeQmenu::item{
+        width:125px;
+    }
+
+/* 左边菜单新消息样式 */
+    #messageNumberLabel{
+    	background-color: #FB6041;
+        border-radius: 8px;
+        min-width:16px;
+        min-height:16px;
+        max-height:16px;
+        line-height:16px;
+        font-size: 10px;
+        color: #ffffff;
+    }
+
+/* 更新提示红点 */
+    #upgradePromptLabel, #avatarChoiceLabelStatus{
+        min-width: 10px;
+        max-width: 10px;
+        min-height：10px;
+        max-height: 10px;
+        background: transparent;
+        border: none;
+        border-image: url(:/sysButton/Resources/img/sysButton/yuanquan.png);
+    }
+
+
+/* 设置滚动条样式 */
+    QScrollBar::vertical {
+        min-width:6px;
+        max-width:6px;
+        background: transparent;
+        padding:0;
+    }
+    QScrollBar::horizontal {
+        min-height:6px;
+        max-height:6px;
+        background: transparent;
+        padding:0;
+        min-width:20px;
+    }
+    QScrollBar::handle:vertical{
+        min-height:20px;
+    }
+    QScrollBar::handle:vertical,QScrollBar::handle:horizontal
+    {
+        background: rgba(223,223,223,0.60);
+        border-radius:3px;
+        border:0;
+    }
+    QScrollBar::handle:vertical:hover,QScrollBar::handle:horizontal:hover
+    {
+        background: rgba(223,223,223,0.80);
+        border-radius:3px;
+    }
+
+    QScrollBar::sub-line:vertical,QScrollBar::sub-line:horizontal
+    {
+        height:0px;width:0px;
+    }
+    QScrollBar::add-line:vertical,QScrollBar::add-line:horizontal
+    {
+        height:0px;width:0px;
+    }
+
+    QScrollBar::sub-page:vertical,QScrollBar::add-page:vertical,QScrollBar::sub-page:horizontal,QScrollBar::add-page:horizontal
+    {
+        background: transparent;
+    }
+
+/* 浏览器样式 */
+    #browserWidget{
+        width:600px;
+        height:590px;
+        background:transparent;
+        border: 1px solid #dfdfdf;
+        border-radius: 2px;
+    }
+    #browserTitle{
+        background: #ffffff;
+        padding:15px 20px;
+    }
+    #bs_backButton,#bs_forwardButton,#bs_freshButton,#bs_minButton,#bs_maxButton,#bs_closeButton{
+        width:12px;
+        height:12px;
+        border:0;
+        text-indent:100px;
+    }
+    #bs_backButton{
+        border-image: url(:/browser/Resources/img/browser/bs-back.png);
+    }
+    #bs_forwardButton{
+        border-image: url(:/browser/Resources/img/browser/bs-next.png);
+    }
+    #bs_freshButton{
+        border-image: url(:/browser/Resources/img/browser/bs-fresh.png);
+    }
+    #bs_freshButton:Hover,#bs_freshButton:Pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-fresh-hover.png);
+    }
+    #bs_minButton{
+        border-image: url(:/browser/Resources/img/browser/bs-min.png);
+    }
+    #bs_minButton:Hover,#bs_minButton:Pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-min-hover.png);
+    }
+    #bs_maxButton{
+        border-image: url(:/browser/Resources/img/browser/bs-max.png);
+    }
+    #bs_maxButton:Hover,#bs_maxButton:Pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-max-hover.png);
+    }
+    #bs_maxButton:checked{
+        border-image: url(:/browser/Resources/img/browser/bs-restore.png);
+    }
+    #bs_maxButton:checked:Hover,#bs_maxButton:checked:Pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-restore-hover.png);
+    }
+    #bs_closeButton{
+        border-image: url(:/browser/Resources/img/browser/bs-close.png);
+    }
+    #bs_closeButton:Hover,#bs_closeButton:Pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-close-hover.png);
+    }
+
+/* mac浏览器样式 */
+    #MacBrowserWidget{
+        background:transparent;
+        border-radius: 4px;
+    }
+    #mac_bs_minButton,#mac_bs_maxButton,#mac_bs_closeButton{
+        width:12px;
+        height:12px;
+        border:0;
+        text-indent:100px;
+    }
+    #mac_bs_minButton{
+        border-image: url(:/mac/Resources/img/mac/min.png);
+    }
+    #mac_bs_minButton:Hover,#mac_bs_minButton:Pressed{
+        border-image: url(:/mac/Resources/img/mac/min-hover.png);
+    }
+    #mac_bs_minButton:!enabled{
+        border-image:url(:/mac/Resources/img/mac/disable.png);
+    }
+    #mac_bs_maxButton{
+        border-image: url(:/mac/Resources/img/mac/max.png);
+    }
+    #mac_bs_maxButton:Hover,#mac_bs_maxButton:Pressed{
+        border-image: url(:/mac/Resources/img/mac/max-hover.png);
+    }
+    #mac_bs_maxButton:checked{
+        border-image: url(:/mac/Resources/img/mac/max.png);
+    }
+    #mac_bs_maxButton:checked:Hover,#mac_bs_maxButton:checked:Pressed{
+        border-image: url(:/mac/Resources/img/mac/max-restore.png);
+    }
+    #mac_bs_closeButton{
+        border-image: url(:/mac/Resources/img/mac/close.png);
+    }
+    #mac_bs_closeButton:Hover,#mac_bs_closeButton:Pressed{
+        border-image: url(:/mac/Resources/img/mac/close-hover.png);
+    }
+
+/* 弹出窗口样式 */
+    QDialog{
+        background: #FFFFFF;
+        border-radius: 2px;
+        box-shadow: 3px 3px 10px #333;
+        border: 1px solid #ebedf0;
+    }
+    #DialogTitleWidget,#feedBackProposalTitleWidget,#exitConfirmTitleWidget,#updateInfoTitleWidget{
+        background:transparent;
+        min-height:40px;
+        max-height:40px;
+        border-top-left-radius:2px;
+        border-top-right-radius:2px;
+        border: 0;
+    }
+    #DialogTitleLabel,#feedBackTitleLabel,#confirmTitleLabel,#updateInfoTitleLabel,#languageTipTitle{
+        font-size:16px;
+        color:#333333;
+    }
+    QPushButton#closeButton,#closeButtonFeed{
+        border-image: url(:/browser/Resources/img/browser/bs-close.png);
+        width:12px;
+        height:12px;
+        background: transparent;
+        border: 0px solid #ebedf0;
+    }
+    QPushButton#closeButton:Hover,QPushButton#closeButton:Pressed,#closeButtonFeed:Hover,#closeButtonFeed:pressed{
+        border-image: url(:/browser/Resources/img/browser/bs-close-hover.png);
+    }
+    /* 添加联系人 */
+    QDialog#SelectContactDialog{
+        min-width:580px;
+        max-width:580px;
+        min-height:482px;
+        max-height:482px;
+    }
+    /* 反馈建议 */
+    QDialog#TNFeedBackProposalDialog{
+        min-width:450px;
+        max-width:450px;
+        min-height:235px;
+        max-height:235px;
+    }
+    /* 更新 */
+    QDialog#TNCheckUpdateDialog,QDialog#TNExitLoginConfirmDialog{
+        min-width:350px;
+        max-width:350px;
+        min-height:160px;
+        max-height:160px;
+    }
+    QDialog#TNCheckUpdateInfoDialog{
+        min-width:450px;
+        max-width:450px;
+        min-height:240px;
+        max-height:240px;
+    }
+    #textEdit{
+        border:0;
+        background:#ffffff;
+        font-size:14px;
+        line-height:22px;
+        text-align:left;
+    }
+    /* 弹框确认按钮 */
+    QPushButton#okButton,QPushButton#btn_redetect_device{
+        min-width: 80px;
+        min-height: 23px;
+        max-width: 80px;
+        max-height: 23px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #3395FF;
+        border: 1px solid #3395FF;
+        border-radius: 2px;
+        padding-bottom:2px;
+    }
+    QPushButton#okButton:hover,QPushButton#btn_redetect_device:hover{
+        background: #298cf8;
+    }
+    /* 弹框取消按钮 */
+    #dialogCloseButton{
+        min-width: 80px;
+        min-height: 24px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #333333;
+        background: #ffffff;
+        border: 1px solid #ebedf0;
+        border-radius: 2px;
+        padding-bottom:1px;
+        padding-left:2px;
+        padding-right:2px;
+    }
+    #dialogCloseButton:hover{
+        background:#f8f8f8;
+    }
+    /* 弹框确认按钮 */
+    QPushButton#groupNameOkButton, QPushButton#groupNameOkButton[enable=true]{
+        min-width: 80px;
+        min-height: 24px;
+        max-width: 80px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #3395FF;
+        border-radius: 2px;
+        padding-bottom:1px;
+        padding-left:2px;
+        padding-right:2px;
+        border: 1px solid #3395FF;
+    }
+    QPushButton#groupNameOkButton:Hover, QPushButton#groupNameOkButton[enable=true]:Hover{
+        background: #298cf8;
+    }
+    QPushButton#groupNameOkButton[enable=false]{
+        background: #F8F8F8;
+        border:1px solid #EBEDF0;
+        color:#8E8E93;
+    }
+    /* 确认按钮置灰效果 */
+    QPushButton#acceptButton:!enabled, QPushButton#okButton:!enabled, QPushButton#groupNameOkButton:!enabled, QPushButton#groupNameOkButton:!enabled{
+        background:rgba(51,149,255,0.5);
+        border-color:rgba(51,149,255,0.5);
+    }
+    /* 弹框取消按钮 */
+    QPushButton#cancelButton,QPushButton#btn_close{
+        min-width: 80px;
+        min-height: 24px;
+        max-width: 80px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #333333;
+        background: #FFFFFF;
+        border: 1px solid #ebedf0;
+        border-radius: 2px;
+        padding-bottom:1px;
+    }
+    QPushButton#cancelButton:Hover,QPushButton#btn_close:Hover{
+        background:#f8f8f8;
+    }
+    /* 切换语言 */
+    #TNLanguageChangeTipDialog{
+        min-width:350px;
+        max-width:350px;
+        min-height:174px;
+        max-height:174px;
+    }
+    #languageTipLabel,#label_camera_status{
+        font-size:14px;
+        line-height:24px;
+    }
+
+/* 网络重连提示框样式 */
+    #TNWarningMessageBox{
+        width:300px;
+        height:40px;
+        background: #FF7445;
+        border-radius: 2px;
+        border:0;
+    }
+    #TNWarningMessageText{
+        color:#ffffff;
+        background:url(:/sysButton/Resources/img/sysButton/warning-icon.png) no-repeat left center;
+        font-size:14px;
+        padding-left:30px;
+        border:0;
+        min-height:20px;
+		margin:0 30px;
+    }
+
+/* 加入群组提示框样式 */
+    TNMessageBox, #TNMessageBox{
+        border:0;
+        background:rgba(0,0,0,0.65);
+        border-radius:5px;
+        max-height:30px;
+    }
+    #pushButton_MessageBox{
+        background:transparent;
+        border:0;
+        width:18px;
+        height:18px;
+        border-image: url(:/sysButton/Resources/img/sysButton/success-ico.png);
+    }
+    #lineEdit_MessageBox{
+        font-size:14px;
+        text-align:center;
+        color:#ffffff;
+        background:transparent;
+        border:0;
+        min-height:30px;
+        padding:0 10px;
+    }
+
+/* 图片查看器样式 */
+    TNPictureViewerDialog{
+        border:0;
+        background:rgba(0,0,0,0.4);
+        border-radius:2px;
+    }
+    #pictureMinButton,#pictureMaxButton,#pictureCloseButton{
+        background:transparent;
+        width:12px;
+        height:12px;
+        margin:0 10px;
+    }
+    #pictureMinButton{
+        border-image: url(:/picviewer/Resources/img/picviewer/min.png);
+    }
+    #pictureMinButton:Hover,#pictureMinButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/min-hover.png);
+    }
+    #pictureMaxButton,#pictureMaxButton:unchecked{
+        border-image: url(:/picviewer/Resources/img/picviewer/max.png);
+    }
+    #pictureMaxButton:checked{
+        border-image: url(:/picviewer/Resources/img/picviewer/max-restore.png);
+    }
+    #pictureMaxButton:Hover,#pictureMaxButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/max-hover.png);
+    }
+    #pictureMaxButton:checked:hover,#pictureMaxButton:checked:pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/max-restore-hover.png);
+    }
+    #pictureCloseButton{
+        border-image: url(:/picviewer/Resources/img/picviewer/close.png);
+    }
+    #pictureCloseButton:Hover,#pictureCloseButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/close-hover.png);
+    }
+    #pictureFoot{
+        background:rgba(0,0,0,0.3);
+        width:260px;
+        height:40px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    #zoomInButton,#zoomOutButton,#rotateButton,#savePictureButton{
+        border:0;
+        background:transparent;
+        width:20px;
+        height:20px;
+        margin:0 15px;
+    }
+    #zoomInButton{
+        border-image: url(:/picviewer/Resources/img/picviewer/zoomin.png);
+    }
+    #zoomInButton:Hover,#zoomInButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/zoomin-hover.png);
+    }
+    #zoomOutButton{
+        border-image: url(:/picviewer/Resources/img/picviewer/zoomout.png);
+    }
+    #zoomOutButton:Hover,#zoomOutButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/zoomout-hover.png);
+    }
+    #rotateButton{
+        width:23px;
+        border-image: url(:/picviewer/Resources/img/picviewer/rotate.png);
+    }
+    #rotateButton:Hover,#rotateButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/rotate-hover.png);
+    }
+    #savePictureButton{
+        border-image: url(:/picviewer/Resources/img/picviewer/download.png);
+    }
+    #savePictureButton:Hover,#savePictureButton:Pressed{
+        border-image: url(:/picviewer/Resources/img/picviewer/download-hover.png);
+    }
+    #previousOne,#nextOne{
+        border:0;
+        background:transparent;
+        width:40px;
+        height:40px;
+    }
+    #previousOne{
+        border-image:url(:/picviewer/Resources/img/picviewer/preview.png);
+    }
+    #previousOne:hover,#previousOne:pressed{
+        border-image:url(:/picviewer/Resources/img/picviewer/preview-hover.png);
+    }
+    #nextOne{
+        border-image:url(:/picviewer/Resources/img/picviewer/next.png);
+    }
+    #nextOne:hover,#nextOne:pressed{
+        border-image:url(:/picviewer/Resources/img/picviewer/next-hover.png);
+    }
+
+
+/* 全局loading样式 */
+    #tnLoadingBox{
+        border:0;
+        background:transparent;
+        height:432px;
+        width:320px;
+    }
+    #tnLoadingLabel{
+        height:432px;
+        width:320px;
+        border:0;
+        border-image: url(:/skin/Resources/img/skin/default/loading-bg.png);
+        background-color: transparent;
+    }
+
+/* 更新进度条样式 */
+    QProgressBar{
+        background:#f0f0f0;
+        width:290px;
+        height:8px;
+        border-radius:4px;
+    }
+    QProgressBar::chunk{
+        background:#3F94FC;
+        border-radius:4px;
+    }
+
+/* toon协议选择名片 */
+    #TNChooseCardDialog{
+        border:1px solid #ebedf0;
+        background:#ffffff;
+    }
+    #chooseCardLabel{
+        color:#8E8E93;
+        font-size:14px;
+    }
+    #cardButton{
+        border:0;card
+        background:transparent;
+        width:80px;
+        margin:10px 12px 10px 0;
+        color:#333333;
+        font-size:12px;
+    }
+    #chooseCardCheckedLabel{
+        border-image:url(:/sysButton/Resources/img/sysButton/checked-icon.png);
+        width:22px;
+        height:22px;
+        background:transparent;
+    }
+
+/* loading提示框 */
+    #TNToastWidget{
+        background:rgba(0,0,0,0.5);
+        border-radius:4px;
+        border:0;
+        color:#ffffff;
+        text-align:center;
+    }
+    #TNToastLabel{
+        color:#ffffff;
+        border:0;
+    }
+
+/* 默认下拉选择框样式 */
+    QComboBox::item{
+        min-height:20px;
+        max-height:20px;
+        padding:0 20px;
+    }
+
+/* 开关按钮样式 */
+    #switchButton{
+        width:37px;
+        height:26px;
+        border-image: url(:/Resources/toolWidget/Off.png);
+        background:transparent;
+    }
+    #switchButton:checked{
+        border-image: url(:/Resources/toolWidget/On.png);
+    }
+
+/* 身份切换弹出框样式 */
+
+    #AvatarChoicelistWidgt{
+        background:#ffffff;
+        border:1px solid #dfdfdf;
+        border-radius:2px;
+        padding:6px 0;
+        width:234px;
+    }
+    #AvatarChoiceLabel{
+        width:8px;
+        height:12px;
+        background:transparent;
+        border-image: url(:/sysButton/Resources/img/sysButton/choice-arrow.png);
+    }
+    #avatorlbitem_status{
+        min-width:10px;
+        max-width:10px;
+        min-height:8px;
+        max-height:8px;
+        border-image:url(:/sysButton/Resources/img/sysButton/choiceIcon.png);
+        background:transparent;
+    }
+
+/* 皮肤设置样式 */
+    #TNSkinSet QPushButton{
+        width:50px;
+        height:50px;
+        border-radius:25px;
+        border:0;
+        position:relative;
+    }
+    #skinBlueBtn{
+        background:#3F94FC;
+    }
+    #skinPinkBtn{
+        background:#E86AA2;
+    }
+    #skinGreenBtn{
+        background:#68BF60;
+    }
+    #skinTeaBtn{
+        background:#2AAB9C;
+    }
+    #skinOrangeBtn{
+        background:#FF794D;
+    }
+    #skinPurpleBtn{
+        background:#904187;
+    }
+    #skinOrchidBtn{
+        background:#AFA9D0;
+    }
+    #skinBudBtn{
+        background:#FF5967;
+    }
+    #TNSkinSet QPushButton:checked{
+        border-image:url(:/sysButton/Resources/img/sysButton/avatarChoiceIcon.png);
+    }
+    #TNSkinSet QLabel{
+        font-size:14px;
+        color:#333333;
+    }
+
+/* 截图功能样式 */
+    /* 画图工具栏 */
+    QToolBar{
+        background:#ffffff;
+        border-radius: 2px;
+        spacing: 0;
+    }
+    #shotToolBar QToolButton{
+        min-width:40px;
+        max-width:40px;
+        min-height:40px;
+        max-height:40px;
+        margin-left:2px;
+        margin-right:2px;
+    }
+    #shotOptionBar QToolButton{
+        min-width:32px;
+        max-width:32px;
+        min-height:40px;
+        max-height:40px;
+        margin-left:2px;
+        margin-right:2px;
+    }
+    #shotSquare{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-square.png);
+    }
+    #shotCircle{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-circle.png);
+    }
+    #shotArrow{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-arrow.png);
+    }
+    #shotPen{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-pen.png);
+    }
+    #shotWord{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-word.png);
+    }
+    #shotRotate{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-rotate.png);
+    }
+    #shotSave{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-download.png);
+    }
+    #shotExit{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-cross.png);
+    }
+    #shotOk{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-ok.png);
+    }
+    /* 工具选中效果 */
+    #shotSquare:hover,#shotSquare:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-square-hover.png);
+    }
+    #shotCircle:hover,#shotCircle:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-circle-hover.png);
+    }
+    #shotArrow:hover,#shotArrow:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-arrow-hover.png);
+    }
+    #shotPen:hover,#shotPen:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-pen-hover.png);
+    }
+    #shotWord:hover,#shotWord:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-word-hover.png);
+    }
+    #shotRotate:hover,#shotRotate:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-rotate-hover.png);
+    }
+    #shotSave:hover,#shotSave:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-download-hover.png);
+    }
+    #shotExit:hover,#shotExit:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-cross-hover.png);
+    }
+    #shotOk:hover,#shotOk:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/icon-ok-hover.png);
+    }
+    /* 线条粗细 */
+    #lineSmall{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/line-s.png);
+    }
+    #lineSmall:hover,#lineSmall:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/line-s-hover.png);
+    }
+    #lineMiddle{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/line-m.png);
+    }
+    #lineMiddle:hover,#lineMiddle:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/line-m-hover.png);
+    }
+    #lineLarge{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/line-l.png);
+    }
+    #lineLarge:hover,#lineLarge:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/line-l-hover.png);
+    }
+    /* 颜色样式 */
+    #colorButton_1{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color1.png);
+    }
+    #colorButton_1:hover,#colorButton_1:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color1-hover.png);
+    }
+    #colorButton_2{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color2.png);
+    }
+    #colorButton_2:hover,#colorButton_2:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color2-hover.png);
+    }
+    #colorButton_3{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color3.png);
+    }
+    #colorButton_3:hover,#colorButton_3:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color3-hover.png);
+    }
+    #colorButton_4{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color4.png);
+    }
+    #colorButton_4:hover,#colorButton_4:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color4-hover.png);
+    }
+    #colorButton_5{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color5.png);
+    }
+    #colorButton_5:hover,#colorButton_5:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color5-hover.png);
+    }
+    #colorButton_6{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color6.png);
+    }
+    #colorButton_6:hover,#colorButton_6:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color6-hover.png);
+    }
+    #colorButton_7{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color7.png);
+    }
+    #colorButton_7:hover,#colorButton_7:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color7-hover.png);
+    }
+    #colorButton_8{
+        background: transparent;
+        border-image: url(:/screenShot/Resources/img/screenShot/color8.png);
+    }
+    #colorButton_8:hover,#colorButton_8:checked{
+        border-image: url(:/screenShot/Resources/img/screenShot/color8-hover.png);
+    }
+
+    /* 坐标显示框 */
+    #DimensionalDisplayLabel{
+        background:rgba(0,0,0,0.8);
+        color:#ffffff;
+        border:0;
+    }
+
+    /* 截图下拉菜单 */
+    #shotMenu::item {
+        width:105px;
+        padding:5px 5px 5px 20px;
+    }
+
+    /* 截图文字大小下拉菜单 */
+    QComboBox#shotCombobox{
+        width:40px;
+        height:25px;
+        background:#ffffff;
+        text-align:left;
+        font-size:14px;
+        color:#333333;
+        border:1px solid #ebedf0;
+        border-radius:2px;
+        padding:0 6px;
+    }
+    QComboBox#shotCombobox::item{
+        padding:2px 15px;
+        background:#ffffff;
+    }
+    QComboBox::drop-down#shotCombobox{
+        border:0;
+        background:transparent;
+    }
+    QComboBox::down-arrow#shotCombobox{
+        image:url(:/sysButton/Resources/img/sysButton/combobox.png);
+        width:10px;
+        height:6px;
+        right:4px;
+        text-align:center;
+        background:transparent;
+    }
+
+    /* 截图编辑文本框样式 */
+    #shotEditer{
+        background:transparent;
+        border:0;
+    }
+    #shotEditer:focus,#shotEditer:hover,#shotEditer[IsShowBorder=true]{
+        border:1px solid #FFB28E;
+        border-radius:2px;
+    }
+
+    /* 发送图片/附件样式 */
+    #sendTitle{
+        text-align:center;
+        font-size:16px;
+    }
+    #sendOkButton{
+        min-width: 90px;
+        min-height: 24px;
+        max-width: 90px;
+        max-height: 24px;
+        font-size: 14px;
+        color: #ffffff;
+        background: #3f94fc;
+        border: 1px solid #3f94fc;
+        border-radius: 2px;
+        padding-bottom:1px;
+    }
+    #m_pFileWidget{
+        background:#f9f9f9;
+        border:1px solid #f3f3f3;
+        width:300px;
+        height:90px;
+    }
+    #m_pFileNameLabel{
+        font-size:12px;
+        width:202px;
+        text-align:left;
+    }
+    #m_pFileSizeLabel{
+        font-size:12px;
+        color:#8e8e93;
+        width:202px;
+        text-align:left;
+    }
+    #batchFileButton{
+        background:#f9f9f9;
+        border:1px solid #f3f3f3;
+        width:300px;
+        height:76px;
+    }
+    #cardTableWidget #imageButton{
+        width:80px;
+        height:80px;
+        border:0;
+        background:#eee;
+    }
+    #removeButton{
+        width:80px;
+        height:80px;
+        border-image: url(:/sysButton/Resources/img/sysButton/img-remove-ico.png);
+        display:none;
+    }
+    #fileRemoveButton{
+        width:16px;
+        height:16px;
+        border-image: url(:/sysButton/Resources/img/sysButton/file-remove-ico.png);
+    }
+    #warningTipLabel{
+        color:#fb6041;
+        font-size:14px;
+    }
+
+/* 选择名片样式 */
+    QDialog#TNChooseCardDialog{
+        min-width:390px;
+        max-width:390px;
+        min-height:242px;
+    }
+    #chooseCardTitleLabel{
+        font-size:16px;
+        color:#333333;
+    }
+    #chooseCardArrow{
+        width:30px;
+        height:26px;
+        background:transparent;
+        border-image: url(:/sysButton/Resources/img/sysButton/addGroupArrow.png);
+    }
+
+/* 同意申请提示框 */
+    #expiredTipLabel{
+        width:230px;
+        height:30px;
+        color:#ffffff;
+        background:rgba(0,0,0,0.6);
+        border-radius:2px;
+        border:0;
+    }
+
+/* 确认加入群组 */
+    #meToolButton,#groupChatToolButton{
+        border:0;
+        background:transparent;
+    }
+
+/* notice 新消息提醒样式 */
+    #TNDetailsUnreadWdiget{
+        background:#f1f7ff;
+        border:1px solid #e2efff;
+        border-right:0;
+        border-top-left-radius:15px;
+        border-bottom-left-radius:15px;
+        min-width:152px;
+        max-width:152px;
+        min-height:28px;
+        max-height:28px;
+    }
+    #TNDetailsUnreadWdiget_EN{
+        background:#f1f7ff;
+        border:1px solid #e2efff;
+        border-right:0;
+        border-top-left-radius:15px;
+        border-bottom-left-radius:15px;
+        min-width:184px;
+        max-width:184px;
+        min-height:28px;
+        max-height:28px;
+    }
+    #details_unread_button_up,#details_unread_button_down{
+        max-width:118px;
+        height:20px;
+        background:transparent;
+        text-align:left;
+        padding-left:20px;
+        border-right:1px solid #e2efff;
+        color:#519efd;
+        font-size:14px;
+    }
+    #details_unread_button_up{
+        border-image:url(:/sysButton/Resources/img/sysButton/newmsg-arrow-up.png);
+    }
+    #details_unread_button_down{
+        border-image:url(:/sysButton/Resources/img/sysButton/newmsg-arrow-down.png);
+    }
+    #details_unread_button_close{
+        width:10px;
+        height:10px;
+        border:0;
+        background:transparent;
+        border-image:url(:/sysButton/Resources/img/sysButton/newmsg-close.png);
+    }
+
+/* 登录踢出提示框样式 */
+    #TNOfflineNoticeDialog{
+        width:290px;
+        height:200px;
+        background:#ffffff;
+        border:1px solid #dfdfdf;
+        border-radius:2px;
+    }
+    #offlineIcon{
+        width:66px;
+        height:66px;
+        background:transparent;
+        border-image: url(:/sysButton/Resources/img/sysButton/offline-ico.png);
+    }
+    #offlineTitleLabel{
+        font-size:16px;
+    }
+    #offlineContentLabel,#offlineContentLabel2,#offlineContentLabel3{
+        font-size:14px;
+        line-height:14px;
+        color:#5d677d;
+    }
+    #offlineButton{
+        min-width: 80px;
+        min-height: 23px;
+        max-width: 80px;
+        max-height: 23px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: #3395FF;
+        border: 1px solid #3395FF;
+        border-radius: 2px;
+        padding-bottom:2px;
+    }
+    #offlineButton:hover{
+        background: #298cf8;
+    }
+
+/* 已转发 */
+    #sendFowardMsg{
+        min-width:100px;
+        max-wdith:100px;
+        min-height:100px;
+        max-height:100px;
+        border-image: url(:/sysButton/Resources/img/sysButton/sendfoward-ico.png);
+    }
+    #sendFowardMsg #lineEdit_MessageBox{
+        padding-top:55px;
+    }
+
+/* 空白页面 */
+    #cardcasenullico{
+        min-width:60px;
+        max-wdith:60px;
+        min-height:60px;
+        max-height:60px;
+        border-image: url(:/sysButton/Resources/img/sysButton/cardcase-none.png);
+    }
+    #searchnullico{
+        min-width:60px;
+        max-wdith:60px;
+        min-height:60px;
+        max-height:60px;
+        border-image: url(:/sysButton/Resources/img/sysButton/search-none.png);
+    }
+	#noticelistnullico{
+	    min-width:51px;
+        max-wdith:51px;
+        min-height:51px;
+        max-height:51px;
+        border-image: url(:/sysButton/Resources/img/sysButton/notice-none.png);
+	}
+    #homepagenullico{
+        min-width:52px;
+        max-wdith:52px;
+        min-height:50px;
+        max-height:50px;
+        border-image: url(:/sysButton/Resources/img/sysButton/homepage-none.png);
+    }
+
+/* 1.5新需求样式 */
+    /* 群聊、群成员管理 */
+    #createGroupChatButton{
+        width:26px;
+        height:26px;
+        border-image: url(:/sysButton/Resources/img/sysButton/group/add-btn.png);
+        border:0;
+        background:transparent;
+    }
+    #createGroupChatButton:Hover{
+        border-image: url(:/sysButton/Resources/img/sysButton/group/add-btn-hover.png);
+    }
+    #TNGroupChatMembersWidget{
+        width:250px;
+        background:#ffffff;
+        border-left:1px solid #ebedf0;
+    }
+    #groupChatNameLabel{
+        color:#000;
+        font-size:13px;
+    }
+    #addMemberButton{
+        text-align:left;
+        width:150px;
+        height:30px;
+        border-image: url(:/sysButton/Resources/img/sysButton/group/add-group-btn.png);
+        font-size:13px;
+        padding-left:38px;
+        line-height:30px;
+    }
+    #addMemberButton:Hover{
+        border-image: url(:/sysButton/Resources/img/sysButton/group/add-group-btn-hover.png);
+    }
+    #removeMemberButton{
+        text-align:left;
+        width:150px;
+        height:30px;
+        border-image: url(:/sysButton/Resources/img/sysButton/group/delete-ico.png);
+        font-size:13px;
+        padding-left:38px;
+        line-height:30px;
+    }
+    #removeMemberButton:Hover{
+        border-image: url(:/sysButton/Resources/img/sysButton/group/delete-ico-hover.png);
+    }
+    #exitButton{
+        height:40px;
+        font-size:13px;
+        border:0;
+        border-top:1px solid #ebedf0;
+        color:#ff7445;
+        background:transparent;
+    }
+    #memberListWidget{
+        font-size:13px;
+        color:#333;
+    }
+    #createGroupLabel1,#createGroupLabel2,#myStuffCardLabel{
+        font-size:13px;
+        height:28px;
+        line-height:28px;
+        margin-bottom:6px;
+    }
+    #myStuffWidget{
+        width:200px;
+        border:1px solid #ebedf0;
+        height:358px;
+        font-size:13px;
+        color:#333;
+        background:#fbfafa;
+    }
+    #unselectWidget,#selectWidget{
+        width:250px;
+        border:1px solid #ebedf0;
+        height:358px;
+        font-size:13px;
+        color:#333;
+    }
+    #selectWidget{
+        height:313px;
+    }
+    /* 主页下拉菜单 */
+    #homepageWidget{
+        background:#fff;
+        border-bottom:1px solid #ebedf0;
+    }
+    #homepageTitle{
+        font-size:14px;
+        color:#000;
+        text-align:left;
+        padding:16px 0 8px 16px;
+    }
+    #homepageListWidget{
+        background:#ffffff;
+        border:1px solid #dfdfdf;
+        border-radius:1px;
+    }
+    #homepageListWidget::Item{
+        width:178px;
+        font-size:14px;
+        color:#333;
+        height:46px;
+        border:0;
+        background:#ffffff;
+    }
+    #homepageListWidget::Item:Hover{
+        background:#EAF3FF;
+    }
+    /* 取消下载按钮/搜索框清除按钮 */
+    #button_cancel_upload,#searchClearButton{
+        width:14px;
+        height:14px;
+        border:0;
+        background:transparent;
+        border-image:url(:/sysButton/Resources/img/sysButton/cancel-upload.png);
+    }
+    #button_cancel_upload:hover,#button_cancel_upload:pressed,#searchClearButton:hover,#searchClearButton:pressed{
+        border-image:url(:/sysButton/Resources/img/sysButton/cancel-upload-hover.png);
+    }

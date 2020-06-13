@@ -1,0 +1,34 @@
+﻿/*
+    * 默认皮肤：北欧蓝
+    * author: zhoujiqiu
+*/
+
+/* 菜单区背景图片 */
+    QWidget#MenuArea{
+        background:transparent;
+        border-image: url(:/skin/Resources/img/skin/default/menu-bg.png);
+    }
+
+/* 列表区背景图片 */
+    QWidget#ListArea{
+        background:url(:/skin/Resources/img/skin/default/list-bg.png);
+    }
+
+/* IM列表响应鼠标样式 */
+    /* 鼠标移开背景色 */
+    #NoticeListItem[selected=false], #NoticeListItem[mousehover=false] {
+        background:transparent;
+    }
+    /* 鼠标经过背景色 */
+    #NoticeListItem[mousehover=true] {
+        background:#e3efff;
+    }
+    /* 当前选中的背景色 */
+    #NoticeListItem[selected=true] {
+        background:#D4E6FF;
+    }
+
+/* 名片切换列表响应鼠标样式 */
+    #avatarChoiceItem:hover{
+        background:#e3efff;
+    }

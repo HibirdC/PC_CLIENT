@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/Emoji.plist</file>
+        <file>Resources/PDF.png</file>
+        <file>Resources/video.png</file>
+        <file>Resources/DefaltAvarta.png</file>
+        <file>Resources/female.png</file>
+        <file>Resources/male.png</file>
+        <file>Resources/downArrow.png</file>
+        <file>Resources/rightArrow.png</file>
+        <file>Resources/loading.gif</file>
+        <file>Resources/android.png</file>
+        <file>Resources/default.png</file>
+        <file>Resources/docx.png</file>
+        <file>Resources/key.png</file>
+        <file>Resources/numbers.png</file>
+        <file>Resources/pages.png</file>
+        <file>Resources/PPT.png</file>
+        <file>Resources/text.png</file>
+        <file>Resources/xls.png</file>
+        <file>Resources/zip.png</file>
+        <file>Resources/gray.jpg</file>
+        <file>Resources/unread.png</file>
+        <file>Resources/audio_play_blue.gif</file>
+        <file>Resources/audio_default_gray.png</file>
+        <file>Resources/audio_play_gray.gif</file>
+        <file>Resources/prompt_fill.png</file>
+        <file>Resources/mask_ellipse.png</file>
+        <file>Resources/audio_default_blue.png</file>
+        <file>Resources/mask_hexagon.png</file>
+        <file>Resources/mask-radius.png</file>
+        <file>Resources/mask_hexagon_small.png</file>
+        <file>Resources/mask_ellipse_moresmall.png</file>
+        <file>Resources/loading_data.gif</file>
+        <file>Resources/mask_ellipse_small.png</file>
+		<file>Resources/mask_ellipse_middle.png</file>
+		<file>Resources/mask_ellipse_middlesmall.png</file>
+		<file>Resources/default_feed_avatar.png</file>
+		<file>Resources/new_friend.png</file>
+    </qresource>
+</RCC>

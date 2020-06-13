@@ -1,0 +1,198 @@
+﻿/*
+    * 皮肤：香橙
+    * 主色系值：#FF794D
+    * author: zhoujiqiu
+*/
+
+/* 菜单区背景图片 */
+    QWidget#MenuArea{
+        border-image:url(:/orange/Resources/img/skin/orange/menu-bg.png);
+        background:transparent;
+    }
+
+/* 列表区背景图片 */
+    QWidget#ListArea,QWidget#MacListArea{
+        background:url(:/orange/Resources/img/skin/orange/list-bg.png);
+    }
+
+/* IM列表响应鼠标样式 */
+    /* 鼠标移开背景色 */
+    #NoticeListItem[selected=false], #NoticeListItem[mousehover=false] {
+        background:transparent;
+    }
+    /* 鼠标经过背景色 */
+    #NoticeListItem[mousehover=true] {
+        background:#FFEEE8;
+    }
+    /* 当前选中的背景色 */
+    #NoticeListItem[selected=true] {
+        background:#FFE7DF;
+    }
+
+/* 我的名片列表响应鼠标样式 */
+    #myCardListWidget::Item:hover{
+        background:#FFEEE8;
+    }
+    #myCardListWidget::Item:checked,#myCardListWidget::Item:selected{
+        background:#FFE7DF;
+    }
+
+/* 名片切换列表响应鼠标样式 */
+    #avatarChoiceItem:hover{
+        background:#FFEEE8;
+    }
+
+/* Notice 消息模块皮肤样式 */
+    /* 鼠标移上去表情图标 */
+    QPushButton#pushButton_Expression:hover{
+        border-image: url(:/orange/Resources/img/skin/orange/emoji_hover.png);
+    }
+    /* 鼠标移上去文件图标 */
+    QPushButton#pushButton_file:hover,QPushButton#pushButton_file:Pressed{
+        border-image: url(:/orange/Resources/img/skin/orange/file_hover.png);
+    }
+    /* 鼠标移上去图片图标 */
+    QPushButton#pushButton_image:hover,QPushButton#pushButton_image:Pressed{
+        border-image: url(:/orange/Resources/img/skin/orange/pic_hover.png);
+    }
+    /* 鼠标移上去图片图标 */
+    QPushButton#pushButton_screenShot:hover,QPushButton#pushButton_screenShot:Pressed{
+        border-image: url(:/orange/Resources/img/skin/orange/shot-hover.png);
+    }
+    QPushButton#pushButton_screenShot_mac:hover,QPushButton#pushButton_screenShot_mac:Pressed{
+        border-image: url(:/orange/Resources/img/skin/orange/shot-mac-hover.png);
+    }
+    /* 消息发送按钮颜色 */
+    QPushButton#pushButton_Send:hover,QPushButton#pushButton_Send:Pressed{
+        color: #FF794D;
+    }
+    /* 滚动条 */
+    #Notice_ListArea QScrollBar::handle:vertical
+    {
+        background:#FAC6B4;
+    }
+    #Notice_ListArea QScrollBar::handle:vertical:hover
+    {
+        background:#FAC6B4;
+    }
+    /* 确认按钮 */
+    QPushButton#acceptButton, QPushButton#okButton, QPushButton#groupNameOkButton, QPushButton#groupNameOkButton[enable=true]{
+        background: #FF794D;
+        border:1px solid #FF794D;
+    }
+    QPushButton#acceptButton:Hover, QPushButton#okButton:Hover, QPushButton#groupNameOkButton:Hover, QPushButton#groupNameOkButton[enable=true]:Hover{
+        background: #e7592b;
+        border:1px solid #e7592b;
+    }
+    /* 确认按钮置灰效果 */
+    QPushButton#acceptButton:!enabled, QPushButton#okButton:!enabled, QPushButton#groupNameOkButton:!enabled, QPushButton#groupNameOkButton:!enabled{
+        background:rgba(255,121,77,0.5);
+        border-color:rgba(255,121,77,0.5);
+    }
+    /* 其他按钮 */
+    #buttonNameButton{
+        background: #FF794D;
+    }
+
+/* Cardcase 通讯录模块皮肤样式 */
+    /* 通讯录列表区样式 */
+    #CardCaselistWidgt, #ColleagueListWidgt, #GroupListWidgt, #GroupChatListWidgt{
+        border-top:1px solid #EBEDF0;
+        background:transparent;
+    }
+    /* 搜索文本框 */
+    #cardcaseSearch{
+        border:1px solid #EBEDF0;
+    }
+    /* 通讯录tab样式 */
+    QPushButton#CardListTopText:Pressed, QPushButton#CardListTopText:Checked{
+        border-bottom:2px solid #FF794D;
+        color:#FF794D;
+    }
+    /* 分栏左侧线条 */
+    #treeCompanyButton,#treeCompanyButton:unchecked,#treeCompanyButton:checked{
+        background:url(:/orange/Resources/img/skin/orange/blueLine.png) no-repeat left center;
+    }
+    /* 滚动条 */
+    #CardCaselistWidgt QScrollBar::handle:vertical, #ColleagueListWidgt QScrollBar::handle:vertical, #GroupListWidgt QScrollBar::handle:vertical, #GroupChatListWidgt QScrollBar::handle:vertical, #SearchlistWidgt QScrollBar::handle:vertical, #myCardListWidget QScrollBar::handle:vertical{
+        background:#FAC6B4;
+    }
+    #CardCaselistWidgt QScrollBar::handle:vertical:hover, #ColleagueListWidgt QScrollBar::handle:vertical:hover, #GroupListWidgt QScrollBar::handle:vertical:hover, #GroupChatListWidgt QScrollBar::handle:vertical:hover, #SearchlistWidgt QScrollBar::handle:vertical:hover, #myCardListWidget QScrollBar::handle:vertical{
+        background:#FAC6B4;
+    }
+    /* 搜索结果区背景图 */
+    #SearchlistWidgt{
+        background:url(:/orange/Resources/img/skin/orange/list-bg.png);
+    }
+    /* 搜索结果分栏左侧线条 */
+    #searchLetterName{
+        background:url(:/orange/Resources/img/skin/orange/blueLine.png) no-repeat left center;
+    }
+
+/* 设置模块皮肤样式 */
+    /* 菜单栏移上去效果 */
+    QPushButton#bootUpButton:hover,
+    QPushButton#noDisturbButton:hover,
+    QPushButton#appearanceButton:hover,
+    QPushButton#localeStorageButton:hover,
+    QPushButton#userAgreementButton:hover,
+    QPushButton#aboutUsButton:hover,
+    QPushButton#exitLoginButton:hover,
+    QPushButton#syncCatalog:hover{
+        background-color: #FFEEE8;
+    }
+    /* 菜单选中效果 */
+    QPushButton#appearanceButton:checked,
+    QPushButton#localeStorageButton:checked,
+    QPushButton#userAgreementButton:checked,
+    QPushButton#aboutUsButton:checked,
+    QPushButton#exitLoginButton:checked,
+    QPushButton#syncCatalog:checked{
+        background-color: #FFE7DF;
+    }
+    /* 设置区各按钮移上去状态 */
+    QPushButton#exitPushButton:Hover,QPushButton#exitPushButton:Pressed,QPushButton#changeDirButton:Hover, #openDirButton:Hover,QPushButton#changeDirButton:Pressed, #openDirButton:Pressed,QPushButton#aboutUsCheckUpdateButton:Hover, #aboutUsFeedBackButton:Hover,QPushButton#aboutUsCheckUpdateButton:Pressed, #aboutUsFeedBackButton:Pressed{
+        background:#FF794D;
+        border:1px solid #FF794D;
+    }
+
+
+/* 右键菜单鼠标移上去的效果 */
+    QMenu::item:selected,QMenu::item:hover{
+        background:#FFEEE8;
+    }
+
+/* 发送图片样式 */
+    #sendOkButton{
+        background: #FF794D;
+        border: 1px solid #FF794D;
+    }
+
+/* 更新提示红点 */
+    #upgradePromptLabel, #avatarChoiceLabelStatus{
+        border-image: url(:/orange/Resources/img/skin/orange/yuanquan.png);
+    }
+
+/* 左边菜单新消息样式 */
+    #messageNumberLabel{
+        background-color: #f8de1c;
+    }
+
+/* 1.5新增皮肤变化样式----------------------------------- */
+    /* 文本框激活样式 */
+    #cardcaseSearch:Focus,#noticeSearch:Focus{
+        border:1px solid #FF794D;
+    }
+    #contactSearchLineEdit:Focus{
+        border:1px solid #FF794D;
+    }
+
+    /* 创建群聊按钮 */
+    #createGroupChatButton:Hover{
+        border-image: url(:/orange/Resources/img/skin/orange/add-btn.png);
+    }
+
+    /* 群成员图标 */
+    #pushButton_top_arrow:Checked,#pushButton_top_arrow:Hover{
+        border-image: url(:/orange/Resources/img/skin/orange/member-ico-hover.png);
+    }

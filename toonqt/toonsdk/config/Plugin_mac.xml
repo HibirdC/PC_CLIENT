@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginCfg>
+    <Plugin Name="libAvatar.dylib" Describe="Avatar" Path="" Dimension="1" Enable="true"/>
+    <Plugin Name="libNotice.dylib" Describe="Notice" Path="" Dimension="2" Enable="true"/>
+    <Plugin Name="libCardCase.dylib" Describe="CardCase" Path="" Dimension="2" Enable="true"/>
+    <Plugin Name="libHomePage.dylib" Describe="Homepage" Path="" Dimension="2" Enable="true"/>
+    <Plugin Name="libMine.dylib" Describe="Mine" Path="" Dimension="2" Enable="true"/>
+    <Plugin Name="libSetup.dylib" Describe="setup" Path="" Dimension="3" Enable="true"/>
+</PluginCfg>

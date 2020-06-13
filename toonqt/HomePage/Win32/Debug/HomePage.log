@@ -1,0 +1,33 @@
+﻿生成启动时间为 2020-06-12 21:43:16。
+     1>项目“D:\Work\toon_PC_Client\toonqt\HomePage\HomePage.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I.\..\Common /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebChannel /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /I.\..\LocalStorage /I.\..\IMCore /I.\..\NetWorkAPI /I.\..\TNMVD /I.\..\ToonProtocol /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D HOMEPAGE_LIB /D _USING_V110_SDK71_ /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt HomePage.cpp
+         HomePage.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\HomePaged.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib Qt5NetWorkd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib Qt5WebChanneld.lib Qt5WebEngineWidgetsd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\ToonProtocold.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\HomePaged.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\HomePaged.lib" /MACHINE:X86 /SAFESEH /DLL Win32\Debug\moc_HomePage.obj
+         Win32\Debug\moc_HomePageDetailsArea.obj
+         Win32\Debug\moc_HomePageListArea.obj
+         Win32\Debug\moc_TNAppJsonObjectParser.obj
+         Win32\Debug\moc_TNHomePageTreeItemDelegate.obj
+         Win32\Debug\moc_TNHomePageTreeModel.obj
+         Win32\Debug\moc_TNHomePageTreeView.obj
+         Win32\Debug\HomePage.obj
+         Win32\Debug\HomePageDetailsArea.obj
+         Win32\Debug\HomePageListArea.obj
+         Win32\Debug\TNAppJsonObjectParser.obj
+         Win32\Debug\TNHomePageTreeItem.obj
+         Win32\Debug\TNHomePageTreeItemDelegate.obj
+         Win32\Debug\TNHomePageTreeModel.obj
+         Win32\Debug\TNHomePageTreeView.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\Commond.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\IMCored.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\NetWorkAPId.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\TNMVDd.lib
+            正在创建库 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\HomePaged.lib 和对象 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\HomePaged.exp
+         HomePage.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\HomePaged.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\HomePage\HomePage.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.13

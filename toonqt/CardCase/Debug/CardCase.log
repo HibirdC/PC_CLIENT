@@ -1,0 +1,48 @@
+﻿生成启动时间为 2020-06-12 21:52:56。
+     1>项目“D:\Work\toon_PC_Client\toonqt\CardCase\CardCase.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /I.\..\Common /I.\..\ToonProtocol /I.\..\LocalStorage /I.\..\IMCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtCore /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtGui /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebEngineWidgets /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtNetWork /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtSql /I.\..\NetWorkAPI /I.\..\TNMVD /IC:\Qt\Qt5.6.2\5.6\msvc2013\include\QtWebChannel /I.\..\Search /I.\Friend /I.\GroupChat /Zi /nologo /W1 /WX- /MP /Od /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D CARDCASE_LIB /D _WINDLL /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CardCaseListArea.cpp
+         CardCaseListArea.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\\CardCased.dll" /NOLOGO /LIBPATH:C:\Qt\Qt5.6.2\5.6\msvc2013\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5Widgetsd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Commond.lib Qt5WebEngineWidgetsd.lib Qt5NetWorkd.lib Qt5WebChanneld.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\LocalStoraged.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\IMCored.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\NetWorkAPId.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\TNMVDd.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\ToonProtocold.lib D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\Searchd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\CardCased.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\CardCased.lib" /MACHINE:X86 /SAFESEH /DLL Debug\CardCase.obj
+         Debug\CardCaseDetailsArea.obj
+         Debug\TNCardCaseCODelegate.obj
+         Debug\TNCardCaseCOModel.obj
+         Debug\TNCompanyItem.obj
+         Debug\TNCoTreeView.obj
+         Debug\TNDepartmentItem.obj
+         Debug\TNStaffItem.obj
+         Debug\TNCardCaseListAdapter.obj
+         Debug\TNCardCaseListFriendItemDelegate.obj
+         Debug\CardCaseListArea.obj
+         Debug\moc_CardCase.obj
+         Debug\moc_CardCaseDetailsArea.obj
+         Debug\moc_CardCaseListArea.obj
+         Debug\moc_TNCardCaseCODelegate.obj
+         Debug\moc_TNCardCaseCOModel.obj
+         Debug\moc_TNCardCaseGroupChatDelegate.obj
+         Debug\moc_TNCardCaseGroupChatModel.obj
+         Debug\moc_TNCardCaseGroupDelegate.obj
+         Debug\moc_TNCardCaseGroupModel.obj
+         Debug\moc_TNCardCaseListAdapter.obj
+         Debug\moc_TNCardCaseListFriendItemDelegate.obj
+         Debug\moc_TNChooseCardCommand.obj
+         Debug\moc_TNCoTreeView.obj
+         Debug\TNCardCaseGroupChatAdapter.obj
+         Debug\TNCardCaseGroupChatDelegate.obj
+         Debug\TNCardCaseGroupChatModel.obj
+         Debug\TNCardCaseGroupAdapter.obj
+         Debug\TNCardCaseGroupDelegate.obj
+         Debug\TNCardCaseGroupModel.obj
+         Debug\TNCardCaseTreeItem.obj
+         Debug\TNChooseCardCommand.obj
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\Commond.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\LocalStoraged.lib
+         D:\Work\toon_PC_Client\TOONSDK\Win32\Debug\TNMVDd.lib
+            正在创建库 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\CardCased.lib 和对象 D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\CardCased.exp
+         CardCase.vcxproj -> D:\Work\toon_PC_Client\TOONSDK\\Win32\Debug\CardCased.dll
+     1>已完成生成项目“D:\Work\toon_PC_Client\toonqt\CardCase\CardCase.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.32
