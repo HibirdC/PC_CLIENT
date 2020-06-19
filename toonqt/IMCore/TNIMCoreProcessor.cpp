@@ -124,25 +124,25 @@ TNCMessage* TNIMCoreProcessor::storageOneMsgFromIM(int type, Toon::MsgReq* msg, 
 {
 	if (!msg)
 		return NULL;
-	bool bNeedProcessMsg = false;
-	if (msg->to_toon_type.size() > 0)
-	{
-		std::vector<string> toToonTypes = msg->to_toon_type;
-        for (size_t index = 0; index < toToonTypes.size(); index++)
-		{
-			QString toonType = toToonTypes[index].c_str();
-			qInfo() << "[IMCore][TNIMCoreProcessor]:storageOneMsgFromIM toToonType" << toonType;
-			if (toonType == APPTYPE)
-			{
-				bNeedProcessMsg = true;
-				break;
-			}
-		}
-	}
-	else
-		bNeedProcessMsg = true;
-	if (!bNeedProcessMsg)
-		return NULL;
+	//bool bNeedProcessMsg = false;
+	//if (msg->to_toon_type.size() > 0)
+	//{
+	//	std::vector<string> toToonTypes = msg->to_toon_type;
+ //       for (size_t index = 0; index < toToonTypes.size(); index++)
+	//	{
+	//		QString toonType = toToonTypes[index].c_str();
+	//		qInfo() << "[IMCore][TNIMCoreProcessor]:storageOneMsgFromIM toToonType" << toonType;
+	//		if (toonType == APPTYPE)
+	//		{
+	//			bNeedProcessMsg = true;
+	//			break;
+	//		}
+	//	}
+	//}
+	//else
+	//	bNeedProcessMsg = true;
+	//if (!bNeedProcessMsg)
+	//	return NULL;
 	TNCMessage* message = TNCMessage::instanceFromMsgReq(type, msg);
     if (message->getSesssionId() == "v_11" && message->contentType == TNChatTypeText)
     {
@@ -381,7 +381,7 @@ void TNIMCoreProcessor::ProcessIsMyself(TNCMessage& message)
 	bool bIsMyself = false;
 	TableBaseVec myFeedVec;
 	//多端多活，我新建的名片，名片没有入库，直接来消息,查库不准，需要根据userid
-	if (message.type == TYPE_MSG_SINGLE_OPERATE || message.type == TYPE_SINGLE_CHAT_MSGREQ)
+	if (message.type == message.type == TYPE_SINGLE_CHAT_MSGREQ)
 	{
 		if (!message.toUserId.isEmpty())
 		{
@@ -389,7 +389,7 @@ void TNIMCoreProcessor::ProcessIsMyself(TNCMessage& message)
 				bIsMyself = true;
 		}
 	}
-	else if (message.type == TYPE_MSG_GROUP_OPERATE || message.type == TYPE_GROUP_CHAT_MSGREQ)
+	else if (message.type == message.type == TYPE_GROUP_CHAT_MSGREQ)
 	{
 		if (!message.fromUserId.isEmpty())
 		{
@@ -721,7 +721,7 @@ void TNIMCoreProcessor::storageSessioFromIM(int type, int unReadCount, TNCMessag
 	session.topic = lastMsg->getTopic().toUtf8().data();
 	session.myFeedId = lastMsg->from.toUtf8().data();
 	session.type = lastMsg->type;
-	if (lastMsg->type == TYPE_SINGLE_CHAT_MSGREQ || lastMsg->type == TYPE_MSG_SINGLE_OPERATE)
+	if (lastMsg->type == TYPE_SINGLE_CHAT_MSGREQ)
 	{
 		TableBaseVec feedTableBaseVec;
 		QString feedOther;
@@ -746,7 +746,7 @@ void TNIMCoreProcessor::storageSessioFromIM(int type, int unReadCount, TNCMessag
 		}
 
 	}
-	else if (lastMsg->type == TYPE_GROUP_CHAT_MSGREQ || lastMsg->type == TYPE_MSG_GROUP_OPERATE)
+	else if (lastMsg->type == TYPE_GROUP_CHAT_MSGREQ)
 	{
 		QString groupId = lastMsg->getSesssionId();
 		st_GroupInfo groupInfo;
@@ -779,10 +779,7 @@ void TNIMCoreProcessor::storageSessioFromIM(int type, int unReadCount, TNCMessag
 		session.title = lastMsg->pushInfo.toUtf8().data();
 	session.lastTime = lastMsg->timestamp;
 	session.sortTime = lastMsg->timestamp;
-	if (lastMsg->type == TYPE_MSG_SINGLE_OPERATE || lastMsg->type == TYPE_MSG_GROUP_OPERATE)
-		session.lastMsgId = lastMsg->msgOpId.toUtf8().data();
-	else
-		session.lastMsgId = lastMsg->msgId.toUtf8().data();
+	session.lastMsgId = lastMsg->msgId.toUtf8().data();
 	session.lastMsg = lastMsg->pushInfo.toUtf8().data();
 	session.lastMsgSendStatus = lastMsg->sendStatus;
 	session.unreadCount = unReadCount;
@@ -958,12 +955,6 @@ void TNIMCoreProcessor::ProcessSendMsgAck(QString& msgId, uint64_t seqId, int st
 				fieldMap.insert("sendStatus", QString::number(TNIMMessageFailed));
 			TNDataControlServer::GetInstance()->UpdateSetValueByFieldMap("BMessage0", fieldMap, "msgId", msgId,DBTYPE_MSG);
 			TNNotifyCenter::instance()->postNotifyOnlineMsg(msgId, status == 0 ? TNIMMessageSuccess : TNIMMessageFailed);
-		}
-		else if (message->GetType() == TYPE_MSG_SINGLE_OPERATE || message->GetType() == TYPE_MSG_GROUP_OPERATE)
-		{
-			_messageOperate->ProcessMessageRevert(&tnmessage);
-			TNDataControlServer::GetInstance()->DeleteFromTableNameByField("BMessage0", "msgId", msgId,DBTYPE_MSG);
-			TNNotifyCenter::instance()->postNotifyRefreshRevert(status == 0 ? 1 : 0, message->GetType(), message->GetTimestamp(),tnmessage.getSesssionId(), tnmessage.msgOpId, tnmessage.pushInfo);
 		}
 	}
 }

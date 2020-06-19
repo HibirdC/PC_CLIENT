@@ -50,10 +50,10 @@ void TNIMMessageOperater::ProcessChatMsgFilterRvert(TNCMessage* msg)
 		if (tableMessageOp.size() > 0)
 		{
 			st_MessageOperatePtr st_msgOp = std::dynamic_pointer_cast<st_MessageOperate>(tableMessageOp[0]);
-			if (msg->type == TYPE_SINGLE_CHAT_MSGREQ)
-				msg->type = TYPE_MSG_SINGLE_OPERATE;
-			if (msg->type == TYPE_GROUP_CHAT_MSGREQ)
-				msg->type = TYPE_MSG_GROUP_OPERATE;
+			//if (msg->type == TYPE_SINGLE_CHAT_MSGREQ)
+				//msg->type = TYPE_MSG_SINGLE_OPERATE;
+			//if (msg->type == TYPE_GROUP_CHAT_MSGREQ)
+				//msg->type = TYPE_MSG_GROUP_OPERATE;
 			QString pushInfo;
 			pushInfo.append(st_msgOp->GetOpName());
 			pushInfo.append(QStringLiteral(REVERT_MSG_INFO));
@@ -88,14 +88,14 @@ bool TNIMMessageOperater::SaveMsgToMessageOperate(TNCMessage* msg)
 
 bool TNIMMessageOperater::IsRevertMsg(TNCMessage* msg)
 {
-	if (msg == NULL)
-		return false;
-	if (msg->type == TYPE_MSG_SINGLE_OPERATE || msg->type == TYPE_MSG_GROUP_OPERATE)
-	{
-		if (msg->catalogId == OPERATE_TYPE_REVOKE)
-			return true;
-	}
-		
+	//if (msg == NULL)
+	//	return false;
+	//if (msg->type == TYPE_MSG_SINGLE_OPERATE || msg->type == TYPE_MSG_GROUP_OPERATE)
+	//{
+	//	if (msg->catalogId == OPERATE_TYPE_REVOKE)
+	//		return true;
+	//}
+	//	
 	return false;
 }
 

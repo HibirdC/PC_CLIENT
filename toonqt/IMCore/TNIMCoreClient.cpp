@@ -270,10 +270,6 @@ int TNIMCoreClient::SendRevokeMessageInner(TNRevokeData* msgData, bool singChat)
 	TNCMessage message;
 	message.msgId = msgData->msgId;
 	//业务类型
-	if (singChat)
-		message.type = TYPE_MSG_SINGLE_OPERATE;
-	else
-		message.type = TYPE_MSG_GROUP_OPERATE;
 	message.timestamp = TNIMUtil::getCurrentTime();
 	message.from = msgData->from;
 	message.to = msgData->to;
@@ -463,13 +459,7 @@ void TNIMCoreClient::IMMessageCastToData(const CTNMessage& imMessage, st_MsgData
 	data.timestmp = imMessage.timestamp;
 	data.bizType = (MSG_BIZ_TYPE)imMessage.type;
 
-	if (imMessage.type == TYPE_MSG_SINGLE_OPERATE || imMessage.type == TYPE_MSG_GROUP_OPERATE)
-	{
-		data.type = MSG_TYPE_NOTICE;
-		data.data = imMessage.pushInfo.c_str();
-	}
-	else
-		ParseContextToMsgData(imMessage.content.c_str(), imMessage.contentType, data);
+	ParseContextToMsgData(imMessage.content.c_str(), imMessage.contentType, data);
 	data.toUserId = imMessage.toClientId.c_str();
 	if (imMessage.type == TYPE_GROUP_CHAT_MSGREQ && imMessage.catalogId != 0)
 	{
@@ -538,13 +528,8 @@ void TNIMCoreClient::MessageCastToData(const st_BMessage0Ptr bmessage, st_MsgDat
 		data.readed = 1;
 	else
 		data.readed = 0;
-	if (bmessage->GetType() == TYPE_MSG_SINGLE_OPERATE || bmessage->GetType() == TYPE_MSG_GROUP_OPERATE)
-	{
-		data.type = MSG_TYPE_NOTICE;
-		data.data = bmessage->GetPushInfo();
-	}
-	else
-		ParseContextToMsgData(bmessage->GetContent(  ), bmessage->GetContentType(), data);
+
+	ParseContextToMsgData(bmessage->GetContent(  ), bmessage->GetContentType(), data);
 	data.localPath = bmessage->GetFileFormat();
 	data.toUserId = bmessage->GetToClientId();
 	if (bmessage->GetType() == TYPE_GROUP_CHAT_MSGREQ && bmessage->GetCatalogId() != 0)
@@ -713,27 +698,27 @@ ITnImDBChat* TNIMCoreClient::GetDBChat()
 
 void TNIMCoreClient::RequestOffMsg(TNOffMsg& offMsg)
 {
-	Toon::SessionName session;
-	session.from = offMsg.from.toUtf8().toStdString();
-	session.to = offMsg.to.toUtf8().toStdString();
-	session.type = offMsg.type;
-	Toon::PullOffMsgReq offReq;
-	offReq.req_id = TNIMUtil::getUUID().toUtf8().data();
-	offReq.up_seq_id = offMsg.maxSeqId;
-	offReq.down_seq_id = offMsg.minSeqId;
-	offReq.limit_count = offMsg.count;
-	offReq.timestamp = offMsg.maxTimeStamp;
-	offReq.priority = 2;
-	offReq.session_name = session;
-	qInfo() << "[IMCore][TNIMCoreClient]:reqHistoryMessage" << "from:" << offMsg.from << "to:" << offMsg.to << "maxseqid:" << offMsg.maxSeqId << "count:" << offMsg.count;
+	//Toon::SessionName session;
+	//session.from = offMsg.from.toUtf8().toStdString();
+	//session.to = offMsg.to.toUtf8().toStdString();
+	//session.type = offMsg.type;
+	//Toon::PullOffMsgReq offReq;
+	//offReq.req_id = TNIMUtil::getUUID().toUtf8().data();
+	//offReq.up_seq_id = offMsg.maxSeqId;
+	//offReq.down_seq_id = offMsg.minSeqId;
+	//offReq.limit_count = offMsg.count;
+	//offReq.timestamp = offMsg.maxTimeStamp;
+	//offReq.priority = 2;
+	//offReq.session_name = session;
+	//qInfo() << "[IMCore][TNIMCoreClient]:reqHistoryMessage" << "from:" << offMsg.from << "to:" << offMsg.to << "maxseqid:" << offMsg.maxSeqId << "count:" << offMsg.count;
 	//_clientImpl->reqOffMessage(offReq);
 }
 
 MSG_BIZ_TYPE TNIMCoreClient::GetSessionType(const st_SessionPtr session, st_MessageAppInfoPtr& appInfo)
 {
-	if (session->GetType() == TYPE_SINGLE_CHAT_MSGREQ || session->GetType() == TYPE_MSG_SINGLE_OPERATE)
+	if (session->GetType() == TYPE_SINGLE_CHAT_MSGREQ)
 		return MSG_BIZ_SINGLECHAT;
-	else if (session->GetType() == TYPE_GROUP_CHAT_MSGREQ || session->GetType() == TYPE_MSG_GROUP_OPERATE)
+	else if (session->GetType() == TYPE_GROUP_CHAT_MSGREQ)
 		return MSG_BIZ_GROUPCHAT;
 	else if (session->GetType() == TYPE_NOTIFY_MSGREQ)
 	{
@@ -750,9 +735,9 @@ MSG_BIZ_TYPE TNIMCoreClient::GetSessionType(const st_SessionPtr session, st_Mess
 
 MSG_BIZ_TYPE TNIMCoreClient::GetSessionType(const CTNSession* session)
 {
-	if (session->type == TYPE_SINGLE_CHAT_MSGREQ || session->type == TYPE_MSG_SINGLE_OPERATE)
+	if (session->type == TYPE_SINGLE_CHAT_MSGREQ)
 		return MSG_BIZ_SINGLECHAT;
-	else if (session->type == TYPE_GROUP_CHAT_MSGREQ || session->type == TYPE_MSG_GROUP_OPERATE)
+	else if (session->type == TYPE_GROUP_CHAT_MSGREQ)
 		return MSG_BIZ_GROUPCHAT;
 	else if (session->type == TYPE_NOTIFY_MSGREQ)
 	{

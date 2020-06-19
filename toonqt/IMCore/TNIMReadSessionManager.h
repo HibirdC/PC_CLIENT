@@ -3,10 +3,10 @@
 
 #include <QObject>
 #include "TNDataControlServer.h"
-namespace Toon
-{
-	class SyncSessionStatusReq;
-}
+//namespace Toon
+//{
+//	class SyncSessionStatusReq;
+//}
 class TNIMReadSessionManager : public QObject
 {
 	Q_OBJECT
@@ -14,10 +14,10 @@ class TNIMReadSessionManager : public QObject
 public:
 	TNIMReadSessionManager(QObject *parent);
 	~TNIMReadSessionManager();
-	void SaveReadSessionReq(const QString& sessionId, const Toon::SyncSessionStatusReq& readSessionReq);
+	//void SaveReadSessionReq(const QString& sessionId, const Toon::SyncSessionStatusReq& readSessionReq);
 	void DeleteReadSessionReq(QString reqId);
 	void GetAllReadSessionReq(TableBaseVec& readSessoins);
-	void GetSyncSessionStatusReq(st_ReadSessionReqPtr stSessionReq, Toon::SyncSessionStatusReq& readReq);
+	//void GetSyncSessionStatusReq(st_ReadSessionReqPtr stSessionReq, Toon::SyncSessionStatusReq& readReq);
 private:
 	
 };

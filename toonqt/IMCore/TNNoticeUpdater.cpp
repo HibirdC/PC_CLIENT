@@ -1678,19 +1678,6 @@ void TNNoticeUpdater::OnFinishLoadSlots(int type, QList<UINotifyData> dataList)
     if (_isIncreamentUpdate)
     {
 		qDebug() << "OnFinishLoadSlots postNotifyRefresh info,type : " << type << " data: " << dataList.size();
-		if (type == RefreshTypeUI_MyCard)
-		{
-			//更新imsdk myfeed数据
-			QList<st_FeedPtr> myAllStuff;
-			TNDataCache::GetInstance()->UpdateMyStuffCache();
-			TNDataCache::GetInstance()->getMyStuff(myAllStuff);
-			vector<std::string> feedList;
-			for (st_FeedPtr feed : myAllStuff)
-			{
-				feedList.push_back(feed->GetFeedID().toUtf8().data());
-			}
-			toonim::getImSDK()->updateMyFeedList(feedList);
-		}
 		TNNotifyCenter::instance()->postNotifyRefresh(type, dataList);
 		//更新缓存
     }
@@ -1807,7 +1794,6 @@ void TNNoticeUpdater::companyUpdateFinishedSlot()
 	{
 		feedList.push_back(feed->GetFeedID().toUtf8().data());
 	}
-	toonim::getImSDK()->updateMyFeedList(feedList);
 	TNNotifyCenter::instance()->postNotifyRefresh(RefreshTypeUI_MyCard, notifyData);
 
 	qInfo() << "[IMCORE][TNNoticeUpdater]companyUpdateFinishedSlot :" << "send RefreshTypeUI_Colleague and RefreshTypeUI_MyCard to UI";

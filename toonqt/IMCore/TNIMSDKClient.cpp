@@ -31,14 +31,9 @@ void TNIMSDKClient::loginResp(int32_t code, vector<int32_t>& contentTypes)
 	{
 		case Toon::CONNECT_RESULT_SUCCESS:
 		{
-			//后面由底层处理
-			//_msgManager->SendOfflineReadSessionInThread();
 			break;
 		}
 		case Toon::CONNECT_RESULT_SERVICE_UNAVAILABLE:
-		{
-			break;
-		}
 		case Toon::CONNECT_RESULT_ERROR_PROTOCOL:
 		case Toon::CONNECT_RESULT_ERROR_INDICATE:
 		case Toon::CONNECT_RESULT_ERROR_USERNAME_OR_PASSWORD:
@@ -51,7 +46,6 @@ void TNIMSDKClient::loginResp(int32_t code, vector<int32_t>& contentTypes)
 			break;
 		}
 	}
-
 }
 
 void TNIMSDKClient::kickOut()

@@ -17,7 +17,6 @@
 #include "TNIMCoreClient.h"
 #include "TNIMReadSessionManager.h"
 #include "CTNChatAPI.h"
-#include "CTNDBAPI.h"
 #include "TNPathUtil.h"
 #include "TNIMSDKClient.h"
 #include "CTNHttpBizApi.h"
@@ -27,6 +26,9 @@
 #include "curl.h"
 #include "TNDataCache.h"
 #include "tnwinconvert.h"
+#include "CTNDBAPI.h"
+
+
 #define PRIORITY_LEVEL_LOW		0
 #define PRIORITY_LEVEL_HIGH		1
 CTNIMClientTNMP::CTNIMClientTNMP() :_deviceToken(""), _msgManager(NULL), _imSDKClient(NULL)
@@ -54,15 +56,14 @@ void CTNIMClientTNMP::addHostInfo(TMTPHostInfo &hostInfo)
 int CTNIMClientTNMP::login(QString username, QString password)
 {
 	//更新myfeedlist
-	QList<st_FeedPtr> myAllStuff;
-	TNDataCache::GetInstance()->getMyStuff(myAllStuff);
-	vector<std::string> feedList;
-	for (st_FeedPtr feed : myAllStuff)
-	{
-		feedList.push_back(feed->GetFeedID().toUtf8().data());
-	}
-	qInfo() << "[IMCore][CTNIMClientTNMP] login myfeed size:"<< feedList.size();
-	toonim::getImSDK()->updateMyFeedList(feedList);
+	//QList<st_FeedPtr> myAllStuff;
+	//TNDataCache::GetInstance()->getMyStuff(myAllStuff);
+	//vector<std::string> feedList;
+	//for (st_FeedPtr feed : myAllStuff)
+	//{
+	//	feedList.push_back(feed->GetFeedID().toUtf8().data());
+	//}
+	//qInfo() << "[IMCore][CTNIMClientTNMP] login myfeed size:"<< feedList.size();
 	return toonim::getImSDK()->login(username.toUtf8().data(), password.toUtf8().data());
 }
 
@@ -82,8 +83,7 @@ int CTNIMClientTNMP::sendMessage(TNCMessage* message, QString toClientId)
 {
 	if (message == NULL)
 		return -1;
-	if (message->type == TYPE_MSG_GROUP_OPERATE || message->type == TYPE_MSG_SINGLE_OPERATE)
-		return revokeMessage(message, toClientId);
+
 	CTNMessage	sdkMessage;
 	sdkMessage.type = message->type;
 	sdkMessage.msgId = message->msgId.toUtf8().data();
@@ -161,9 +161,10 @@ void CTNIMClientTNMP::InitIMSDK(TNIMMsgManager* msgManager)
 	toonim::CTNClientInfo clientInfo;
 	clientInfo.clientId = _clientId.toUtf8().data();
 	clientInfo.deviceId = _deviceId.toUtf8().data();
-	clientInfo.pushToken = _deviceToken.toUtf8().data();
+	clientInfo.userType = 2;
+	clientInfo.authType = 3;
+	clientInfo.appType = 3;
 	clientInfo.deviceType = TOON_DEVICE_TYPE;
-	clientInfo.toonType = _appType;
 	clientInfo.version = _version.toUtf8().data();
 	QString appPath = QCoreApplication::applicationDirPath();
 	clientInfo.appPath = appPath.toUtf8().data();
@@ -177,7 +178,7 @@ void CTNIMClientTNMP::InitIMSDK(TNIMMsgManager* msgManager)
 	//imSDK->addNoticeFilter(CATALOG_FRIEND_REQ, subCatalogIds, NEW_FRIEND_NOTICE);
 	imSDK->setCallback(_imSDKClient);
 	//初始化接口信息
-	toonim::initHttpBiz(clientInfo.clientId.c_str(), clientInfo.token.c_str(), clientInfo.deviceId.c_str(), clientInfo.toonType, clientInfo.version.c_str(), QSysInfo::productVersion().toUtf8().data());
+	//toonim::initHttpBiz(clientInfo.clientId.c_str(), "", clientInfo.deviceId.c_str(), 0, clientInfo.version.c_str(), QSysInfo::productVersion().toUtf8().data());
 }
 
 

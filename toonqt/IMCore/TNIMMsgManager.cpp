@@ -19,7 +19,7 @@ TNIMMsgManager::TNIMMsgManager() :_readManager(NULL), _msgProcessor(NULL)
 	qRegisterMetaType<Toon::OffMsgCountResp>("Toon::OffMsgCountResp");
 	qRegisterMetaType<Toon::HotSessionResp>("Toon::HotSessionResp");
 	qRegisterMetaType<Toon::OffMsgResp>("Toon::OffMsgResp");
-	qRegisterMetaType<Toon::SyncSessionStatusReq>("Toon::SyncSessionStatusReq");
+	//qRegisterMetaType<Toon::SyncSessionStatusReq>("Toon::SyncSessionStatusReq");
 	qRegisterMetaType<uint64_t>("uint64_t");
 	qRegisterMetaType<TNMsgData>("TNMsgData");
 	qRegisterMetaType<TNRevokeData>("TNRevokeData");
@@ -274,7 +274,7 @@ bool TNIMMsgManager::UpdateSessionTitle(toonim::CTNSession& session)
 	if (!session.sessionId.empty() && (session.title.empty() || session.avatarId.empty() || session.myFeedId.empty()))
 	{
 		QString sessionId = session.sessionId.c_str();
-		if (session.type == TYPE_SINGLE_CHAT_MSGREQ || session.type == TYPE_MSG_SINGLE_OPERATE)
+		if (session.type == TYPE_SINGLE_CHAT_MSGREQ)
 		{
 			QString myFeedId = session.myFeedId.c_str(); 
 			if (!myFeedId.isEmpty())
@@ -289,7 +289,7 @@ bool TNIMMsgManager::UpdateSessionTitle(toonim::CTNSession& session)
 				}
 			}
 		}
-		else if (session.type == TYPE_GROUP_CHAT_MSGREQ || session.type == TYPE_MSG_GROUP_OPERATE)
+		else if (session.type == TYPE_GROUP_CHAT_MSGREQ)
 		{
 			QString groupId = sessionId;
 			st_GroupInfo groupInfo;
@@ -321,7 +321,7 @@ bool TNIMMsgManager::UpdateSessionTitle(toonim::CTNSession& session)
 		return true;
 	}
 	//单聊更新topic，旧版本topic于sdk不一致，导致已读单聊有问题
-	if (session.type == TYPE_SINGLE_CHAT_MSGREQ || session.type == TYPE_MSG_SINGLE_OPERATE)
+	if (session.type == TYPE_SINGLE_CHAT_MSGREQ)
 	{
 		if (session.topic.empty() || session.topic.find("_") == std::string::npos)
 		{

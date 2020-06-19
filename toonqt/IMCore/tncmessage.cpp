@@ -47,7 +47,6 @@ TNCMessage* TNCMessage::instanceFromMsgReq(int type, Toon::MsgReq* req)
          case TYPE_GROUP_NOTIFY_REQ:
          case TYPE_SINGLE_CHAT_MSGREQ:
          case TYPE_GROUP_CHAT_MSGREQ:
-         case TYPE_MOMENT_MSGREQ:
 
          {
              Toon::BizMsg bizMsg;
@@ -102,28 +101,6 @@ TNCMessage* TNCMessage::instanceFromMsgReq(int type, Toon::MsgReq* req)
              break;
 
          }
-         case TYPE_MSG_SINGLE_OPERATE:
-         case TYPE_MSG_GROUP_OPERATE:
-         {
-             Toon::MsgOperate msgOperate;
-             try {
-                 msgOperate.readFrom(is);
-             } catch (...) {
-//                 TNIM_INFO(@"MsgOperate readFrom  error");
-
-                 break;
-             }
-
-             QVariantMap bizMap;
-             bizMap["catalogId"] = QVariant(msgOperate.catalogId);
-             bizMap["operatorFeedId"] = QVariant(msgOperate.operatorFeedId.c_str());
-             bizMap["operatorName"] = QVariant(msgOperate.operatorName.c_str());
-             bizMap["msgId"] = QVariant(msgOperate.msgId.c_str());
-			 message->msgOpId = msgOperate.msgId.c_str();
-			 message->catalogId = msgOperate.catalogId;
-             json = TNIMUtil::mapToJson(bizMap);
-              break;
-         }
          default:
          {
             json = QString(req->content.data());
@@ -141,10 +118,10 @@ TNCMessage* TNCMessage::instanceFromMsgReq(int type, Toon::MsgReq* req)
 QString TNCMessage::genSessionId(Toon_TMTP_TYPE type,const QString &from,const QString& to){
     QString sessionId;
 
-       if (type == TYPE_GROUP_CHAT_MSGREQ || type == TYPE_MSG_GROUP_OPERATE) {
+       if (type == TYPE_GROUP_CHAT_MSGREQ) {
            sessionId = to;
        }
-       else if (type == TYPE_SINGLE_CHAT_MSGREQ || type == TYPE_MSG_SINGLE_OPERATE){
+       else if (type == TYPE_SINGLE_CHAT_MSGREQ){
            if (to.compare(from, Qt::CaseInsensitive) > 0) {
                sessionId = to + "_" + from;
            }else{
@@ -163,10 +140,10 @@ QString TNCMessage::genSessionId(Toon_TMTP_TYPE type,const QString &from,const Q
 QString TNCMessage::genTopic(Toon_TMTP_TYPE type, QString& toUserId, QString& to)
 {
 	QString topic;
-	if (type == TYPE_GROUP_CHAT_MSGREQ || type == TYPE_MSG_GROUP_OPERATE) {
+	if (type == TYPE_GROUP_CHAT_MSGREQ) {
 		topic = to;
 	}
-	else if (type == TYPE_SINGLE_CHAT_MSGREQ || type == TYPE_MSG_SINGLE_OPERATE){
+	else if (type == TYPE_SINGLE_CHAT_MSGREQ){
 		topic = toUserId;
 	}
 	else{
