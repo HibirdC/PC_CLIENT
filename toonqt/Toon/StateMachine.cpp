@@ -293,7 +293,7 @@ void StateMachine::ShowMainFrame(bool bStopLoad)
 		_mainWidget->showWidget();
 		_mainWidget->activateWindow();
 		TNIMCoreClient* client = TNIMCoreClient::GetIMClient();
-        client->IMLogin(_pluginParam->strMobile, _pluginParam->strTnUserToken);
+        client->IMLogin(_pluginParam->strEmailAddress, _pluginParam->strTnUserToken);
 	}
 }
 

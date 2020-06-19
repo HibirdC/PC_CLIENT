@@ -25,7 +25,7 @@ TNBizActionResponder::TNBizActionResponder(QObject *parent) : QObject(parent)
     m_pluginParam = TNUserDataHelper::GetInstance()->_pluginParam;
 
     m_httpApi = std::make_shared<TNHttpApi>();
-    m_httpApi->InitDomainUrl(m_pluginParam->str_new_user_systoon_com);
+	m_httpApi->InitDomainUrl(m_pluginParam->strHostInfo);
 }
 
 void TNBizActionResponder::slotReceiveMessageFromH5(const QString &text)

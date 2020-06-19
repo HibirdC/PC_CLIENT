@@ -1296,7 +1296,7 @@ bool TNDataControlServer::getOwnerDataStatus(QSqlDatabase *db,int dbType)
 {
 	bool ret = false;
 	QString userId = TNUserDataUtil::GetInstance()->getUserPluginParam()->strTnUserID;
-	QString mobile = TNUserDataUtil::GetInstance()->getUserPluginParam()->strMobile;
+	QString email = TNUserDataUtil::GetInstance()->getUserPluginParam()->strEmailAddress;
 
 	switch (dbType)
 	{
@@ -1312,7 +1312,7 @@ bool TNDataControlServer::getOwnerDataStatus(QSqlDatabase *db,int dbType)
 			{
 				st_OwnerDataPtr ownerData = std::make_shared<st_OwnerData>();
 				ownerData->setUserId(userId);
-				ownerData->setMobileId(mobile);
+				ownerData->setMobileId(email);
 				ownerData->setExt(TNVersionInfo::appVersion());
 				InsertDatas(std::dynamic_pointer_cast<TableBase>(ownerData), DBTYPE_USER);
 				ret = true;
@@ -1340,7 +1340,7 @@ bool TNDataControlServer::getOwnerDataStatus(QSqlDatabase *db,int dbType)
 			{
 				st_OwnerDataPtr ownerData = std::make_shared<st_OwnerData>();
 				ownerData->setUserId(userId);
-				ownerData->setMobileId(mobile);
+				ownerData->setMobileId(email);
 				ownerData->setExt(TNVersionInfo::appVersion());
 				InsertDatas(std::dynamic_pointer_cast<TableBase>(ownerData), DBTYPE_MSG);
 				ret = true;

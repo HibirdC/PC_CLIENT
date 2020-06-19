@@ -37,6 +37,7 @@ void  TNQRCodeLogin::GetQRCodeInfo()
 	{
 		if (success)
 		{
+			AAAAA
 			_strQRCodePath = path;
 			emit DownQRCodeSuccess(_strQRCodePath);
 		}

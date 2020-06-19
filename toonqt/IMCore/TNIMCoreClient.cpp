@@ -51,8 +51,7 @@ void TNIMCoreClient::InitIM(TNPluginParamPtr pluginParm)
 	TNUserDataHelper::GetInstance()->Init(pluginParm);
 	//增量更新版本数据缓存
 	TNUserVersionInfo::GetInstance()->InitVesionMap();
-	Init(pluginParm->strTnUserID, pluginParm->strMacAddress, pluginParm->str_api_imssl_systoon_com, pluginParm->str_api_im_systoon_com);
-	//IMLogin(pluginParm->strMobile, pluginParm->strTnUserToken);
+	Init(pluginParm->strTnUserID, pluginParm->strMacAddress, pluginParm->strHostInfo, pluginParm->strHostInfo);
 }
 
 void TNIMCoreClient::Init(QString& userId, QString& deviceId, QString& hostSSL, QString& host)
@@ -64,13 +63,12 @@ void TNIMCoreClient::Init(QString& userId, QString& deviceId, QString& hostSSL, 
 	_clientImpl->setClientId(userId);
 	_clientImpl->setDeviceId(deviceId);
 	_clientImpl->InitIMSDK(_msgManager);
-	AddIMServerAddr(hostSSL, true);
 	AddIMServerAddr(host, false);
 }
 
 void TNIMCoreClient::AddIMServerAddr(QString& host, bool isSSL)
 {
-	QString ipHost = host.right(host.size() - host.indexOf("/") - 2);
+	QString ipHost = host/*host.right(host.size() - host.indexOf("/") - 2)*/;
 	QStringList hostList = ipHost.split(":");
 	TMTPHostInfo hostInfo;
 	hostInfo.isSSL = isSSL;
@@ -86,7 +84,9 @@ int TNIMCoreClient::IMLogin(QString& username, QString& userToken)
 	_userName = username;
 	_userToken = userToken;
 	_bLogined = true;
-	return _clientImpl->login(username, userToken);
+	int loginStatus = _clientImpl->login(username, userToken);
+	qDebug() << "[TNIMCoreClient]~TNIMCoreClient,login status:" << loginStatus;
+	return loginStatus;
 }
 
 int TNIMCoreClient::IMLogout()

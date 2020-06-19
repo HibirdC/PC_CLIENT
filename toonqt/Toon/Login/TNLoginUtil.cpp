@@ -148,18 +148,6 @@ bool TNLoginUtil::parseMobileFromLoginUser(const st_LoginUserPtr &loginUser, QSt
     if (loginUser == nullptr)
         return false;
 
-    QString teleCodeMobile = loginUser->GetMobile();
-    if (!teleCodeMobile.startsWith("00"))
-    {
-        if (errorContent)
-            *errorContent = QString("本次自动登录无效");
-        return false;
-    }
-
-    if (teleCode)
-        *teleCode = teleCodeMobile.left(4);
-    if (mobile)
-        *mobile   = teleCodeMobile.mid(4);
-
+	*mobile = loginUser->GetMobile();
     return true;
 }

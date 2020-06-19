@@ -72,10 +72,11 @@ public:
 	QString strTnUserID;
 	QString strTnUserToken;
 	QString strTnUserAgent;
-	QString strMobile;
+	//QString strMobile;
 	QString strMacAddress;
+	QString strEmailAddress;
 
-	//路由表
+	////路由表
 	QString str_new_user_systoon_com;
 	QString str_new_contact_systoon_com; 
 	QString str_api_feed_systoon_com;
@@ -87,8 +88,8 @@ public:
 	QString str_appdown_systoon_com;
 	QString str_api_im_systoon_com;
 	QString str_api_imssl_systoon_com;
-    QString str_mix_systoon_com;
-    QString str_cams_systoon_com;
+	QString str_mix_systoon_com;
+	QString strHostInfo;
 
     //界面当前选中的page(通知,通讯录,我的....)
     int _currentSelectPage;

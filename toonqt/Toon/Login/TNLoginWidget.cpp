@@ -44,14 +44,11 @@ TNLoginWidget::TNLoginWidget(bool isAutoLogin, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::TNLoginWidget)
     , loginFormUi(new Ui::LoginForm)
-    , newDeviceFormUi(new Ui::NewDeviceLoginForm)
     , resetPsdForm01Ui(new Ui::ResetPasswordForm01)
     , resetPsdForm02Ui(new Ui::ResetPasswordForm02)
     , resetPsdForm03Ui(new Ui::ResetPasswordForm03)
     , qrCodeForm01Ui(new Ui::QRCodeScanForm01)
     , qrCodeForm02Ui(new Ui::QRCodeScanForm02)
-    , m_newDeviceIdCodeTimer(NULL)
-    , m_resetPsdIdCodeTimer(NULL)
     , _bottomMovie(NULL)
     , _scanLogin(NULL)
     , _bIsFirstLogin(false)
@@ -72,18 +69,11 @@ TNLoginWidget::TNLoginWidget(bool isAutoLogin, QWidget *parent)
     initResetPasswordForm01(); // 1
     initResetPasswordForm02(); // 2
     initResetPasswordForm03(); // 3
-
-    initNewDeviceLoginForm();  // 4
-
     initQRCodeScanForm01();    // 5
     initQRCodeScanForm02();    // 6
 
     InitUiDataIfAutoLogin();
 
-#ifdef DAOTOON
-    TNToonCommandManager* commandManager = TNToonCommandManager::instance();
-    connect(commandManager->server(), SIGNAL(receivedLoginParasFromWeb(QString)), this, SLOT(OnLoginDAOSlot(QString)));
-#endif
     loginFormUi->mobileLineEdit->installEventFilter(this);
     loginFormUi->passwordLineEdit->installEventFilter(this);
 
@@ -167,11 +157,6 @@ void TNLoginWidget::LoginThreadStart()
     }
 }
 
-void TNLoginWidget::slotOnLoginIdCodeTimer(const QString &timeText)
-{
-    newDeviceFormUi->obtainIdCodeButton->setText(timeText);
-}
-
 void TNLoginWidget::initMainForm()
 {
 #ifndef Q_OS_MAC
@@ -250,106 +235,15 @@ void TNLoginWidget::InitRouterList()
 {
     _pluginParam->strMacAddress  = TNLoginUtil::getHostMacAddress();
     _pluginParam->strTnUserAgent = TNLoginUtil::getUserAgent();
-
-	//屏蔽埋点
-    //TNDataStatistics::RecordStatisData(OP_TYPE_STARTUP, _pluginParam);
+	_pluginParam->strHostInfo = QString("10.250.200.198:10012");
 
     _httpDomainRouterApi = std::make_shared<TNHttpDomainRouterApi>();
     _httpApi = std::make_shared<TNHttpApi>();
-
-	/*
-    QString strDomainUrl = URL_ROUTER_LIST;
-    _httpDomainRouterApi->GetRouterList([&](bool domainSuccess, QJsonObject domainJsonObject)
-    {
-        if (domainSuccess)
-        {
-            QTime time;
-            time.start();
-            qDebug() << "[Toon][TNLoginWidget]GetRouterList: " << QString(QJsonDocument(domainJsonObject).toJson());
-            int retCode = domainJsonObject["meta"].toObject().value("code").toInt();
-            if (retCode == 0)
-            {
-                QJsonArray domain = domainJsonObject.value("data").toObject().value("domain").toArray();
-                QVariantMap mapDomain;
-                for (int index = 0; index < domain.size(); index++)
-                {
-                    QVariantMap spaceItem = domain[index].toVariant().toMap();
-                    QString key = spaceItem.begin().key();
-                    QVariant  value = spaceItem.begin().value();
-                    //qDebug()<<"key="<<key<<" value="<<value;
-                    mapDomain.insert(key, value);
-                }
-
-                if (mapDomain.contains(URL_NEW_USER_SYSTOON_COM) && mapDomain[URL_NEW_USER_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_new_user_systoon_com = mapDomain[URL_NEW_USER_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_NEW_CONTACT_SYSTOON_COM) && mapDomain[URL_NEW_CONTACT_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_new_contact_systoon_com = mapDomain[URL_NEW_CONTACT_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_API_FEED_SYSTOON_COM) && mapDomain[URL_API_FEED_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_api_feed_systoon_com = mapDomain[URL_API_FEED_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_NEW_ORG_SYSTOON_COM) && mapDomain[URL_NEW_ORG_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_new_org_systoon_com = mapDomain[URL_NEW_ORG_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_API_NEW_GROUPCHAT_SYSTOON_COM) && mapDomain[URL_API_NEW_GROUPCHAT_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_api_new_groupchat_systoon_com = mapDomain[URL_API_NEW_GROUPCHAT_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_CARD_SYSTOON_COM) && mapDomain[URL_CARD_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_new_card_systoon_com = mapDomain[URL_CARD_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_NEW_GROUP_SYSTOON_COM) && mapDomain[URL_NEW_GROUP_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_new_group_systoon_com = mapDomain[URL_NEW_GROUP_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_API_APP_SYSTOON_COM) && mapDomain[URL_API_APP_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_api_app_systoon_com = mapDomain[URL_API_APP_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_APPDOWN_SYSTOON_COM) && mapDomain[URL_APPDOWN_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_appdown_systoon_com = mapDomain[URL_APPDOWN_SYSTOON_COM].toStringList().at(0);
-				if (mapDomain.contains(URL_API_IM_SYSTOON_COM) && mapDomain[URL_API_IM_SYSTOON_COM].toStringList().size() > 0)
-					_pluginParam->str_api_im_systoon_com = mapDomain[URL_API_IM_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_API_IMSSL_SYSTOON_COM) && mapDomain[URL_API_IMSSL_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_api_imssl_systoon_com = mapDomain[URL_API_IMSSL_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_MIX_SYSTOON_COM) && mapDomain[URL_MIX_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_mix_systoon_com = mapDomain[URL_MIX_SYSTOON_COM].toStringList().at(0);
-                if (mapDomain.contains(URL_CAMS_SYSTOON_COM) && mapDomain[URL_CAMS_SYSTOON_COM].toStringList().size()>0)
-                    _pluginParam->str_cams_systoon_com = mapDomain[URL_CAMS_SYSTOON_COM].toStringList().at(0);
-
-                _httpApi->InitDomainUrl(_pluginParam->str_new_user_systoon_com);
-                _bInitNetRoute = true;
-                qInfo() << "[Toon][TNLoginWidget]parseRouterList-time=" << time.elapsed();
-                time.restart();
-                QtConcurrent::run(this, &TNLoginWidget::LoginThreadStart);
-                qInfo() << "[Toon][TNLoginWidget]QtConcurrent::run-time=" << time.elapsed();
-            }
-            else
-            {
-                ShowMessage(("请检查您的网络连接"));
-                QString content = domainJsonObject.value("meta").toObject().value("message").toString();
-                qInfo() << "[Toon][TNLoginWidget]GetRouterList failed. retCode=" << retCode << " content=" << content;
-            }
-        }
-        else
-        {
-            qInfo() << "[Toon][TNLoginWidget]GetRouterList failed. domainSuccess=" << domainSuccess;
-            ShowMessage(("请检查您的网络连接"));
-        }
-    }, strDomainUrl, _pluginParam->strTnUserAgent);
-	*/
-}
-
-void TNLoginWidget::resetNewDeviceIdCodeTimer()
-{
-    if (_bIsFirstLogin)
-    {
-        _bIsFirstLogin = false;
-        m_newDeviceIdCodeTimer->resetTimer();
-        newDeviceFormUi->obtainIdCodeButton->setText(("获取验证码"));
-    }
-}
-
-void TNLoginWidget::resetResetPsdIdCodeTimer()
-{
-    m_resetPsdIdCodeTimer->resetTimer();
-    resetPsdForm01Ui->obtainIdCodeButton->setText(("获取验证码"));
+	_bInitNetRoute = true;
 }
 
 void TNLoginWidget::slotOnClickQRCodeScan()
 {
-    resetNewDeviceIdCodeTimer();
-    resetResetPsdIdCodeTimer();
     if (!this->_bInitNetRoute)
     {
         ShowMessage(("操作失败，请稍后重试"));
@@ -359,13 +253,11 @@ void TNLoginWidget::slotOnClickQRCodeScan()
 
     if (ui->btn_qrcode->isChecked())
     {
-        TNDataStatistics::RecordFuncStatisData(FUNC_TYPE_ScanCode_Switch, _pluginParam);
-        ui->stackedWidget->setCurrentIndex(5);
+        ui->stackedWidget->setCurrentIndex(4);
         _scanLogin->GetQRCodePic();
     }
     else
     {
-        TNDataStatistics::RecordFuncStatisData(FUNC_TYPE_PWD_Switch, _pluginParam);
         ui->stackedWidget->setCurrentIndex(0);
         _scanLogin->CancelQRCodeLogin();
     }
@@ -388,12 +280,9 @@ void TNLoginWidget::slotOnClickLoginButton()
             return;
         }
 
-		//登录状态
-        //TNDataStatistics::RecordFuncStatisData(FUNC_TYPE_PWD_Login, _pluginParam);
-
-        QString strMobile   = getMobileNumber_Login();
+        QString strEmail   = getMobileNumber_Login();
         QString strPassword = getPasswordAfterMD5_Login();
-        LoginOKByPassword(strMobile, strPassword);
+        LoginOKByPassword(strEmail, strPassword);
     }
     loginFormUi->loginPushButton->setEnabled(true);
     loginFormUi->loginPushButton->setText(("登录"));
@@ -401,15 +290,11 @@ void TNLoginWidget::slotOnClickLoginButton()
 
 void TNLoginWidget::LoginIMServer()
 {
-	/*
-    TNDataStatistics::RecordStatisData(OP_TYPE_LOGIN, _pluginParam);
-    TNHttpCloudApi::GetInstance()->GetCloudStoken(_pluginParam);
-	*/
     TNIMCoreClient* client = TNIMCoreClient::GetIMClient();
     client->InitIM(_pluginParam);
 }
 
-void TNLoginWidget::LoginOKByPassword(const QString &strMobile, const QString &strPassword, bool isAuto, bool faceId)
+void TNLoginWidget::LoginOKByPassword(const QString &strEmail, const QString &strPassword, bool isAuto, bool faceId)
 {
 	int nRet = 2;
     if (nRet == 1)
@@ -419,13 +304,14 @@ void TNLoginWidget::LoginOKByPassword(const QString &strMobile, const QString &s
     else if (nRet == 2)
     {
         QJsonObject object;
-		int nWithPasswordRet = _httpApi->LoginWithPassword(strMobile, strPassword, object);
+		int nWithPasswordRet = _httpApi->LoginWithPassword(strEmail, strPassword, object);
         if (nWithPasswordRet == 1)
         {
 			QString strTnUserID = object.value("data").toObject().value("imid").toString();
-            QString strTnUserToken = object.value("data").toObject().value("session").toString();
+			QString strTnUserToken = strPassword /*object.value("data").toObject().value("session").toString()*/;
 			TNUtil::setPasswordLogin(true);
-            if (SetCurrentUserInfo(strTnUserID, strTnUserToken, strMobile))
+			SaveLoginUserToDB(strEmail, strTnUserToken);
+			if (SetCurrentUserInfo(strTnUserID, strTnUserToken, strEmail))
             {
                 LoginIMServer();
                 LoadCardCaseDataToDB();
@@ -437,162 +323,6 @@ void TNLoginWidget::LoginOKByPassword(const QString &strMobile, const QString &s
 			ShowMessage(("用户名或密码错误"));
         }
     }
-}
-
-void TNLoginWidget::OnCheckCodeForFirstLogin()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-    newDeviceFormUi->errorLabel->setText(QString::null);
-    newDeviceFormUi->idCodeLineEdit->clear();
-
-    slotOnClickObtainIdCodeButton_NewDevice(); //开始计时
-}
-
-void TNLoginWidget::LoginOKByIdenfy(const QString &strTeleCode, const QString &strMobile, const QString &strIdentify)
-{
-    if (!this->_bInitNetRoute)
-    {
-        ShowMessage(("操作失败，请稍后重试"));
-        InitRouterList();
-        return;
-    }
-
-    QString	strMacAddress = TNLoginUtil::getHostMacAddress();
-    int nRet = _httpApi->CheckRegisterBeforeLoginNew("1", "1", _pluginParam->strTnUserAgent, strTeleCode, strMobile, strMacAddress);
-    if (nRet == 1)
-    {
-        ShowMessage(("用户未注册"));
-    }
-    else if (nRet == 2)
-    {
-        st_LoginWithPasswordHttpBody body;
-        body.strDeviceName = QSysInfo::productType();
-        body.strDeviceToken = strMacAddress;
-        body.strIdfa = "";
-        body.strImei = "";
-        body.strMacAddress = strMacAddress;
-        body.strMobile = strMobile;
-        body.strPassword = strIdentify;
-        body.bRegLogin = false;
-        body.strTeleCode = strTeleCode;
-        body.strUuid = strMacAddress;
-
-        QJsonObject object;
-        int code = 0;
-        int nLoginWithVCodeRet = _httpApi->LoginWithVCode(_pluginParam, body, object, &code);
-        if (nLoginWithVCodeRet == 1)
-        {
-            QString strTnUserID    = QString("%1").arg(object.value("data").toObject().value("userId").toInt());
-            QString strTnUserToken = object.value("data").toObject().value("token").toString();
-            if (_bIsFirstLogin)
-            {
-                _bIsFirstLogin = false;
-                SaveLoginUserToDB(strTeleCode, strMobile, getPasswordAfterMD5_Login());
-                TNUtil::setPasswordLogin(true);
-            }
-            else
-            {
-                TNUtil::setPasswordLogin(false);
-            }
-            if (SetCurrentUserInfo(strTnUserID, strTnUserToken, strMobile))
-            {
-                LoginIMServer();
-                LoadCardCaseDataToDB();
-                emit SendPluginParamSignal(_pluginParam);
-            }
-        }
-        else if (nLoginWithVCodeRet == 2)
-        {
-            ShowMessage(("验证码错误，请重新输入"));
-        }
-        else if (nLoginWithVCodeRet == 3)
-        {
-            ShowMessage(("验证码失效，请重新获取"));
-        }
-        else
-        {
-            if (code == 104106)
-                ShowMessage(("验证码错误次数超限"));
-            else
-                ShowMessage(("验证码错误，请重新输入"));
-        }
-    }
-    else if (nRet == 3)
-    {
-        ShowMessage(("账号已锁定，请24小时后重试"));
-    }
-    else
-    {
-        ShowMessage(("网络连接不可用"));
-    }
-}
-
-void TNLoginWidget::slotOnClickObtainIdCodeButton_NewDevice()
-{	
-    if ( !m_newDeviceIdCodeTimer->isInitialState() )
-        return;
-
-    if (!this->_bInitNetRoute)
-    {
-        ShowMessage(("操作失败，请稍后重试"));
-        InitRouterList();
-        return;
-    }
-
-    QString strTeleCode = getTeleCode_Login();
-    QString strMobile   = getMobileNumber_Login();
-    QString	strMacAddress = TNLoginUtil::getHostMacAddress();
-    int nRet = _httpApi->CheckRegisterBeforeLoginNew("1", "1", _pluginParam->strTnUserAgent, strTeleCode, strMobile, strMacAddress);
-    if (nRet == 1)
-    {
-        ShowMessage(("用户未注册"));
-    }
-    else if (nRet == 2)
-    {
-        int nIdCodeRet = _httpApi->sendVCodeBeforeLogin(_pluginParam, strTeleCode, strMobile, APPTYPE);
-        if (nIdCodeRet == 0)
-        {
-            m_newDeviceIdCodeTimer->start(1000);
-        }
-        else if (nIdCodeRet == 1)
-        {
-            ShowMessage(("一小时最多能发5条"));
-        }
-        else if (nIdCodeRet == 2)
-        {
-            ShowMessage(("一天最多能发10条"));
-        }
-        else
-        {
-            ShowMessage(("验证码发送过于频繁"));
-        }
-    }
-    else if (nRet == 3)
-    {
-        ShowMessage(("账号已锁定，请24小时后重试"));
-    }
-    else
-    {
-        ShowMessage(("网络连接不可用"));
-    }
-
-    QString strSendBtn = newDeviceFormUi->obtainIdCodeButton->text();
-    if (strSendBtn == ("重新发送"))
-        TNDataStatistics::RecordFuncStatisData(FUNC_TYPE_Resend_Code, _pluginParam);
-}
-
-void TNLoginWidget::slotOnClickLoginButton_NewDevice()
-{
-    newDeviceFormUi->loginPushButton->setText(("登录中"));
-    newDeviceFormUi->loginPushButton->setEnabled(false);
-    const QString strTeleCode = getTeleCode_Login();
-    const QString strMobile   = getMobileNumber_Login();
-    const QString strIdentify = getIdCode_Login();
-
-    qInfo() << "[Toon][TNLoginWidget]slotOnClickLoginButton_NewDevice strTeleCode=" << strTeleCode << " strMobile=" << strMobile << " strIdentify=" << strIdentify;
-    LoginOKByIdenfy(strTeleCode, strMobile, strIdentify);
-    newDeviceFormUi->loginPushButton->setEnabled(true);
-    newDeviceFormUi->loginPushButton->setText(("登录"));
 }
 
 void TNLoginWidget::ShowMessage(const QString& errorContent)
@@ -608,18 +338,6 @@ void TNLoginWidget::ShowMessage(const QString& errorContent)
     case 2:
         resetPsdForm02Ui->errorLabel->setText(errorContent);
         break;
-    case 3:
-        //resetPsdForm03Ui->errorLabel->setText(errorContent);
-        break;
-    case 4:
-        newDeviceFormUi->errorLabel->setText(errorContent);
-        break;
-    case 5:
-        //qrCodeForm01Ui->errorLabel->setText(errorContent);
-        break;
-    case 6:
-        //qrCodeForm02Ui->errorLabel->setText(errorContent);
-        break;
     default:
         break;
     }
@@ -630,7 +348,7 @@ void TNLoginWidget::LoadCardCaseDataToDB()
     TNIMCoreClient::GetIMClient()->UpdateAddressBookFromServer();
 }
 
-void TNLoginWidget::SaveLoginUserToDB(const QString &strTeleCode, const QString &strMobile, const QString &strPassword)
+void TNLoginWidget::SaveLoginUserToDB(const QString &strEmail, const QString &strPassword)
 {
     st_LoginUserPtr loginUser = std::make_shared<st_LoginUser>();
 
@@ -651,7 +369,7 @@ void TNLoginWidget::SaveLoginUserToDB(const QString &strTeleCode, const QString 
         loginUser->SetCheckState(0);
     }
 
-    loginUser->SetMobile(strTeleCode+strMobile);
+    loginUser->SetMobile(strEmail);
 
     QString logDate = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
     loginUser->SetLogDate(logDate);
@@ -663,12 +381,13 @@ void TNLoginWidget::SaveLoginUserToDB(const QString &strTeleCode, const QString 
     TNDataControlServer::GetInstance()->InsertDatas(std::dynamic_pointer_cast<TableBase>(loginUser),DBTYPE_COMMON);
 }
 
-bool TNLoginWidget::SetCurrentUserInfo(const QString& userId,const QString& userToken, const QString& userMobile)
+bool TNLoginWidget::SetCurrentUserInfo(const QString& userId, const QString& userToken,const QString& userEmail)
 {
     _pluginParam->strTnUserID = userId;
     _pluginParam->strTnUserToken = userToken;
-    _pluginParam->strMobile = userMobile;
-    qInfo() << "[Toon][TNLoginWidget] setcurrentuserInfo userid:" << userId << " usertoken:" << userToken << userMobile;
+	_pluginParam->strEmailAddress = userEmail;
+
+	qInfo() << "[Toon][TNLoginWidget] setcurrentuserInfo userid:" << userId << " usertoken:" << userToken << userEmail;
     TNPathUtil::SetCurrentUser(userId);
     TNUserDataUtil::GetInstance()->setUserPluginParam(_pluginParam);
     bool ok = TNDataControlServer::GetInstance()->ResetConnect();
@@ -691,27 +410,27 @@ void TNLoginWidget::OnScanCodeReadySlot(const QString &path)
 
 void TNLoginWidget::OnGetScanCodeStatusSlot(int status)
 {
-    if (status == OPERA_SCAN)
-    {
-        //更新图片，显示当前登录手机号
-        QString mobile = _scanLogin->GetMobile();
-        qrCodeForm02Ui->mobileLabel->setText(mobile);
-        ui->stackedWidget->setCurrentIndex(6);
-    }
-    else if (status == OPERA_LOGIN)
-    {
-        //登陆成功
-        QString token = _scanLogin->GetToken();
-        QString userId = _scanLogin->GetUserId();
-        QString mobile = _scanLogin->GetMobile();
-        TNUtil::setPasswordLogin(false);
-        if (SetCurrentUserInfo(userId, token, mobile))
-        {
-            LoginIMServer();
-            LoadCardCaseDataToDB();
-            emit SendPluginParamSignal(_pluginParam);
-        }
-    }
+	if (status == OPERA_SCAN)
+	{
+		//更新图片，显示当前登录手机号
+		QString mobile = _scanLogin->GetMobile();
+		qrCodeForm02Ui->mobileLabel->setText(mobile);
+		ui->stackedWidget->setCurrentIndex(5);
+	}
+	else if (status == OPERA_LOGIN)
+	{
+		//登陆成功
+		QString token = _scanLogin->GetToken();
+		QString userId = _scanLogin->GetUserId();
+		QString mobile = _scanLogin->GetMobile();
+		TNUtil::setPasswordLogin(false);
+		if (SetCurrentUserInfo(userId, token, mobile))
+		{
+			LoginIMServer();
+			LoadCardCaseDataToDB();
+			emit SendPluginParamSignal(_pluginParam);
+		}
+	}
 }
 
 void TNLoginWidget::OnScanCodeInvaldSlot()
@@ -744,13 +463,13 @@ bool TNLoginWidget::eventFilter(QObject *target, QEvent *event)
         if (event->type() == QEvent::FocusIn)
         {
             QString strTeleCode = getTeleCode_Login();
-            QString strMobile = loginFormUi->mobileLineEdit->text();
-            if (strMobile.isEmpty())
+            QString strEmail = loginFormUi->mobileLineEdit->text();
+            if (strEmail.isEmpty())
             {
                 QString errorMsg = (strTeleCode == "0000") ? ("运营号不能为空") : ("手机号不能为空");
                 ShowMessage(errorMsg);
             }
-            else if (strMobile.size() > 0 && strMobile.size() != 11)
+            else if (strEmail.size() > 0 && strEmail.size() != 11)
             {
                 QString errorMsg = (strTeleCode == "0000") ? ("运营号格式不正确") : ("手机号格式不正确");
                 ShowMessage(errorMsg);
@@ -773,12 +492,12 @@ bool TNLoginWidget::eventFilter(QObject *target, QEvent *event)
     {
         if (event->type() == QEvent::FocusIn)
         {
-            QString strMobile = resetPsdForm01Ui->mobileLineEdit->text();
-            if (strMobile.isEmpty())
+            QString strEmail = resetPsdForm01Ui->mobileLineEdit->text();
+            if (strEmail.isEmpty())
             {
                 ShowMessage(("手机号不能为空"));
             }
-            else if (strMobile.size() > 0 && strMobile.size() != 11)
+            else if (strEmail.size() > 0 && strEmail.size() != 11)
             {
                 ShowMessage(("手机号格式不正确"));
             }
@@ -830,17 +549,6 @@ void TNLoginWidget::keyPressEvent(QKeyEvent *event)
             }
         }
     }
-    else if (ui->stackedWidget->currentIndex() == 4)
-    {
-        if (event->type() == QEvent::KeyPress)
-        {
-            QKeyEvent *keyEvent = dynamic_cast<QKeyEvent *>(event);
-            if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter)
-            {
-                slotOnClickLoginButton_NewDevice();
-            }
-        }
-    }
 
     QWidget::keyPressEvent(event);
 }
@@ -848,139 +556,6 @@ void TNLoginWidget::keyPressEvent(QKeyEvent *event)
 void TNLoginWidget::checkUpgrade()
 {
     TNUpgradeMangement::instance()->checkNewVersion(_pluginParam, TNUpgradeMangement::ctBoot);
-}
-
-bool TNLoginWidget::LoginByAutoIdenfy(const QString& strParam)
-{
-    QStringList args = qApp->arguments();
-    qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy args:" << strParam << "cmd args:" << args;
-    if (args.size() == 2)
-    {
-        //toonpc://logintoon?accessToken=abcsdfsdsdfasdf&mobile=355656&authCode=fxxx&orgId=xxxx&appId=xxxx/
-        //QString userParam = args[1];
-        QUrl urlProtol(strParam);
-        QUrlQuery urlQuerty(urlProtol);
-        QString acctoken = urlQuerty.queryItemValue("accessToken");
-        QString strMobile = urlQuerty.queryItemValue("mobile");
-        QString strAutoCode = urlQuerty.queryItemValue("authCode");
-        QString strOrgId = urlQuerty.queryItemValue("orgId");
-        QString strAppId = urlQuerty.queryItemValue("appId");
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy param:" << strParam;
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy acctoken:" << acctoken;
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy strOrgId:" << strOrgId;
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy strAppId:" << strAppId;
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy strMobile:" << strMobile;
-        qInfo() << "[Toon][TNLoginWidget]LoginByAutoIdenfy strAutoCode:" << strAutoCode;
-        if (acctoken.isEmpty() || strMobile.isEmpty() || strAutoCode.isEmpty() || strOrgId.isEmpty() || strAppId.isEmpty())
-        {
-            QMessageBox::information(NULL, "toon", ("免登码或者手机号信息为空！"));
-            qApp->quit();
-#ifdef Q_OS_WIN
-            HANDLE hself = GetCurrentProcess();
-            TerminateProcess(hself, 0);
-#endif
-            return true;
-        }
-        QString userId;
-        QString userToken;
-        if (_httpApi->LoginWithAuthCodeByOA(strMobile, strAutoCode, acctoken, strOrgId, strAppId, userId, userToken))
-        {
-            if (SetCurrentUserInfo(userId, userToken, strMobile))
-            {
-                LoginIMServer();
-                LoadCardCaseDataToDB();
-                emit SendPluginParamSignal(_pluginParam);
-            }
-        }
-        else
-        {
-            QMessageBox::information(NULL, "toon", ("登录失败！"));
-            qApp->quit();
-#ifdef Q_OS_WIN
-            HANDLE hself = GetCurrentProcess();
-            TerminateProcess(hself, 0);
-#endif
-        }
-        return true;
-    }
-    return false;
-}
-
-void TNLoginWidget::OnLoginDAOSlot(QString strParam)
-{
-    LoginByAutoIdenfy(strParam);
-}
-
-void TNLoginWidget::slotOnClickObtainIdCodeButton_ResetPsd()
-{
-	/*
-    if (resetPsdForm01Ui->mobileLineEdit->text().trimmed().isEmpty())
-    {
-        ShowMessage(("手机号不能为空"));
-        return;
-    }
-    if (!TNLoginUtil::checkMobileNumber(resetPsdForm01Ui->mobileLineEdit->text().trimmed()))
-    {
-        ShowMessage(("手机号格式不正确"));
-        return;
-    }
-
-    if ( !m_resetPsdIdCodeTimer->isInitialState() )
-        return;
-
-    if (!this->_bInitNetRoute)
-    {
-        ShowMessage(("操作失败，请稍后重试"));
-        InitRouterList();
-        return;
-    }
-
-    QString strTeleCode = getTeleCode_ResetPsd();
-    QString strMobile   = getMobileNumber_ResetPsd();
-    QString	strMacAddress = TNLoginUtil::getHostMacAddress();
-    int nRet = _httpApi->CheckRegisterBeforeLoginNew("1", "1", _pluginParam->strTnUserAgent, strTeleCode, strMobile, strMacAddress);
-    if (nRet == 1)
-    {
-        ShowMessage(("用户未注册"));
-    }
-    else if (nRet == 2)
-    {
-        int nIdCodeRet = _httpApi->sendVCodeBeforeLogin(_pluginParam, strTeleCode, strMobile, APPTYPE);
-        if (nIdCodeRet == 0)
-        {
-            m_resetPsdIdCodeTimer->start(1000);
-        }
-        else if (nIdCodeRet == 1)
-        {
-            ShowMessage(("一小时最多能发5条"));
-        }
-        else if (nIdCodeRet == 2)
-        {
-            ShowMessage(("一天最多能发10条"));
-        }
-        else
-        {
-            ShowMessage(("验证码发送过于频繁"));
-        }
-    }
-    else if (nRet == 3)
-    {
-        ShowMessage(("账号已锁定，请24小时后重试"));
-    }
-    else
-    {
-        ShowMessage(("网络连接不可用"));
-    }
-
-    QString strSendBtn = resetPsdForm01Ui->obtainIdCodeButton->text();
-    if (strSendBtn == ("重新发送"))
-        TNDataStatistics::RecordFuncStatisData(FUNC_TYPE_Resend_Code, _pluginParam);
-	*/
-}
-
-void TNLoginWidget::slotOnResetPsdIdCodeTimer(const QString &timeText)
-{
-    resetPsdForm01Ui->obtainIdCodeButton->setText(timeText);
 }
 
 void TNLoginWidget::initLoginForm()
@@ -1029,24 +604,6 @@ void TNLoginWidget::initLoginForm()
     connect(loginFormUi->loginPushButton, SIGNAL(clicked()), this, SLOT(slotOnClickLoginButton()));
 }
 
-void TNLoginWidget::initNewDeviceLoginForm()
-{
-    QWidget *newDeviceForm = new QWidget();
-    newDeviceFormUi->setupUi(newDeviceForm);
-
-    newDeviceFormUi->errorLabel->setText(QString::null);
-    newDeviceFormUi->deviceLabel->setObjectName("deviceLabel");
-
-    setIdCodeLineEdit(newDeviceFormUi->idCodeLineEdit);
-
-    ui->stackedWidget->addWidget(newDeviceForm);
-
-    m_newDeviceIdCodeTimer = new TNIdCodeTimer(this);
-    connect(m_newDeviceIdCodeTimer, SIGNAL(remainingTimeChanged(const QString &)), this, SLOT(slotOnLoginIdCodeTimer(const QString &)));
-    connect(newDeviceFormUi->obtainIdCodeButton, SIGNAL(clicked()), this, SLOT(slotOnClickObtainIdCodeButton_NewDevice()));
-    connect(newDeviceFormUi->loginPushButton, SIGNAL(clicked()), this, SLOT(slotOnClickLoginButton_NewDevice()));
-}
-
 void TNLoginWidget::initResetPasswordForm01()
 {
     QWidget *resetPsdForm01 = new QWidget();
@@ -1058,9 +615,6 @@ void TNLoginWidget::initResetPasswordForm01()
     resetPsdForm01Ui->resetPushButton->setEnabled(false);
 
     ui->stackedWidget->addWidget(resetPsdForm01);
-
-    m_resetPsdIdCodeTimer = new TNIdCodeTimer(this);
-    connect(m_resetPsdIdCodeTimer, SIGNAL(remainingTimeChanged(const QString &)), this, SLOT(slotOnResetPsdIdCodeTimer(const QString &)));
     connect(resetPsdForm01Ui->mobileLineEdit, SIGNAL(textEdited(const QString &)), this, SLOT(slotButtonStateChanged_ResetPsd01(const QString &)));
     connect(resetPsdForm01Ui->idCodeLineEdit, SIGNAL(textEdited(const QString &)), this, SLOT(slotButtonStateChanged_ResetPsd01(const QString &)));
     connect(resetPsdForm01Ui->resetPushButton, SIGNAL(clicked()), this, SLOT(slotResetPassword01_ok()));
@@ -1134,17 +688,6 @@ void TNLoginWidget::initQRCodeScanForm02()
     connect(qrCodeForm02Ui->backCodeScanButton, SIGNAL(clicked()), this, SLOT(slotBackCodeScanLogin()));
 }
 
-void TNLoginWidget::slotTeleCodeChanged(int index)
-{    
-    QString placeholderText = ((index == 0) ? ("请输入手机号") : ("请输入运营号"));
-    ShowMessage(QString::null);
-    loginFormUi->mobileLineEdit->clear();
-    loginFormUi->mobileLineEdit->setPlaceholderText(placeholderText);
-    loginFormUi->passwordLineEdit->clear();
-    loginFormUi->rememberPsdCheckBox->setChecked(false);
-    _userInfo.reset();
-}
-
 void TNLoginWidget::slotRememberPsdStateChanged(int state)
 {
     if (Qt::CheckState(state) == Qt::Unchecked)
@@ -1204,9 +747,9 @@ void TNLoginWidget::slotForgetPassword()
 void TNLoginWidget::slotButtonStateChanged_ResetPsd01(const QString &text)
 {
     Q_UNUSED(text);
-    QString strMobile = resetPsdForm01Ui->mobileLineEdit->text().trimmed();
+    QString strEmail = resetPsdForm01Ui->mobileLineEdit->text().trimmed();
     QString strIdCode = resetPsdForm01Ui->idCodeLineEdit->text().trimmed();
-    if (TNLoginUtil::checkMobileNumber(strMobile) && (strIdCode.trimmed().size()>=4))
+    if (TNLoginUtil::checkMobileNumber(strEmail) && (strIdCode.trimmed().size()>=4))
     {
         resetPsdForm01Ui->resetPushButton->setEnabled(true);
     }
@@ -1450,11 +993,6 @@ QString TNLoginWidget::getPasswordAfterMD5_Login()
     const QString strPassword = loginFormUi->passwordLineEdit->text().trimmed();
     return TNLoginUtil::getPasswordAfterMD5(strPassword);
 	*/
-}
-
-QString TNLoginWidget::getIdCode_Login()
-{
-    return newDeviceFormUi->idCodeLineEdit->text().trimmed();
 }
 
 QString TNLoginWidget::getTeleCode_ResetPsd()

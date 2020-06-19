@@ -18,7 +18,6 @@
 namespace Ui {
 class TNLoginWidget;
 class LoginForm;
-class NewDeviceLoginForm;
 class ResetPasswordForm01;
 class ResetPasswordForm02;
 class ResetPasswordForm03;
@@ -28,7 +27,6 @@ class QRCodeScanForm02;
 
 class QComboBox;
 class QLineEdit;
-class TNIdCodeTimer;
 class TNLoginWidget : public QWidget
 {
     Q_OBJECT
@@ -46,12 +44,6 @@ private Q_SLOTS:
     void slotOnClickQRCodeScan();
 
     void slotOnClickLoginButton();
-
-    void slotOnClickObtainIdCodeButton_NewDevice();
-    void slotOnClickLoginButton_NewDevice();
-
-    void slotOnLoginIdCodeTimer(const QString &timeText);
-
     void slotExeAutoLogin();
 
     //二维码下载完
@@ -60,12 +52,6 @@ private Q_SLOTS:
     void OnGetScanCodeStatusSlot(int status);
     //二维码过期
     void OnScanCodeInvaldSlot();
-
-    void OnLoginDAOSlot(QString strParam);
-
-    void slotOnClickObtainIdCodeButton_ResetPsd();
-    void slotOnResetPsdIdCodeTimer(const QString &timeText);
-
 signals:
     void SendPluginParamSignal(TNPluginParamPtr param);
     void LoginSignal();
@@ -84,27 +70,17 @@ private:
     void LoadCardCaseDataToDB();
 
     void LoginOKByPassword(const QString &strMobile, const QString &strPassword, bool isAuto = false, bool faceId = false);
-    //第一次登陆需要验证码校验
-    void OnCheckCodeForFirstLogin();
-    void LoginOKByIdenfy(const QString &strTeleCode, const QString &strMobile, const QString &strIdentify);
 
     void LoginIMServer();
-    void SaveLoginUserToDB(const QString &strTeleCode, const QString &strMobile, const QString &strPassword);
-    bool SetCurrentUserInfo(const QString& userId, const QString& userToken, const QString& userMobile);
+    void SaveLoginUserToDB(const QString &strMobile, const QString &strPassword);
+	bool SetCurrentUserInfo(const QString& userId, const QString& userToken, const QString& userEmail);
 
     void LoginThreadStart();
     void exeAutoLogin(st_LoginUserPtr loginUser);
     void checkUpgrade();
-    void resetNewDeviceIdCodeTimer();
-    void resetResetPsdIdCodeTimer();
-
-    //冬奥通免登接口
-    bool LoginByAutoIdenfy(const QString& strParam);
-
 private:
     Ui::TNLoginWidget *ui;
     Ui::LoginForm *loginFormUi;
-    Ui::NewDeviceLoginForm  *newDeviceFormUi;
     Ui::ResetPasswordForm01 *resetPsdForm01Ui;
     Ui::ResetPasswordForm02 *resetPsdForm02Ui;
     Ui::ResetPasswordForm03 *resetPsdForm03Ui;
@@ -123,16 +99,11 @@ private:
     TNHttpCheckVCodeBeforeLogin m_checkVCodeResetPsd;
     TNHttpResetPassword m_resetPassword;
 
-    TNIdCodeTimer *m_newDeviceIdCodeTimer;
-    TNIdCodeTimer *m_resetPsdIdCodeTimer;
-
     bool _bInitNetRoute;
     bool _bIsFirstLogin;
 
     QMutex _mutex;
-
 private slots:    
-    void slotTeleCodeChanged(int index);
     void slotRememberPsdStateChanged(int state);
     void slotAutoLoginStateChanged(int state);
     void slotLoginMobileTextChanged(const QString &text);
@@ -150,7 +121,6 @@ private slots:
 private:
     void initMainForm();
     void initLoginForm();
-    void initNewDeviceLoginForm();
     void initResetPasswordForm01();
     void initResetPasswordForm02();
     void initResetPasswordForm03();

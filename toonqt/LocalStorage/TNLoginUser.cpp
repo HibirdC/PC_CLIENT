@@ -168,7 +168,7 @@ void TNLoginUser::createTable()
 	if (!tableIsExist("LoginUser"))
 	{
 		QSqlQuery query(*_db);
-        query.exec("Create  TABLE MAIN.[LoginUser]([token] varchar(64), [pwdState] int, [checkState] int,[logDate] varchar(24) NOT NULL,[ext] varchar(32),[mobile] varchar(16) PRIMARY KEY UNIQUE NOT NULL)");
+        query.exec("Create  TABLE MAIN.[LoginUser]([token] varchar(64), [pwdState] int, [checkState] int,[logDate] varchar(24) NOT NULL,[ext] varchar(32),[mobile] varchar(64) PRIMARY KEY UNIQUE NOT NULL)");
 	}
     else
     {

@@ -170,11 +170,11 @@ void CTNIMClientTNMP::InitIMSDK(TNIMMsgManager* msgManager)
 	toonim::ITnImSdk* imSDK = toonim::initIm(clientInfo);
 	if (_imSDKClient == NULL)
 		_imSDKClient = new TNIMSDKClient(_msgManager);
-	std::vector<int> subCatalogIds;
-	subCatalogIds.push_back(SubCatalogType_ChangeCard);
-	subCatalogIds.push_back(SubCatalogType_PhoneChangeCard);
+	//std::vector<int> subCatalogIds;
+	//subCatalogIds.push_back(SubCatalogType_ChangeCard);
+	//subCatalogIds.push_back(SubCatalogType_PhoneChangeCard);
 	//过滤新的朋友通知
-	imSDK->addNoticeFilter(CATALOG_FRIEND_REQ, subCatalogIds, NEW_FRIEND_NOTICE);
+	//imSDK->addNoticeFilter(CATALOG_FRIEND_REQ, subCatalogIds, NEW_FRIEND_NOTICE);
 	imSDK->setCallback(_imSDKClient);
 	//初始化接口信息
 	toonim::initHttpBiz(clientInfo.clientId.c_str(), clientInfo.token.c_str(), clientInfo.deviceId.c_str(), clientInfo.toonType, clientInfo.version.c_str(), QSysInfo::productVersion().toUtf8().data());
